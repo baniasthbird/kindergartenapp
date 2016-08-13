@@ -1,0 +1,519 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2C8AE9DF1D5F337B0069B3BD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8AE9DE1D5F337B0069B3BD /* main.m */; };
+		2C8AE9E21D5F337B0069B3BD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8AE9E11D5F337B0069B3BD /* AppDelegate.m */; };
+		2C8AE9E51D5F337B0069B3BD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8AE9E41D5F337B0069B3BD /* ViewController.m */; };
+		2C8AE9E81D5F337B0069B3BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C8AE9E61D5F337B0069B3BD /* Main.storyboard */; };
+		2C8AE9EA1D5F337B0069B3BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C8AE9E91D5F337B0069B3BD /* Assets.xcassets */; };
+		2C8AE9ED1D5F337B0069B3BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C8AE9EB1D5F337B0069B3BD /* LaunchScreen.storyboard */; };
+		2C8AE9F81D5F337C0069B3BD /* kindergartenappTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8AE9F71D5F337C0069B3BD /* kindergartenappTests.m */; };
+		2C8AEA031D5F337C0069B3BD /* kindergartenappUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8AEA021D5F337C0069B3BD /* kindergartenappUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2C8AE9F41D5F337C0069B3BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2C8AE9D21D5F337B0069B3BD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C8AE9D91D5F337B0069B3BD;
+			remoteInfo = kindergartenapp;
+		};
+		2C8AE9FF1D5F337C0069B3BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2C8AE9D21D5F337B0069B3BD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C8AE9D91D5F337B0069B3BD;
+			remoteInfo = kindergartenapp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2C8AE9DA1D5F337B0069B3BD /* kindergartenapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kindergartenapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C8AE9DE1D5F337B0069B3BD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2C8AE9E01D5F337B0069B3BD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2C8AE9E11D5F337B0069B3BD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2C8AE9E31D5F337B0069B3BD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2C8AE9E41D5F337B0069B3BD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2C8AE9E71D5F337B0069B3BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2C8AE9E91D5F337B0069B3BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2C8AE9EC1D5F337B0069B3BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2C8AE9EE1D5F337B0069B3BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C8AE9F31D5F337C0069B3BD /* kindergartenappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kindergartenappTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C8AE9F71D5F337C0069B3BD /* kindergartenappTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = kindergartenappTests.m; sourceTree = "<group>"; };
+		2C8AE9F91D5F337C0069B3BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C8AE9FE1D5F337C0069B3BD /* kindergartenappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kindergartenappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C8AEA021D5F337C0069B3BD /* kindergartenappUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = kindergartenappUITests.m; sourceTree = "<group>"; };
+		2C8AEA041D5F337C0069B3BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2C8AE9D71D5F337B0069B3BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C8AE9F01D5F337C0069B3BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C8AE9FB1D5F337C0069B3BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2C8AE9D11D5F337B0069B3BD = {
+			isa = PBXGroup;
+			children = (
+				2C8AE9DC1D5F337B0069B3BD /* kindergartenapp */,
+				2C8AE9F61D5F337C0069B3BD /* kindergartenappTests */,
+				2C8AEA011D5F337C0069B3BD /* kindergartenappUITests */,
+				2C8AE9DB1D5F337B0069B3BD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2C8AE9DB1D5F337B0069B3BD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2C8AE9DA1D5F337B0069B3BD /* kindergartenapp.app */,
+				2C8AE9F31D5F337C0069B3BD /* kindergartenappTests.xctest */,
+				2C8AE9FE1D5F337C0069B3BD /* kindergartenappUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2C8AE9DC1D5F337B0069B3BD /* kindergartenapp */ = {
+			isa = PBXGroup;
+			children = (
+				2C8AE9E01D5F337B0069B3BD /* AppDelegate.h */,
+				2C8AE9E11D5F337B0069B3BD /* AppDelegate.m */,
+				2C8AE9E31D5F337B0069B3BD /* ViewController.h */,
+				2C8AE9E41D5F337B0069B3BD /* ViewController.m */,
+				2C8AE9E61D5F337B0069B3BD /* Main.storyboard */,
+				2C8AE9E91D5F337B0069B3BD /* Assets.xcassets */,
+				2C8AE9EB1D5F337B0069B3BD /* LaunchScreen.storyboard */,
+				2C8AE9EE1D5F337B0069B3BD /* Info.plist */,
+				2C8AE9DD1D5F337B0069B3BD /* Supporting Files */,
+			);
+			path = kindergartenapp;
+			sourceTree = "<group>";
+		};
+		2C8AE9DD1D5F337B0069B3BD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2C8AE9DE1D5F337B0069B3BD /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2C8AE9F61D5F337C0069B3BD /* kindergartenappTests */ = {
+			isa = PBXGroup;
+			children = (
+				2C8AE9F71D5F337C0069B3BD /* kindergartenappTests.m */,
+				2C8AE9F91D5F337C0069B3BD /* Info.plist */,
+			);
+			path = kindergartenappTests;
+			sourceTree = "<group>";
+		};
+		2C8AEA011D5F337C0069B3BD /* kindergartenappUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2C8AEA021D5F337C0069B3BD /* kindergartenappUITests.m */,
+				2C8AEA041D5F337C0069B3BD /* Info.plist */,
+			);
+			path = kindergartenappUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2C8AE9D91D5F337B0069B3BD /* kindergartenapp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C8AEA071D5F337C0069B3BD /* Build configuration list for PBXNativeTarget "kindergartenapp" */;
+			buildPhases = (
+				2C8AE9D61D5F337B0069B3BD /* Sources */,
+				2C8AE9D71D5F337B0069B3BD /* Frameworks */,
+				2C8AE9D81D5F337B0069B3BD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = kindergartenapp;
+			productName = kindergartenapp;
+			productReference = 2C8AE9DA1D5F337B0069B3BD /* kindergartenapp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2C8AE9F21D5F337C0069B3BD /* kindergartenappTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C8AEA0A1D5F337C0069B3BD /* Build configuration list for PBXNativeTarget "kindergartenappTests" */;
+			buildPhases = (
+				2C8AE9EF1D5F337C0069B3BD /* Sources */,
+				2C8AE9F01D5F337C0069B3BD /* Frameworks */,
+				2C8AE9F11D5F337C0069B3BD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2C8AE9F51D5F337C0069B3BD /* PBXTargetDependency */,
+			);
+			name = kindergartenappTests;
+			productName = kindergartenappTests;
+			productReference = 2C8AE9F31D5F337C0069B3BD /* kindergartenappTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2C8AE9FD1D5F337C0069B3BD /* kindergartenappUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C8AEA0D1D5F337C0069B3BD /* Build configuration list for PBXNativeTarget "kindergartenappUITests" */;
+			buildPhases = (
+				2C8AE9FA1D5F337C0069B3BD /* Sources */,
+				2C8AE9FB1D5F337C0069B3BD /* Frameworks */,
+				2C8AE9FC1D5F337C0069B3BD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2C8AEA001D5F337C0069B3BD /* PBXTargetDependency */,
+			);
+			name = kindergartenappUITests;
+			productName = kindergartenappUITests;
+			productReference = 2C8AE9FE1D5F337C0069B3BD /* kindergartenappUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2C8AE9D21D5F337B0069B3BD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "zr-mac";
+				TargetAttributes = {
+					2C8AE9D91D5F337B0069B3BD = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					2C8AE9F21D5F337C0069B3BD = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 2C8AE9D91D5F337B0069B3BD;
+					};
+					2C8AE9FD1D5F337C0069B3BD = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 2C8AE9D91D5F337B0069B3BD;
+					};
+				};
+			};
+			buildConfigurationList = 2C8AE9D51D5F337B0069B3BD /* Build configuration list for PBXProject "kindergartenapp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2C8AE9D11D5F337B0069B3BD;
+			productRefGroup = 2C8AE9DB1D5F337B0069B3BD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2C8AE9D91D5F337B0069B3BD /* kindergartenapp */,
+				2C8AE9F21D5F337C0069B3BD /* kindergartenappTests */,
+				2C8AE9FD1D5F337C0069B3BD /* kindergartenappUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2C8AE9D81D5F337B0069B3BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C8AE9ED1D5F337B0069B3BD /* LaunchScreen.storyboard in Resources */,
+				2C8AE9EA1D5F337B0069B3BD /* Assets.xcassets in Resources */,
+				2C8AE9E81D5F337B0069B3BD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C8AE9F11D5F337C0069B3BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C8AE9FC1D5F337C0069B3BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2C8AE9D61D5F337B0069B3BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C8AE9E51D5F337B0069B3BD /* ViewController.m in Sources */,
+				2C8AE9E21D5F337B0069B3BD /* AppDelegate.m in Sources */,
+				2C8AE9DF1D5F337B0069B3BD /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C8AE9EF1D5F337C0069B3BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C8AE9F81D5F337C0069B3BD /* kindergartenappTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C8AE9FA1D5F337C0069B3BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C8AEA031D5F337C0069B3BD /* kindergartenappUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2C8AE9F51D5F337C0069B3BD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2C8AE9D91D5F337B0069B3BD /* kindergartenapp */;
+			targetProxy = 2C8AE9F41D5F337C0069B3BD /* PBXContainerItemProxy */;
+		};
+		2C8AEA001D5F337C0069B3BD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2C8AE9D91D5F337B0069B3BD /* kindergartenapp */;
+			targetProxy = 2C8AE9FF1D5F337C0069B3BD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2C8AE9E61D5F337B0069B3BD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C8AE9E71D5F337B0069B3BD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2C8AE9EB1D5F337B0069B3BD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C8AE9EC1D5F337B0069B3BD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2C8AEA051D5F337C0069B3BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2C8AEA061D5F337C0069B3BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2C8AEA081D5F337C0069B3BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = kindergartenapp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nsc.kindergartenapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2C8AEA091D5F337C0069B3BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = kindergartenapp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nsc.kindergartenapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2C8AEA0B1D5F337C0069B3BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = kindergartenappTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nsc.kindergartenappTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/kindergartenapp.app/kindergartenapp";
+			};
+			name = Debug;
+		};
+		2C8AEA0C1D5F337C0069B3BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = kindergartenappTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nsc.kindergartenappTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/kindergartenapp.app/kindergartenapp";
+			};
+			name = Release;
+		};
+		2C8AEA0E1D5F337C0069B3BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = kindergartenappUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nsc.kindergartenappUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = kindergartenapp;
+			};
+			name = Debug;
+		};
+		2C8AEA0F1D5F337C0069B3BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = kindergartenappUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nsc.kindergartenappUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = kindergartenapp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2C8AE9D51D5F337B0069B3BD /* Build configuration list for PBXProject "kindergartenapp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C8AEA051D5F337C0069B3BD /* Debug */,
+				2C8AEA061D5F337C0069B3BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2C8AEA071D5F337C0069B3BD /* Build configuration list for PBXNativeTarget "kindergartenapp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C8AEA081D5F337C0069B3BD /* Debug */,
+				2C8AEA091D5F337C0069B3BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2C8AEA0A1D5F337C0069B3BD /* Build configuration list for PBXNativeTarget "kindergartenappTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C8AEA0B1D5F337C0069B3BD /* Debug */,
+				2C8AEA0C1D5F337C0069B3BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2C8AEA0D1D5F337C0069B3BD /* Build configuration list for PBXNativeTarget "kindergartenappUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C8AEA0E1D5F337C0069B3BD /* Debug */,
+				2C8AEA0F1D5F337C0069B3BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2C8AE9D21D5F337B0069B3BD /* Project object */;
+}
