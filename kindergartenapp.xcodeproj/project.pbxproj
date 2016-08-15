@@ -15,6 +15,8 @@
 		2C8AE9ED1D5F337B0069B3BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C8AE9EB1D5F337B0069B3BD /* LaunchScreen.storyboard */; };
 		2C8AE9F81D5F337C0069B3BD /* kindergartenappTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8AE9F71D5F337C0069B3BD /* kindergartenappTests.m */; };
 		2C8AEA031D5F337C0069B3BD /* kindergartenappUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8AEA021D5F337C0069B3BD /* kindergartenappUITests.m */; };
+		2C8AEA131D606A420069B3BD /* FirstVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8AEA121D606A420069B3BD /* FirstVc.m */; };
+		2C8AEA171D606AB90069B3BD /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8AEA161D606AB90069B3BD /* UserInfo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		2C8AE9FE1D5F337C0069B3BD /* kindergartenappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kindergartenappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C8AEA021D5F337C0069B3BD /* kindergartenappUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = kindergartenappUITests.m; sourceTree = "<group>"; };
 		2C8AEA041D5F337C0069B3BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C8AEA111D606A420069B3BD /* FirstVc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FirstVc.h; path = FirstVc/FirstVc.h; sourceTree = "<group>"; };
+		2C8AEA121D606A420069B3BD /* FirstVc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FirstVc.m; path = FirstVc/FirstVc.m; sourceTree = "<group>"; };
+		2C8AEA151D606AB90069B3BD /* UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserInfo.h; path = Common/UserInfo.h; sourceTree = "<group>"; };
+		2C8AEA161D606AB90069B3BD /* UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserInfo.m; path = Common/UserInfo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,8 @@
 		2C8AE9DC1D5F337B0069B3BD /* kindergartenapp */ = {
 			isa = PBXGroup;
 			children = (
+				2C8AEA141D606A9C0069B3BD /* Common */,
+				2C8AEA101D6069FA0069B3BD /* View */,
 				2C8AE9E01D5F337B0069B3BD /* AppDelegate.h */,
 				2C8AE9E11D5F337B0069B3BD /* AppDelegate.m */,
 				2C8AE9E31D5F337B0069B3BD /* ViewController.h */,
@@ -138,6 +146,24 @@
 				2C8AEA041D5F337C0069B3BD /* Info.plist */,
 			);
 			path = kindergartenappUITests;
+			sourceTree = "<group>";
+		};
+		2C8AEA101D6069FA0069B3BD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2C8AEA111D606A420069B3BD /* FirstVc.h */,
+				2C8AEA121D606A420069B3BD /* FirstVc.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		2C8AEA141D606A9C0069B3BD /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				2C8AEA151D606AB90069B3BD /* UserInfo.h */,
+				2C8AEA161D606AB90069B3BD /* UserInfo.m */,
+			);
+			name = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,7 +297,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C8AE9E51D5F337B0069B3BD /* ViewController.m in Sources */,
+				2C8AEA131D606A420069B3BD /* FirstVc.m in Sources */,
 				2C8AE9E21D5F337B0069B3BD /* AppDelegate.m in Sources */,
+				2C8AEA171D606AB90069B3BD /* UserInfo.m in Sources */,
 				2C8AE9DF1D5F337B0069B3BD /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
