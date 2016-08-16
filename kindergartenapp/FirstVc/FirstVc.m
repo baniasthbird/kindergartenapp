@@ -11,6 +11,12 @@
 @implementation FirstVc
 
 -(void)viewDidLoad {
+    
+    
+    self.navigationController.navigationBar.topItem.title=@"新马良幼儿园";
+   // UIView *view=
+ //   self.navigationController.navigationBar.topItem.titleView.backgroundColor=[UIColor colorWithRed:226/255.0f green:101/255.0f blue:51/255.0f alpha:1];
+    //self.navigationController.navigationBar.backgroundColor=[UIColor colorWithRed:226/255.0f green:101/255.0f blue:51/255.0f alpha:1];
     //self.view.=@"新马良幼儿园";
     _view_ClassName.layer.borderWidth=1;
     _view_ClassName.layer.borderColor=[[UIColor colorWithRed:187/255.0f green:187/255.0f blue:187/255.0f alpha:1] CGColor];
