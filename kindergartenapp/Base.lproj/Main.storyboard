@@ -19,32 +19,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="giJ-9j-ukR">
-                                <rect key="frame" x="220" y="255" width="160" height="90"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="90" id="h8s-lV-QVC"/>
-                                    <constraint firstAttribute="width" constant="160" id="yYZ-3r-2Qi"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="老师登陆">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.Width">
-                                        <integer key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Login" translatesAutoresizingMaskIntoConstraints="NO" id="fsn-Es-O6P">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Login_Logo" translatesAutoresizingMaskIntoConstraints="NO" id="mQ5-vo-TFp" userLabel="Login_Logo">
+                                <rect key="frame" x="77" y="48" width="445" height="48"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Login_Pic" translatesAutoresizingMaskIntoConstraints="NO" id="Ccb-n7-7c8" userLabel="LoginPic">
+                                <rect key="frame" x="138" y="126" width="324" height="93"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sA4-ck-eWU">
-                                <rect key="frame" x="220" y="105" width="160" height="90"/>
+                                <rect key="frame" x="53" y="385" width="494" height="46"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="160" id="YhW-oB-gdV"/>
-                                    <constraint firstAttribute="height" constant="90" id="boY-10-nUk"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="家长登陆">
+                                <state key="normal" title="登    陆">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -56,39 +44,30 @@
                                     <segue destination="byV-A9-VXo" kind="show" id="mxg-EM-HdC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yHE-ni-iRm">
-                                <rect key="frame" x="220" y="405" width="160" height="90"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="160" id="CF2-Vy-ndQ"/>
-                                    <constraint firstAttribute="height" constant="90" id="oQT-ZG-q3h"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="园长登陆">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.Width">
-                                        <integer key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="giJ-9j-ukR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0m1-fX-f5z"/>
-                            <constraint firstItem="sA4-ck-eWU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-150" id="B3J-cM-teI"/>
-                            <constraint firstItem="yHE-ni-iRm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="150" id="P8u-AD-Cgh"/>
-                            <constraint firstItem="giJ-9j-ukR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zkc-x7-d9q"/>
-                            <constraint firstItem="yHE-ni-iRm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kWE-As-Gf5"/>
+                            <constraint firstItem="sA4-ck-eWU" firstAttribute="width" secondItem="fsn-Es-O6P" secondAttribute="width" multiplier="0.8229" id="Cod-V7-McL"/>
+                            <constraint firstItem="mQ5-vo-TFp" firstAttribute="width" secondItem="fsn-Es-O6P" secondAttribute="width" multiplier="0.74133" id="NIs-ck-OeK"/>
+                            <constraint firstItem="sA4-ck-eWU" firstAttribute="top" secondItem="fsn-Es-O6P" secondAttribute="bottom" multiplier="0.6413" id="Obi-3D-vUV"/>
+                            <constraint firstItem="mQ5-vo-TFp" firstAttribute="height" secondItem="fsn-Es-O6P" secondAttribute="height" multiplier="0.08" id="RBD-vm-xcq"/>
+                            <constraint firstItem="mQ5-vo-TFp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="REf-pz-Vub"/>
+                            <constraint firstItem="sA4-ck-eWU" firstAttribute="height" secondItem="fsn-Es-O6P" secondAttribute="height" multiplier="0.077" id="TvE-Hs-8pt"/>
+                            <constraint firstItem="mQ5-vo-TFp" firstAttribute="top" secondItem="fsn-Es-O6P" secondAttribute="bottom" multiplier="0.08" id="Wt2-1o-cTi"/>
+                            <constraint firstItem="fsn-Es-O6P" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="ahd-mF-xM1"/>
+                            <constraint firstItem="Ccb-n7-7c8" firstAttribute="height" secondItem="fsn-Es-O6P" secondAttribute="height" multiplier="0.1558" id="bdB-6n-6b7"/>
+                            <constraint firstItem="Ccb-n7-7c8" firstAttribute="width" secondItem="fsn-Es-O6P" secondAttribute="width" multiplier="0.5395" id="fNE-WD-glC"/>
+                            <constraint firstItem="fsn-Es-O6P" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="imW-wf-4yJ"/>
+                            <constraint firstItem="fsn-Es-O6P" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ldr-SC-yqm"/>
+                            <constraint firstItem="fsn-Es-O6P" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="muS-YQ-Vfo"/>
                             <constraint firstItem="sA4-ck-eWU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pL5-Df-7DX"/>
+                            <constraint firstItem="Ccb-n7-7c8" firstAttribute="top" secondItem="fsn-Es-O6P" secondAttribute="bottom" multiplier="0.2097" id="tUm-NX-XfB"/>
+                            <constraint firstItem="Ccb-n7-7c8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yRR-4G-rBs"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bgu-E9-WPL"/>
                     <connections>
-                        <outlet property="Login_Lead" destination="yHE-ni-iRm" id="won-7q-deW"/>
                         <outlet property="login_Parent" destination="sA4-ck-eWU" id="AGQ-ql-Q0F"/>
-                        <outlet property="login_Teacher" destination="giJ-9j-ukR" id="BRf-Ve-LCu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -423,4 +402,9 @@
             <point key="canvasLocation" x="3473" y="1773"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Login" width="375" height="667"/>
+        <image name="Login_Logo" width="521" height="125"/>
+        <image name="Login_Pic" width="349" height="191"/>
+    </resources>
 </document>
