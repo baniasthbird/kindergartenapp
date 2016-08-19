@@ -32,22 +32,22 @@
                                 <rect key="frame" x="53" y="249" width="494" height="97"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GLT-4g-e6B" userLabel="txtUsrName">
-                                        <rect key="frame" x="66" y="0.0" width="422.5" height="49"/>
+                                        <rect key="frame" x="84" y="0.0" width="405" height="49"/>
                                         <color key="backgroundColor" red="0.97647058823529409" green="0.97254901960784312" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GHB-eD-Qfq" userLabel="txtPwd">
-                                        <rect key="frame" x="66" y="49" width="422.5" height="49"/>
+                                        <rect key="frame" x="84" y="49" width="405" height="49"/>
                                         <color key="backgroundColor" red="0.97647058823529409" green="0.97254901960784312" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="imgUsr" translatesAutoresizingMaskIntoConstraints="NO" id="E9G-Af-Lnt" userLabel="imgUsr">
-                                        <rect key="frame" x="23" y="7" width="69.5" height="33"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgUsr" translatesAutoresizingMaskIntoConstraints="NO" id="E9G-Af-Lnt" userLabel="imgUsr">
+                                        <rect key="frame" x="7" y="8" width="70" height="33"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgPwd" translatesAutoresizingMaskIntoConstraints="NO" id="SAY-SY-ZzB" userLabel="imgPwd">
-                                        <rect key="frame" x="23" y="57.5" width="69.5" height="33"/>
+                                        <rect key="frame" x="7" y="57" width="70" height="33"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ve-fb-xRv" userLabel="singleLine">
                                         <rect key="frame" x="0.0" y="48" width="494" height="1"/>
@@ -57,20 +57,20 @@
                                         </constraints>
                                     </view>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dropdown_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="yKg-LM-opY" userLabel="imgarrow">
-                                        <rect key="frame" x="404" y="8" width="74.5" height="33"/>
+                                        <rect key="frame" x="404" y="8" width="75" height="33"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.97647058823529409" green="0.97254901960784312" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="SAY-SY-ZzB" firstAttribute="height" secondItem="E9G-Af-Lnt" secondAttribute="height" id="3BN-Xg-1DO"/>
                                     <constraint firstItem="GHB-eD-Qfq" firstAttribute="height" secondItem="2C9-rY-1UU" secondAttribute="height" multiplier="0.5" id="AOy-NM-qr4"/>
-                                    <constraint firstItem="E9G-Af-Lnt" firstAttribute="leading" secondItem="2C9-rY-1UU" secondAttribute="trailing" multiplier="0.04807" id="FuP-1Q-HYT"/>
+                                    <constraint firstItem="E9G-Af-Lnt" firstAttribute="leading" secondItem="2C9-rY-1UU" secondAttribute="trailing" multiplier="0.015" id="FuP-1Q-HYT"/>
                                     <constraint firstItem="E9G-Af-Lnt" firstAttribute="height" secondItem="2C9-rY-1UU" secondAttribute="height" multiplier="0.337079" id="HTV-Lg-uKZ"/>
                                     <constraint firstItem="8ve-fb-xRv" firstAttribute="top" secondItem="2C9-rY-1UU" secondAttribute="bottom" multiplier="0.5" id="IRL-yO-Epx"/>
                                     <constraint firstItem="GHB-eD-Qfq" firstAttribute="leading" secondItem="GLT-4g-e6B" secondAttribute="leading" id="Ifm-gb-BIo"/>
                                     <constraint firstItem="GLT-4g-e6B" firstAttribute="top" secondItem="2C9-rY-1UU" secondAttribute="top" id="IvV-Fs-goM"/>
                                     <constraint firstItem="SAY-SY-ZzB" firstAttribute="width" secondItem="E9G-Af-Lnt" secondAttribute="width" id="O3J-N3-7mQ"/>
-                                    <constraint firstItem="GLT-4g-e6B" firstAttribute="width" secondItem="2C9-rY-1UU" secondAttribute="width" multiplier="0.855" id="S7y-QF-omo"/>
+                                    <constraint firstItem="GLT-4g-e6B" firstAttribute="width" secondItem="2C9-rY-1UU" secondAttribute="width" multiplier="0.82" id="S7y-QF-omo"/>
                                     <constraint firstItem="GHB-eD-Qfq" firstAttribute="top" secondItem="GLT-4g-e6B" secondAttribute="bottom" id="XHy-vt-fQe"/>
                                     <constraint firstItem="GHB-eD-Qfq" firstAttribute="width" secondItem="GLT-4g-e6B" secondAttribute="width" id="h4z-Pu-boq"/>
                                     <constraint firstItem="8ve-fb-xRv" firstAttribute="leading" secondItem="2C9-rY-1UU" secondAttribute="leading" id="hPH-0Q-mP0"/>
@@ -99,9 +99,6 @@
                                         <integer key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="byV-A9-VXo" kind="show" id="mxg-EM-HdC"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>

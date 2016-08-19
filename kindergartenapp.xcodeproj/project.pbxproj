@@ -17,6 +17,13 @@
 		2C8AEA031D5F337C0069B3BD /* kindergartenappUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8AEA021D5F337C0069B3BD /* kindergartenappUITests.m */; };
 		2C8AEA131D606A420069B3BD /* FirstVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8AEA121D606A420069B3BD /* FirstVc.m */; };
 		2C8AEA171D606AB90069B3BD /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8AEA161D606AB90069B3BD /* UserInfo.m */; };
+		4DDB1AE24EA15B79A798639A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C5BBA671F146BFEDCE513B /* libPods.a */; };
+		68F89E051D66DFA700D2C1F0 /* libAFNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68F89E041D66DFA700D2C1F0 /* libAFNetworking.a */; };
+		68F89E071D66DFAB00D2C1F0 /* libMBProgressHUD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68F89E061D66DFAB00D2C1F0 /* libMBProgressHUD.a */; };
+		68F89E091D66DFAE00D2C1F0 /* libSDWebImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68F89E081D66DFAE00D2C1F0 /* libSDWebImage.a */; };
+		68F89E121D66F1E900D2C1F0 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F89E0F1D66F1E900D2C1F0 /* Reachability.m */; };
+		68F89E131D66F1E900D2C1F0 /* YBMonitorNetWorkState.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F89E111D66F1E900D2C1F0 /* YBMonitorNetWorkState.m */; };
+		68F89E171D67057A00D2C1F0 /* MainTabController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F89E161D67057A00D2C1F0 /* MainTabController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +64,18 @@
 		2C8AEA121D606A420069B3BD /* FirstVc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FirstVc.m; path = FirstVc/FirstVc.m; sourceTree = "<group>"; };
 		2C8AEA151D606AB90069B3BD /* UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserInfo.h; path = Common/UserInfo.h; sourceTree = "<group>"; };
 		2C8AEA161D606AB90069B3BD /* UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserInfo.m; path = Common/UserInfo.m; sourceTree = "<group>"; };
+		68F89E041D66DFA700D2C1F0 /* libAFNetworking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAFNetworking.a; path = "Pods/../build/Debug-iphoneos/libAFNetworking.a"; sourceTree = "<group>"; };
+		68F89E061D66DFAB00D2C1F0 /* libMBProgressHUD.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMBProgressHUD.a; path = "Pods/../build/Debug-iphoneos/libMBProgressHUD.a"; sourceTree = "<group>"; };
+		68F89E081D66DFAE00D2C1F0 /* libSDWebImage.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSDWebImage.a; path = "Pods/../build/Debug-iphoneos/libSDWebImage.a"; sourceTree = "<group>"; };
+		68F89E0E1D66F1E900D2C1F0 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		68F89E0F1D66F1E900D2C1F0 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		68F89E101D66F1E900D2C1F0 /* YBMonitorNetWorkState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBMonitorNetWorkState.h; sourceTree = "<group>"; };
+		68F89E111D66F1E900D2C1F0 /* YBMonitorNetWorkState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBMonitorNetWorkState.m; sourceTree = "<group>"; };
+		68F89E151D67057A00D2C1F0 /* MainTabController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainTabController.h; path = MainController/MainTabController.h; sourceTree = "<group>"; };
+		68F89E161D67057A00D2C1F0 /* MainTabController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainTabController.m; path = MainController/MainTabController.m; sourceTree = "<group>"; };
+		B2C5BBA671F146BFEDCE513B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D359E4B71E491FD71813096F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		D5D1F35B18B696CBA04EA63B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +83,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68F89E091D66DFAE00D2C1F0 /* libSDWebImage.a in Frameworks */,
+				68F89E071D66DFAB00D2C1F0 /* libMBProgressHUD.a in Frameworks */,
+				68F89E051D66DFA700D2C1F0 /* libAFNetworking.a in Frameworks */,
+				4DDB1AE24EA15B79A798639A /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +114,8 @@
 				2C8AE9F61D5F337C0069B3BD /* kindergartenappTests */,
 				2C8AEA011D5F337C0069B3BD /* kindergartenappUITests */,
 				2C8AE9DB1D5F337B0069B3BD /* Products */,
+				3886FF6AB1FA59CD77E9A151 /* Pods */,
+				58410DE252D473D1171250F7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,6 +132,8 @@
 		2C8AE9DC1D5F337B0069B3BD /* kindergartenapp */ = {
 			isa = PBXGroup;
 			children = (
+				68F89E141D67053600D2C1F0 /* MainController */,
+				68F89E0B1D66F1E900D2C1F0 /* OpenSource */,
 				2C8AEA141D606A9C0069B3BD /* Common */,
 				2C8AEA101D6069FA0069B3BD /* View */,
 				2C8AE9E01D5F337B0069B3BD /* AppDelegate.h */,
@@ -166,6 +193,62 @@
 			name = Common;
 			sourceTree = "<group>";
 		};
+		3886FF6AB1FA59CD77E9A151 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D359E4B71E491FD71813096F /* Pods.debug.xcconfig */,
+				D5D1F35B18B696CBA04EA63B /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		58410DE252D473D1171250F7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				68F89E081D66DFAE00D2C1F0 /* libSDWebImage.a */,
+				68F89E061D66DFAB00D2C1F0 /* libMBProgressHUD.a */,
+				68F89E041D66DFA700D2C1F0 /* libAFNetworking.a */,
+				B2C5BBA671F146BFEDCE513B /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		68F89E0B1D66F1E900D2C1F0 /* OpenSource */ = {
+			isa = PBXGroup;
+			children = (
+				68F89E0C1D66F1E900D2C1F0 /* NetWork */,
+			);
+			path = OpenSource;
+			sourceTree = "<group>";
+		};
+		68F89E0C1D66F1E900D2C1F0 /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+				68F89E0D1D66F1E900D2C1F0 /* Network */,
+			);
+			path = NetWork;
+			sourceTree = "<group>";
+		};
+		68F89E0D1D66F1E900D2C1F0 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				68F89E0E1D66F1E900D2C1F0 /* Reachability.h */,
+				68F89E0F1D66F1E900D2C1F0 /* Reachability.m */,
+				68F89E101D66F1E900D2C1F0 /* YBMonitorNetWorkState.h */,
+				68F89E111D66F1E900D2C1F0 /* YBMonitorNetWorkState.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		68F89E141D67053600D2C1F0 /* MainController */ = {
+			isa = PBXGroup;
+			children = (
+				68F89E151D67057A00D2C1F0 /* MainTabController.h */,
+				68F89E161D67057A00D2C1F0 /* MainTabController.m */,
+			);
+			name = MainController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -173,9 +256,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2C8AEA071D5F337C0069B3BD /* Build configuration list for PBXNativeTarget "kindergartenapp" */;
 			buildPhases = (
+				CA6FB760336651521193645F /* Check Pods Manifest.lock */,
 				2C8AE9D61D5F337B0069B3BD /* Sources */,
 				2C8AE9D71D5F337B0069B3BD /* Frameworks */,
 				2C8AE9D81D5F337B0069B3BD /* Resources */,
+				E30CF8C1D0D78C9A9AEEC8CE /* Embed Pods Frameworks */,
+				EBA1D8C2DEF719FCDAD72582 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -291,6 +377,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		CA6FB760336651521193645F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E30CF8C1D0D78C9A9AEEC8CE /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EBA1D8C2DEF719FCDAD72582 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2C8AE9D61D5F337B0069B3BD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -300,6 +434,9 @@
 				2C8AEA131D606A420069B3BD /* FirstVc.m in Sources */,
 				2C8AE9E21D5F337B0069B3BD /* AppDelegate.m in Sources */,
 				2C8AEA171D606AB90069B3BD /* UserInfo.m in Sources */,
+				68F89E121D66F1E900D2C1F0 /* Reachability.m in Sources */,
+				68F89E131D66F1E900D2C1F0 /* YBMonitorNetWorkState.m in Sources */,
+				68F89E171D67057A00D2C1F0 /* MainTabController.m in Sources */,
 				2C8AE9DF1D5F337B0069B3BD /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,10 +576,15 @@
 		};
 		2C8AEA081D5F337C0069B3BD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D359E4B71E491FD71813096F /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = kindergartenapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nsc.kindergartenapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -450,10 +592,15 @@
 		};
 		2C8AEA091D5F337C0069B3BD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5D1F35B18B696CBA04EA63B /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = kindergartenapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nsc.kindergartenapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -524,6 +671,7 @@
 				2C8AEA091D5F337C0069B3BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2C8AEA0A1D5F337C0069B3BD /* Build configuration list for PBXNativeTarget "kindergartenappTests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +680,7 @@
 				2C8AEA0C1D5F337C0069B3BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2C8AEA0D1D5F337C0069B3BD /* Build configuration list for PBXNativeTarget "kindergartenappUITests" */ = {
 			isa = XCConfigurationList;
@@ -540,6 +689,7 @@
 				2C8AEA0F1D5F337C0069B3BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
