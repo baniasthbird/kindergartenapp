@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -21,6 +22,8 @@
     NSDictionary * dict=@{NSForegroundColorAttributeName:   [UIColor whiteColor]};
     
     [[UINavigationBar appearance] setTitleTextAttributes:dict];
+    
+    
     return YES;
 }
 

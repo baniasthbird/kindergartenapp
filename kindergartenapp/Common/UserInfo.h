@@ -8,6 +8,28 @@
 
 #import <Foundation/Foundation.h>
 
-@interface UserInfo : NSObject
+@interface UserInfo : NSObject<NSCoding>
+
+@property (nonatomic,strong) NSMutableArray *arr_menus;
+
+@property (nonatomic,strong) NSString *str_token;
+
+@property (nonatomic,strong) NSString *str_account;
+
+@property (nonatomic,strong) NSString *str_id;
+
+@property (nonatomic,strong) NSString *str_name;
+
+@property (nonatomic,strong) NSString *nickname;
+
+@property (nonatomic,strong) NSString *str_org;
+
+@property  (nonatomic,strong) NSString* str_phonenumber;
+
+@property  (nonatomic,strong) NSString* str_role;
+
+@property  (nonatomic,strong) NSString* str_schoolcode;
+
+
 
 @end

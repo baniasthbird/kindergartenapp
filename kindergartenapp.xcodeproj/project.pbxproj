@@ -15,8 +15,15 @@
 		2C8AE9ED1D5F337B0069B3BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C8AE9EB1D5F337B0069B3BD /* LaunchScreen.storyboard */; };
 		2C8AE9F81D5F337C0069B3BD /* kindergartenappTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8AE9F71D5F337C0069B3BD /* kindergartenappTests.m */; };
 		2C8AEA031D5F337C0069B3BD /* kindergartenappUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8AEA021D5F337C0069B3BD /* kindergartenappUITests.m */; };
-		2C8AEA131D606A420069B3BD /* FirstVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8AEA121D606A420069B3BD /* FirstVc.m */; };
 		2C8AEA171D606AB90069B3BD /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8AEA161D606AB90069B3BD /* UserInfo.m */; };
+		2C9361A01D692E88002E5D4E /* NTButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C93619F1D692E88002E5D4E /* NTButton.m */; };
+		2C9361AD1D6930E4002E5D4E /* FirstVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9361AC1D6930E4002E5D4E /* FirstVc.m */; };
+		2C9361B01D6930F9002E5D4E /* SecondVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9361AF1D6930F9002E5D4E /* SecondVc.m */; };
+		2C9361B31D69312A002E5D4E /* ThirdVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9361B21D69312A002E5D4E /* ThirdVc.m */; };
+		2C9361B81D693222002E5D4E /* FourthVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9361B71D693222002E5D4E /* FourthVc.m */; };
+		2C9361BB1D6932AF002E5D4E /* SettingVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9361BA1D6932AF002E5D4E /* SettingVc.m */; };
+		2C9361C41D69D5DB002E5D4E /* WebBrowserTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9361C31D69D5DB002E5D4E /* WebBrowserTest.m */; };
+		2C9361C81D69DDF9002E5D4E /* BaseFunc.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9361C71D69DDF9002E5D4E /* BaseFunc.m */; };
 		4DDB1AE24EA15B79A798639A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C5BBA671F146BFEDCE513B /* libPods.a */; };
 		68F89E051D66DFA700D2C1F0 /* libAFNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68F89E041D66DFA700D2C1F0 /* libAFNetworking.a */; };
 		68F89E071D66DFAB00D2C1F0 /* libMBProgressHUD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68F89E061D66DFAB00D2C1F0 /* libMBProgressHUD.a */; };
@@ -60,10 +67,24 @@
 		2C8AE9FE1D5F337C0069B3BD /* kindergartenappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kindergartenappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C8AEA021D5F337C0069B3BD /* kindergartenappUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = kindergartenappUITests.m; sourceTree = "<group>"; };
 		2C8AEA041D5F337C0069B3BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2C8AEA111D606A420069B3BD /* FirstVc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FirstVc.h; path = FirstVc/FirstVc.h; sourceTree = "<group>"; };
-		2C8AEA121D606A420069B3BD /* FirstVc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FirstVc.m; path = FirstVc/FirstVc.m; sourceTree = "<group>"; };
 		2C8AEA151D606AB90069B3BD /* UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserInfo.h; path = Common/UserInfo.h; sourceTree = "<group>"; };
 		2C8AEA161D606AB90069B3BD /* UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserInfo.m; path = Common/UserInfo.m; sourceTree = "<group>"; };
+		2C93619E1D692E88002E5D4E /* NTButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTButton.h; sourceTree = "<group>"; };
+		2C93619F1D692E88002E5D4E /* NTButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTButton.m; sourceTree = "<group>"; };
+		2C9361AB1D6930E4002E5D4E /* FirstVc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FirstVc.h; path = View/FirstVc/FirstVc.h; sourceTree = "<group>"; };
+		2C9361AC1D6930E4002E5D4E /* FirstVc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FirstVc.m; path = View/FirstVc/FirstVc.m; sourceTree = "<group>"; };
+		2C9361AE1D6930F9002E5D4E /* SecondVc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SecondVc.h; path = View/SecondVc/SecondVc.h; sourceTree = "<group>"; };
+		2C9361AF1D6930F9002E5D4E /* SecondVc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SecondVc.m; path = View/SecondVc/SecondVc.m; sourceTree = "<group>"; };
+		2C9361B11D69312A002E5D4E /* ThirdVc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThirdVc.h; path = View/ThirdVc/ThirdVc.h; sourceTree = "<group>"; };
+		2C9361B21D69312A002E5D4E /* ThirdVc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ThirdVc.m; path = View/ThirdVc/ThirdVc.m; sourceTree = "<group>"; };
+		2C9361B61D693222002E5D4E /* FourthVc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FourthVc.h; path = View/FourthVc/Controller/FourthVc.h; sourceTree = "<group>"; };
+		2C9361B71D693222002E5D4E /* FourthVc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FourthVc.m; path = View/FourthVc/Controller/FourthVc.m; sourceTree = "<group>"; };
+		2C9361B91D6932AF002E5D4E /* SettingVc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingVc.h; path = View/SettingVc/SettingVc.h; sourceTree = "<group>"; };
+		2C9361BA1D6932AF002E5D4E /* SettingVc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingVc.m; path = View/SettingVc/SettingVc.m; sourceTree = "<group>"; };
+		2C9361C21D69D5DB002E5D4E /* WebBrowserTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebBrowserTest.h; path = View/FirstVc/WebBrowserTest.h; sourceTree = "<group>"; };
+		2C9361C31D69D5DB002E5D4E /* WebBrowserTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebBrowserTest.m; path = View/FirstVc/WebBrowserTest.m; sourceTree = "<group>"; };
+		2C9361C61D69DDF9002E5D4E /* BaseFunc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseFunc.h; path = Common/BaseFunc.h; sourceTree = "<group>"; };
+		2C9361C71D69DDF9002E5D4E /* BaseFunc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseFunc.m; path = Common/BaseFunc.m; sourceTree = "<group>"; };
 		68F89E041D66DFA700D2C1F0 /* libAFNetworking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAFNetworking.a; path = "Pods/../build/Debug-iphoneos/libAFNetworking.a"; sourceTree = "<group>"; };
 		68F89E061D66DFAB00D2C1F0 /* libMBProgressHUD.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMBProgressHUD.a; path = "Pods/../build/Debug-iphoneos/libMBProgressHUD.a"; sourceTree = "<group>"; };
 		68F89E081D66DFAE00D2C1F0 /* libSDWebImage.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSDWebImage.a; path = "Pods/../build/Debug-iphoneos/libSDWebImage.a"; sourceTree = "<group>"; };
@@ -178,8 +199,11 @@
 		2C8AEA101D6069FA0069B3BD /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2C8AEA111D606A420069B3BD /* FirstVc.h */,
-				2C8AEA121D606A420069B3BD /* FirstVc.m */,
+				2C9361BC1D6932B9002E5D4E /* SettingVc */,
+				2C9361B41D6931BD002E5D4E /* FourthVc */,
+				2C9361A91D693085002E5D4E /* ThirdVc */,
+				2C9361A71D693001002E5D4E /* SecondVc */,
+				2C9361A51D692FDD002E5D4E /* FirstVc */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -187,10 +211,133 @@
 		2C8AEA141D606A9C0069B3BD /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				2C8AEA151D606AB90069B3BD /* UserInfo.h */,
-				2C8AEA161D606AB90069B3BD /* UserInfo.m */,
+				2C9361C51D69DDB7002E5D4E /* Base */,
+				2C9361BE1D696F10002E5D4E /* User */,
 			);
 			name = Common;
+			sourceTree = "<group>";
+		};
+		2C93619D1D692E88002E5D4E /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				2C93619E1D692E88002E5D4E /* NTButton.h */,
+				2C93619F1D692E88002E5D4E /* NTButton.m */,
+			);
+			name = Modal;
+			path = MainController/Modal;
+			sourceTree = "<group>";
+		};
+		2C9361A41D692FD0002E5D4E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		2C9361A51D692FDD002E5D4E /* FirstVc */ = {
+			isa = PBXGroup;
+			children = (
+				2C9361A61D692FE8002E5D4E /* Controller */,
+				2C9361A41D692FD0002E5D4E /* View */,
+			);
+			name = FirstVc;
+			sourceTree = "<group>";
+		};
+		2C9361A61D692FE8002E5D4E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2C9361AB1D6930E4002E5D4E /* FirstVc.h */,
+				2C9361AC1D6930E4002E5D4E /* FirstVc.m */,
+				2C9361C21D69D5DB002E5D4E /* WebBrowserTest.h */,
+				2C9361C31D69D5DB002E5D4E /* WebBrowserTest.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		2C9361A71D693001002E5D4E /* SecondVc */ = {
+			isa = PBXGroup;
+			children = (
+				2C9361A81D693009002E5D4E /* Controller */,
+			);
+			name = SecondVc;
+			sourceTree = "<group>";
+		};
+		2C9361A81D693009002E5D4E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2C9361AE1D6930F9002E5D4E /* SecondVc.h */,
+				2C9361AF1D6930F9002E5D4E /* SecondVc.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		2C9361A91D693085002E5D4E /* ThirdVc */ = {
+			isa = PBXGroup;
+			children = (
+				2C9361AA1D69308C002E5D4E /* Controller */,
+			);
+			name = ThirdVc;
+			sourceTree = "<group>";
+		};
+		2C9361AA1D69308C002E5D4E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2C9361B11D69312A002E5D4E /* ThirdVc.h */,
+				2C9361B21D69312A002E5D4E /* ThirdVc.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		2C9361B41D6931BD002E5D4E /* FourthVc */ = {
+			isa = PBXGroup;
+			children = (
+				2C9361B51D6931C7002E5D4E /* Controller */,
+			);
+			name = FourthVc;
+			sourceTree = "<group>";
+		};
+		2C9361B51D6931C7002E5D4E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2C9361B61D693222002E5D4E /* FourthVc.h */,
+				2C9361B71D693222002E5D4E /* FourthVc.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		2C9361BC1D6932B9002E5D4E /* SettingVc */ = {
+			isa = PBXGroup;
+			children = (
+				2C9361BD1D6932C2002E5D4E /* Controller */,
+			);
+			name = SettingVc;
+			sourceTree = "<group>";
+		};
+		2C9361BD1D6932C2002E5D4E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2C9361B91D6932AF002E5D4E /* SettingVc.h */,
+				2C9361BA1D6932AF002E5D4E /* SettingVc.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		2C9361BE1D696F10002E5D4E /* User */ = {
+			isa = PBXGroup;
+			children = (
+				2C8AEA161D606AB90069B3BD /* UserInfo.m */,
+				2C8AEA151D606AB90069B3BD /* UserInfo.h */,
+			);
+			name = User;
+			sourceTree = "<group>";
+		};
+		2C9361C51D69DDB7002E5D4E /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				2C9361C61D69DDF9002E5D4E /* BaseFunc.h */,
+				2C9361C71D69DDF9002E5D4E /* BaseFunc.m */,
+			);
+			name = Base;
 			sourceTree = "<group>";
 		};
 		3886FF6AB1FA59CD77E9A151 /* Pods */ = {
@@ -243,6 +390,7 @@
 		68F89E141D67053600D2C1F0 /* MainController */ = {
 			isa = PBXGroup;
 			children = (
+				2C93619D1D692E88002E5D4E /* Modal */,
 				68F89E151D67057A00D2C1F0 /* MainTabController.h */,
 				68F89E161D67057A00D2C1F0 /* MainTabController.m */,
 			);
@@ -431,13 +579,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C8AE9E51D5F337B0069B3BD /* ViewController.m in Sources */,
-				2C8AEA131D606A420069B3BD /* FirstVc.m in Sources */,
 				2C8AE9E21D5F337B0069B3BD /* AppDelegate.m in Sources */,
 				2C8AEA171D606AB90069B3BD /* UserInfo.m in Sources */,
+				2C9361B31D69312A002E5D4E /* ThirdVc.m in Sources */,
+				2C9361BB1D6932AF002E5D4E /* SettingVc.m in Sources */,
 				68F89E121D66F1E900D2C1F0 /* Reachability.m in Sources */,
 				68F89E131D66F1E900D2C1F0 /* YBMonitorNetWorkState.m in Sources */,
 				68F89E171D67057A00D2C1F0 /* MainTabController.m in Sources */,
+				2C9361A01D692E88002E5D4E /* NTButton.m in Sources */,
 				2C8AE9DF1D5F337B0069B3BD /* main.m in Sources */,
+				2C9361B01D6930F9002E5D4E /* SecondVc.m in Sources */,
+				2C9361C41D69D5DB002E5D4E /* WebBrowserTest.m in Sources */,
+				2C9361C81D69DDF9002E5D4E /* BaseFunc.m in Sources */,
+				2C9361B81D693222002E5D4E /* FourthVc.m in Sources */,
+				2C9361AD1D6930E4002E5D4E /* FirstVc.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

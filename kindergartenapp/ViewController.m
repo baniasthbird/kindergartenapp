@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "AFNetworking.h"
 #import "YBMonitorNetWorkState.h"
+#import "UserInfo.h"
 
 @interface ViewController ()<UITextFieldDelegate,YBMonitorNetWorkStateDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *login_Parent;
@@ -42,6 +43,8 @@
    
     _txtUsrName.text=@"p112";
     _txtPwd.text=@"123456";
+    _txtPwd.delegate=self;
+    _txtUsrName.delegate=self;
     [_imgarrow setHidden:YES];
 
     _session=[AFHTTPSessionManager manager];
@@ -56,6 +59,11 @@
     
     [self netWorkStateChanged];
 
+    self.view.userInteractionEnabled = YES;
+    
+    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(fingerTapped:)];
+    
+    [self.view addGestureRecognizer:singleTap];
 
     
 }
@@ -79,6 +87,12 @@
             } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                 NSDictionary *JSON=[NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
                 NSLog(@"接收数据成功");
+                NSString *str_result= [JSON objectForKey:@"result"];
+                if ([str_result isEqualToString:@"success"]) {
+                    [self MoveToNextPage:JSON];
+                    
+                }
+                
                 
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                 NSLog(@"接收失败");
@@ -102,6 +116,57 @@
     
     str_reachable=currentNetWorkState;
 
+}
+
+#pragma mark textField方法
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
+}
+
+
+-(void)fingerTapped:(UITapGestureRecognizer *)gestureRecognizer {
+    [_txtPwd resignFirstResponder];
+    [_txtUsrName resignFirstResponder];
+}
+
+
+-(void)MoveToNextPage:(NSDictionary*)dic_usr {
+    UserInfo *usrInfo=[[UserInfo alloc]init];
+    NSString *str_token=[dic_usr objectForKey:@"token"];
+    NSMutableArray *arr_menus=[dic_usr objectForKey:@"menus"];
+    NSMutableDictionary *dic_tmp_usr=[dic_usr objectForKey:@"user"];
+    NSString *str_id=[dic_tmp_usr objectForKey:@"id"];
+    NSString *str_name=[dic_tmp_usr objectForKey:@"name"];
+    NSString *str_nickname=[dic_tmp_usr objectForKey:@"nickname"];
+    NSString *str_account=[dic_tmp_usr objectForKey:@"account"];
+    NSString *str_role=[dic_tmp_usr objectForKey:@"role"];
+    NSInteger i_role=[str_role integerValue];
+    str_role=[NSString stringWithFormat:@"%ld",(long)i_role];
+    NSString *str_schoolcode =[dic_tmp_usr objectForKey:@"schoolcode"];
+    NSString *str_org=[dic_tmp_usr objectForKey:@"orgnization"];
+    NSString *str_phonenum=[dic_tmp_usr objectForKey:@"phonenumber"];
+    
+    usrInfo.str_token=str_token;
+    usrInfo.arr_menus=arr_menus;
+    usrInfo.str_id=str_id;
+    usrInfo.str_name=str_name;
+    usrInfo.nickname=str_nickname;
+    usrInfo.str_account=str_account;
+    usrInfo.str_org=str_role;
+    usrInfo.str_schoolcode=str_schoolcode;
+    usrInfo.str_org=str_org;
+    usrInfo.str_phonenumber=str_phonenum;
+    [self saveUserInfo:usrInfo];
+    UIViewController *next = [[self storyboard] instantiateViewControllerWithIdentifier:@"navMain"];
+    [self presentViewController:next animated:YES completion:nil];
+}
+
+-(void)saveUserInfo:(UserInfo*)usrInfo {
+    NSData *data=[NSKeyedArchiver archivedDataWithRootObject:usrInfo];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:data forKey:@"user"];
+    [defaults synchronize];
 }
 
 @end
