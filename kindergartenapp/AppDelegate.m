@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import <UIKit/UIKit.h>
 
 @interface AppDelegate ()
 
@@ -23,6 +24,15 @@
     
     [[UINavigationBar appearance] setTitleTextAttributes:dict];
     
+    self.window=[[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    
+    self.window.rootViewController=[storyboard instantiateInitialViewController];
+    
+    [self.window makeKeyAndVisible];
+    
+    sleep(2);
     
     return YES;
 }

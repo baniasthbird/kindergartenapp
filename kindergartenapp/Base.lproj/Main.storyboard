@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginView" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -215,7 +215,7 @@
                                 <rect key="frame" x="0.0" y="202" width="600" height="48"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Vy-WA-LXT" userLabel="btn_message">
-                                        <rect key="frame" x="445" y="11" width="55" height="29.5"/>
+                                        <rect key="frame" x="445" y="11" width="55" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" backgroundImage="Message"/>
                                     </button>
@@ -226,7 +226,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HJ2-Tu-Ejb" userLabel="btn_zone">
-                                        <rect key="frame" x="516" y="11" width="55" height="29.5"/>
+                                        <rect key="frame" x="516" y="11" width="55" height="30"/>
                                         <state key="normal" backgroundImage="Zone"/>
                                     </button>
                                 </subviews>
@@ -245,7 +245,7 @@
                                 </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="PNl-rc-Cth" userLabel="Logo">
-                                <rect key="frame" x="29" y="151" width="102.5" height="102.5"/>
+                                <rect key="frame" x="29" y="151" width="103" height="103"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="PNl-rc-Cth" secondAttribute="height" multiplier="1:1" id="BSJ-ws-NbX"/>
                                 </constraints>

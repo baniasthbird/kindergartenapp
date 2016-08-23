@@ -25,6 +25,9 @@
 		2C9361C41D69D5DB002E5D4E /* WebBrowserTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9361C31D69D5DB002E5D4E /* WebBrowserTest.m */; };
 		2C9361C81D69DDF9002E5D4E /* BaseFunc.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9361C71D69DDF9002E5D4E /* BaseFunc.m */; };
 		4DDB1AE24EA15B79A798639A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C5BBA671F146BFEDCE513B /* libPods.a */; };
+		684CB4881D6BE00A0099CEE4 /* GrayPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 684CB4821D6BE00A0099CEE4 /* GrayPageControl.m */; };
+		684CB4891D6BE00A0099CEE4 /* HcdGuideViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 684CB4851D6BE00A0099CEE4 /* HcdGuideViewCell.m */; };
+		684CB48A1D6BE00A0099CEE4 /* HcdGuideViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 684CB4871D6BE00A0099CEE4 /* HcdGuideViewManager.m */; };
 		68F89E051D66DFA700D2C1F0 /* libAFNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68F89E041D66DFA700D2C1F0 /* libAFNetworking.a */; };
 		68F89E071D66DFAB00D2C1F0 /* libMBProgressHUD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68F89E061D66DFAB00D2C1F0 /* libMBProgressHUD.a */; };
 		68F89E091D66DFAE00D2C1F0 /* libSDWebImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68F89E081D66DFAE00D2C1F0 /* libSDWebImage.a */; };
@@ -85,6 +88,13 @@
 		2C9361C31D69D5DB002E5D4E /* WebBrowserTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebBrowserTest.m; path = View/FirstVc/WebBrowserTest.m; sourceTree = "<group>"; };
 		2C9361C61D69DDF9002E5D4E /* BaseFunc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseFunc.h; path = Common/BaseFunc.h; sourceTree = "<group>"; };
 		2C9361C71D69DDF9002E5D4E /* BaseFunc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseFunc.m; path = Common/BaseFunc.m; sourceTree = "<group>"; };
+		684CB4811D6BE00A0099CEE4 /* GrayPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrayPageControl.h; sourceTree = "<group>"; };
+		684CB4821D6BE00A0099CEE4 /* GrayPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrayPageControl.m; sourceTree = "<group>"; };
+		684CB4831D6BE00A0099CEE4 /* HcdGuideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HcdGuideView.h; sourceTree = "<group>"; };
+		684CB4841D6BE00A0099CEE4 /* HcdGuideViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HcdGuideViewCell.h; sourceTree = "<group>"; };
+		684CB4851D6BE00A0099CEE4 /* HcdGuideViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HcdGuideViewCell.m; sourceTree = "<group>"; };
+		684CB4861D6BE00A0099CEE4 /* HcdGuideViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HcdGuideViewManager.h; sourceTree = "<group>"; };
+		684CB4871D6BE00A0099CEE4 /* HcdGuideViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HcdGuideViewManager.m; sourceTree = "<group>"; };
 		68F89E041D66DFA700D2C1F0 /* libAFNetworking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAFNetworking.a; path = "Pods/../build/Debug-iphoneos/libAFNetworking.a"; sourceTree = "<group>"; };
 		68F89E061D66DFAB00D2C1F0 /* libMBProgressHUD.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMBProgressHUD.a; path = "Pods/../build/Debug-iphoneos/libMBProgressHUD.a"; sourceTree = "<group>"; };
 		68F89E081D66DFAE00D2C1F0 /* libSDWebImage.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSDWebImage.a; path = "Pods/../build/Debug-iphoneos/libSDWebImage.a"; sourceTree = "<group>"; };
@@ -360,9 +370,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		684CB4801D6BE00A0099CEE4 /* HcdGuideView */ = {
+			isa = PBXGroup;
+			children = (
+				684CB4811D6BE00A0099CEE4 /* GrayPageControl.h */,
+				684CB4821D6BE00A0099CEE4 /* GrayPageControl.m */,
+				684CB4831D6BE00A0099CEE4 /* HcdGuideView.h */,
+				684CB4841D6BE00A0099CEE4 /* HcdGuideViewCell.h */,
+				684CB4851D6BE00A0099CEE4 /* HcdGuideViewCell.m */,
+				684CB4861D6BE00A0099CEE4 /* HcdGuideViewManager.h */,
+				684CB4871D6BE00A0099CEE4 /* HcdGuideViewManager.m */,
+			);
+			path = HcdGuideView;
+			sourceTree = "<group>";
+		};
 		68F89E0B1D66F1E900D2C1F0 /* OpenSource */ = {
 			isa = PBXGroup;
 			children = (
+				684CB4801D6BE00A0099CEE4 /* HcdGuideView */,
 				68F89E0C1D66F1E900D2C1F0 /* NetWork */,
 			);
 			path = OpenSource;
@@ -467,6 +492,7 @@
 				TargetAttributes = {
 					2C8AE9D91D5F337B0069B3BD = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = K2XM9WW286;
 					};
 					2C8AE9F21D5F337C0069B3BD = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -585,12 +611,15 @@
 				2C9361BB1D6932AF002E5D4E /* SettingVc.m in Sources */,
 				68F89E121D66F1E900D2C1F0 /* Reachability.m in Sources */,
 				68F89E131D66F1E900D2C1F0 /* YBMonitorNetWorkState.m in Sources */,
+				684CB4891D6BE00A0099CEE4 /* HcdGuideViewCell.m in Sources */,
 				68F89E171D67057A00D2C1F0 /* MainTabController.m in Sources */,
 				2C9361A01D692E88002E5D4E /* NTButton.m in Sources */,
 				2C8AE9DF1D5F337B0069B3BD /* main.m in Sources */,
+				684CB48A1D6BE00A0099CEE4 /* HcdGuideViewManager.m in Sources */,
 				2C9361B01D6930F9002E5D4E /* SecondVc.m in Sources */,
 				2C9361C41D69D5DB002E5D4E /* WebBrowserTest.m in Sources */,
 				2C9361C81D69DDF9002E5D4E /* BaseFunc.m in Sources */,
+				684CB4881D6BE00A0099CEE4 /* GrayPageControl.m in Sources */,
 				2C9361B81D693222002E5D4E /* FourthVc.m in Sources */,
 				2C9361AD1D6930E4002E5D4E /* FirstVc.m in Sources */,
 			);
@@ -734,13 +763,14 @@
 			baseConfigurationReference = D359E4B71E491FD71813096F /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = kindergartenapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.nsc.kindergartenapp;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.hnsi.kindergartenapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -750,13 +780,14 @@
 			baseConfigurationReference = D5D1F35B18B696CBA04EA63B /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = kindergartenapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.nsc.kindergartenapp;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.hnsi.kindergartenapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

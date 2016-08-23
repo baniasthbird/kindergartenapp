@@ -10,6 +10,7 @@
 #import "AFNetworking.h"
 #import "YBMonitorNetWorkState.h"
 #import "UserInfo.h"
+#import "HcdGuideView.h"
 
 @interface ViewController ()<UITextFieldDelegate,YBMonitorNetWorkStateDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *login_Parent;
@@ -28,6 +29,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    NSMutableArray *images = [NSMutableArray new];
+    
+    [images addObject:[UIImage imageNamed:@"slide_image1"]];
+    [images addObject:[UIImage imageNamed:@"slide_image2"]];
+    [images addObject:[UIImage imageNamed:@"slide_image3"]];
+    [images addObject:[UIImage imageNamed:@"slide_image4"]];
+    
+    [[HcdGuideViewManager sharedInstance] showGuideViewWithImages:images
+                                                   andButtonTitle:@"开始体验"
+                                              andButtonTitleColor:[UIColor blueColor]
+                                                 andButtonBGColor:[UIColor clearColor]
+                                             andButtonBorderColor:[UIColor blueColor]];
+    
+    
     // Do any additional setup after loading the view, typically from a nib.
     self.view.backgroundColor=[UIColor colorWithRed:240/255.0f green:240/255.0f blue:240/255.0f alpha:1];
     _login_Parent.layer.borderWidth=1;
