@@ -183,7 +183,7 @@
 
 -(void)Albumn:(UIButton*)sender {
     NSString *str_url=@"";
-    if (sender.tag==5) {
+    if ([sender.titleLabel.text isEqualToString:@"相册"]) {
         str_url=[dic_pic objectForKey:@"url"];
     }
     else if (sender.tag==6) {

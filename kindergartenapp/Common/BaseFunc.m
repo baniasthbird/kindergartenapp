@@ -14,7 +14,14 @@
     NSObject *obj_tmp=[dic_tmp objectForKey:str_key];
     NSString *str_tmp=@"";
     if (obj_tmp!=[NSNull null]) {
-        str_tmp=(NSString*)obj_tmp;
+        if ([obj_tmp isKindOfClass:[NSNumber class]]) {
+            long l_tmp=[(NSNumber*)obj_tmp longLongValue];
+            str_tmp=[NSString stringWithFormat:@"%ld",l_tmp];
+        }
+        else {
+             str_tmp=(NSString*)obj_tmp;
+        }
+       
     }
     return str_tmp;
 }
