@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Class_child : NSObject
+@interface Class_child : NSObject<NSCoding>
 
 @property (nonatomic,strong) NSString *gradeid;
 

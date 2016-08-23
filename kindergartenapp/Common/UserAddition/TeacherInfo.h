@@ -10,7 +10,9 @@
 #import "Class_child.h"
 
 //一个老师负责多个班级
-@interface TeacherInfo : NSObject
+@interface TeacherInfo : NSObject<NSCoding>
+
++(instancetype)CreateTeacher:(NSMutableArray*)arr_class;
 
 @property (nonatomic,strong) NSMutableArray *arr_class;
 
