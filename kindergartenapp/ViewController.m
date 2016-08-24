@@ -227,10 +227,18 @@
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         [defaults setObject:data forKey:@"user_parent"];
         [defaults synchronize];
+        NSLog(@"家长数据保存成功!");
         
     }
     else if (i_role==2) {
-        
+        //解析所有班级，添加教师
+        NSMutableArray *arr_class=[self GenerateClass:dic_usr_add];
+        TeacherInfo *teacher=[TeacherInfo CreateTeacher:arr_class];
+        NSData *data=[NSKeyedArchiver archivedDataWithRootObject:teacher];
+        NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
+        [defaults setObject:data forKey:@"user_teacher"];
+        [defaults synchronize];
+        NSLog(@"老师数据保存成功");
     }
     else if (i_role==3) {
         
@@ -270,7 +278,25 @@
     return arr_babies;
 }
 
-
+-(NSMutableArray*)GenerateClass:(NSDictionary*)dic_usr_add {
+    NSMutableArray *arr_class=[[NSMutableArray alloc]init];
+    NSString *str_gradeid=[baseFunc GetValueFromDic:dic_usr_add key:@"gradeid"];
+    NSString *str_class_id=[baseFunc GetValueFromDic:dic_usr_add key:@"id"];
+    NSString *str_schoolid=[baseFunc GetValueFromDic:dic_usr_add key:@"schoolid"];
+    NSString *str_schoolname=[baseFunc GetValueFromDic:dic_usr_add key:@"schoolname"];
+    NSString *str_stunumber=[baseFunc GetValueFromDic:dic_usr_add key:@"stunumber"];
+    NSString *str_classname=[baseFunc GetValueFromDic:dic_usr_add key:@"classname"];
+    Class_child *o_class=[[Class_child alloc]init];
+    o_class.gradeid=str_gradeid;
+    o_class.class_id=str_class_id;
+    o_class.schoolid=str_schoolid;
+    o_class.schoolname=str_schoolname;
+    o_class.stunumber=str_stunumber;
+    o_class.classname=str_classname;
+    [arr_class addObject:o_class];
+    return arr_class;
+    
+}
 
 
 @end

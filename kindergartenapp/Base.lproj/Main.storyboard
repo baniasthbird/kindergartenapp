@@ -152,7 +152,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="班级群" image="second" selectedImage="second_selected" id="vgu-Nf-PYZ"/>
+                    <tabBarItem key="tabBarItem" title="班级群" image="ren" selectedImage="second_selected" id="vgu-Nf-PYZ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3cC-Ij-ONC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -322,15 +322,15 @@
         <image name="Message" width="57" height="54"/>
         <image name="Zone" width="57" height="54"/>
         <image name="dropdown_arrow" width="157" height="120"/>
-        <image name="first" width="35" height="35"/>
-        <image name="first_selected" width="35" height="35"/>
+        <image name="first" width="25" height="25"/>
+        <image name="first_selected" width="25" height="25"/>
         <image name="imgPwd" width="146" height="124"/>
         <image name="imgUsr" width="146" height="120"/>
-        <image name="second" width="35" height="35"/>
-        <image name="second_selected" width="35" height="35"/>
-        <image name="setting" width="35" height="35"/>
-        <image name="setting_selected" width="35" height="35"/>
-        <image name="third" width="35" height="35"/>
-        <image name="third_selcted" width="35" height="35"/>
+        <image name="ren" width="29" height="29"/>
+        <image name="second_selected" width="29" height="29"/>
+        <image name="setting" width="29" height="29"/>
+        <image name="setting_selected" width="29" height="29"/>
+        <image name="third" width="29" height="29"/>
+        <image name="third_selcted" width="29" height="29"/>
     </resources>
 </document>

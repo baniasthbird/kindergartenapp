@@ -9,6 +9,8 @@
 #import "FirstVc.h"
 #import "WebBrowserTest.h"
 #import "BaseFunc.h"
+#import "ParentInfo.h"
+#import "TeacherInfo.h"
 
 @implementation FirstVc {
     
@@ -25,6 +27,10 @@
     UIView *bgView3;
     
     BaseFunc *baseFunc;
+    
+    ParentInfo *parent;
+    
+    TeacherInfo *teacher;
 }
 
 
@@ -42,6 +48,18 @@
    _userInfo=[NSKeyedUnarchiver unarchiveObjectWithData:data];
     
     i_role=[_userInfo.str_role integerValue];
+    
+    if (i_role==0) {
+        parent=[[ParentInfo alloc]init];
+        NSData *data_parent=[[NSUserDefaults standardUserDefaults] objectForKey:@"user_parent"];
+        parent=[NSKeyedUnarchiver unarchiveObjectWithData:data_parent];
+    }
+    else if (i_role==2) {
+        teacher=[[TeacherInfo alloc]init];
+        NSData *data_teacher=[[NSUserDefaults standardUserDefaults] objectForKey:@"user_teacher"];
+        teacher=[NSKeyedUnarchiver unarchiveObjectWithData:data_teacher];
+    }
+    
     
     baseFunc =[[BaseFunc alloc]init];
     
@@ -135,6 +153,7 @@
     UIButton *btn_4=[[UIButton alloc]init];
     UIButton *btn_5=[[UIButton alloc]init];
     UIButton *btn_6=[[UIButton alloc]init];
+    //家长
     if (role==0) {
         [btn_1 setFrame:CGRectMake(0.06441223832528*self.view.frame.size.width, 0.03170289855072*self.view.frame.size.height, 0.18518518518519*self.view.frame.size.width, 0.18518518518519*self.view.frame.size.width)];
         [btn_1 setCenter:CGPointMake(self.view.frame.size.width*0.18, bgView1.frame.size.height*0.25)];
@@ -161,13 +180,13 @@
         [btn_5 setCenter:CGPointMake(self.view.frame.size.width*0.5, bgView1.frame.size.height*0.75)];
         [btn_5 setBackgroundImage:[UIImage imageNamed:@"p_btn5"] forState:UIControlStateNormal];
         [btn_5 setTitle:@"相册" forState:UIControlStateNormal];
-        btn_5.tag=5;
+        [btn_5 setTag:5];
         [btn_5 addTarget:self action:@selector(Albumn:) forControlEvents:UIControlEventTouchUpInside];
         
         [btn_6 setFrame:CGRectMake(0.76167471819646*self.view.frame.size.width, 0.21920289855072*self.view.frame.size.height, 0.18518518518519*self.view.frame.size.width, 0.18518518518519*self.view.frame.size.width)];
         [btn_6 setCenter:CGPointMake(self.view.frame.size.width*0.82, bgView1.frame.size.height*0.75)];
         [btn_6 setBackgroundImage:[UIImage imageNamed:@"p_btn6"] forState:UIControlStateNormal];
-        btn_5.tag=6;
+        [btn_6 setTag:6];
         [btn_6 setTitle:@"视频" forState:UIControlStateNormal];
         [btn_6 addTarget:self action:@selector(Albumn:) forControlEvents:UIControlEventTouchUpInside];
         
@@ -178,12 +197,20 @@
         [bgView1 addSubview:btn_5];
         [bgView1 addSubview:btn_6];
     }
+    //老师
+    else if (i_role==2) {
+        
+    }
+    //园长
+    else if (i_role==3) {
+        
+    }
    
 }
 
 -(void)Albumn:(UIButton*)sender {
     NSString *str_url=@"";
-    if ([sender.titleLabel.text isEqualToString:@"相册"]) {
+    if (sender.tag==5) {
         str_url=[dic_pic objectForKey:@"url"];
     }
     else if (sender.tag==6) {

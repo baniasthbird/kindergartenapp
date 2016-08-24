@@ -12,6 +12,7 @@
 
 @property (nonatomic,strong) NSString *gradeid;
 
+//id
 @property (nonatomic,strong) NSString *class_id;
 
 @property (nonatomic,strong) NSString *schoolid;

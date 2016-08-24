@@ -30,6 +30,8 @@
     
     self.window.rootViewController=[storyboard instantiateInitialViewController];
     
+    
+    
     [self.window makeKeyAndVisible];
     
     sleep(2);
