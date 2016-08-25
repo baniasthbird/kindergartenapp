@@ -10,4 +10,9 @@
 
 @implementation ThirdVc
 
+-(void)viewDidLoad {
+    self.tabBarItem.image=[[UIImage imageNamed:@"third"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    self.tabBarItem.selectedImage=[[UIImage imageNamed:@"third_selcted"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+}
+
 @end

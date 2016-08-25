@@ -28,6 +28,7 @@
 		2C9361CF1D6C8D44002E5D4E /* Baby.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9361CE1D6C8D44002E5D4E /* Baby.m */; };
 		2C9361D51D6C8EA9002E5D4E /* Class_child.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9361D41D6C8EA9002E5D4E /* Class_child.m */; };
 		2C9361D81D6C8FD7002E5D4E /* TeacherInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9361D71D6C8FD7002E5D4E /* TeacherInfo.m */; };
+		2C9361DA1D6F2FE9002E5D4E /* FZSEJT.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2C9361D91D6F2F5F002E5D4E /* FZSEJT.ttf */; };
 		4DDB1AE24EA15B79A798639A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C5BBA671F146BFEDCE513B /* libPods.a */; };
 		684CB4881D6BE00A0099CEE4 /* GrayPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 684CB4821D6BE00A0099CEE4 /* GrayPageControl.m */; };
 		684CB4891D6BE00A0099CEE4 /* HcdGuideViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 684CB4851D6BE00A0099CEE4 /* HcdGuideViewCell.m */; };
@@ -100,6 +101,7 @@
 		2C9361D41D6C8EA9002E5D4E /* Class_child.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Class_child.m; path = Common/UserAddition/Class_child.m; sourceTree = "<group>"; };
 		2C9361D61D6C8FD7002E5D4E /* TeacherInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TeacherInfo.h; path = Common/UserAddition/TeacherInfo.h; sourceTree = "<group>"; };
 		2C9361D71D6C8FD7002E5D4E /* TeacherInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TeacherInfo.m; path = Common/UserAddition/TeacherInfo.m; sourceTree = "<group>"; };
+		2C9361D91D6F2F5F002E5D4E /* FZSEJT.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FZSEJT.ttf; sourceTree = "<group>"; };
 		684CB4811D6BE00A0099CEE4 /* GrayPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrayPageControl.h; sourceTree = "<group>"; };
 		684CB4821D6BE00A0099CEE4 /* GrayPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrayPageControl.m; sourceTree = "<group>"; };
 		684CB4831D6BE00A0099CEE4 /* HcdGuideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HcdGuideView.h; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 		2C8AE9D11D5F337B0069B3BD = {
 			isa = PBXGroup;
 			children = (
+				2C9361D91D6F2F5F002E5D4E /* FZSEJT.ttf */,
 				2C8AE9DC1D5F337B0069B3BD /* kindergartenapp */,
 				2C8AE9F61D5F337C0069B3BD /* kindergartenappTests */,
 				2C8AEA011D5F337C0069B3BD /* kindergartenappUITests */,
@@ -557,6 +560,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C9361DA1D6F2FE9002E5D4E /* FZSEJT.ttf in Resources */,
 				2C8AE9ED1D5F337B0069B3BD /* LaunchScreen.storyboard in Resources */,
 				2C8AE9EA1D5F337B0069B3BD /* Assets.xcassets in Resources */,
 				2C8AE9E81D5F337B0069B3BD /* Main.storyboard in Resources */,

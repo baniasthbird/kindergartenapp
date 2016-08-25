@@ -36,6 +36,8 @@
 
 -(void)viewDidLoad {
     
+    self.tabBarItem.image=[[UIImage imageNamed:@"first"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    self.tabBarItem.selectedImage=[[UIImage imageNamed:@"first_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
     self.navigationController.navigationBar.topItem.title=@"新马良幼儿园";
    // UIView *view=
@@ -89,6 +91,17 @@
     [_lbl_name sizeToFit];
     
     
+    NSArray *familyNames = [UIFont familyNames];
+    for( NSString *familyName in familyNames )
+    {
+        NSArray *fontNames = [UIFont fontNamesForFamilyName:familyName];
+        for( NSString *fontName in fontNames )
+        {
+            printf( "\tFont: %s \n", [fontName UTF8String] );
+        }
+    }
+    
+    
     NSLog(@"获取成功");
     
 }
@@ -109,6 +122,28 @@
         bgView2=[[UIView alloc]init];
         [bgView2 setFrame:CGRectMake(0, y_bgView2, self.view.frame.size.width, 0.0606884057971*self.view.frame.size.height)];
         bgView2.backgroundColor=[UIColor whiteColor];
+        UILabel *lbl_title=[[UILabel alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, bgView2.frame.size.height)];
+        lbl_title.text=@"最新话题";
+        lbl_title.textAlignment=NSTextAlignmentCenter;
+        lbl_title.font=[UIFont fontWithName:@"FZSEJW--GB1-0" size:12];
+        lbl_title.textColor=[UIColor colorWithRed:255/255.0f green:78/255.0f blue:0 alpha:1];
+        
+        UIView *line_left=[[UIView alloc]initWithFrame:CGRectMake(10, bgView2.frame.size.height/2, self.view.frame.size.width/2-45, 1)];
+        line_left.backgroundColor=[UIColor colorWithRed:240/255.0f green:240/255.0f blue:240/255.0f alpha:1];
+        
+        UIView *line_right=[[UIView alloc]initWithFrame:CGRectMake(self.view.frame.size.width/2+35, bgView2.frame.size.height/2, self.view.frame.size.width/2-100, 1)];
+        line_right.backgroundColor=[UIColor colorWithRed:240/255.0f green:240/255.0f blue:240/255.0f alpha:1];
+        
+        UILabel *lbl_more=[[UILabel alloc]initWithFrame:CGRectMake(self.view.frame.size.width-80, 0, 80, bgView2.frame.size.height)];
+        lbl_more.text=@"查看更多";
+        lbl_more.textAlignment=NSTextAlignmentCenter;
+        lbl_more.font=[UIFont systemFontOfSize:12];
+        lbl_more.textColor=[UIColor colorWithRed:234/255.0f green:202/255.0f blue:160/255.0f alpha:1];
+        
+        [bgView2 addSubview:lbl_title];
+        [bgView2 addSubview:line_left];
+        [bgView2 addSubview:line_right];
+        [bgView2 addSubview:lbl_more];
         [bgView2 sizeToFit];
         
         
@@ -159,27 +194,46 @@
         [btn_1 setCenter:CGPointMake(self.view.frame.size.width*0.18, bgView1.frame.size.height*0.25)];
         [btn_1 setBackgroundImage:[UIImage imageNamed:@"p_btn1"] forState:UIControlStateNormal];
         [btn_1 setTitle:@"今日活动" forState:UIControlStateNormal];
+        [btn_1 setTitleColor:[UIColor colorWithRed:240/255.0f green:92/255.0f blue:122/255.0f alpha:1] forState:UIControlStateNormal];
+        btn_1.titleLabel.font=[UIFont fontWithName:@"FZSEJW--GB1-0" size:16];
+        [btn_1 setTitleEdgeInsets:UIEdgeInsetsMake(75, 0, 0, 0)];
+       
         
       
         [btn_2 setFrame:CGRectMake(0.4122383252818*self.view.frame.size.width, 0.03170289855072*self.view.frame.size.height, 0.18518518518519*self.view.frame.size.width, 0.18518518518519*self.view.frame.size.width)];
         [btn_2 setCenter:CGPointMake(self.view.frame.size.width*0.5, bgView1.frame.size.height*0.25)];
         [btn_2 setBackgroundImage:[UIImage imageNamed:@"p_btn2"] forState:UIControlStateNormal];
         [btn_2 setTitle:@"今日食谱" forState:UIControlStateNormal];
+        [btn_2 setTitleColor:[UIColor colorWithRed:91/255.0f green:176/255.0f blue:85/255.0f alpha:1] forState:UIControlStateNormal];
+        btn_2.titleLabel.font=[UIFont fontWithName:@"FZSEJW--GB1-0" size:16];
+        [btn_2 setTitleEdgeInsets:UIEdgeInsetsMake(75, 0, 0, 0)];
+
         
         [btn_3 setFrame:CGRectMake(0.76167471819646*self.view.frame.size.width, 0.03170289855072*self.view.frame.size.height, 0.18518518518519*self.view.frame.size.width, 0.18518518518519*self.view.frame.size.width)];
         [btn_3 setCenter:CGPointMake(self.view.frame.size.width*0.82, bgView1.frame.size.height*0.25)];
         [btn_3 setBackgroundImage:[UIImage imageNamed:@"p_btn3"] forState:UIControlStateNormal];
         [btn_3 setTitle:@"家园互动" forState:UIControlStateNormal];
+        [btn_3 setTitleColor:[UIColor colorWithRed:124/255.0f green:162/255.0f blue:232/255.0f alpha:1] forState:UIControlStateNormal];
+        btn_3.titleLabel.font=[UIFont fontWithName:@"FZSEJW--GB1-0" size:16];
+        [btn_3 setTitleEdgeInsets:UIEdgeInsetsMake(75, 0, 0, 0)];
         
         [btn_4 setFrame:CGRectMake(0.06441223832528*self.view.frame.size.width, 0.21920289855072*self.view.frame.size.height, 0.18518518518519*self.view.frame.size.width, 0.18518518518519*self.view.frame.size.width)];
         [btn_4 setCenter:CGPointMake(self.view.frame.size.width*0.18, bgView1.frame.size.height*0.75)];
         [btn_4 setBackgroundImage:[UIImage imageNamed:@"p_btn4"] forState:UIControlStateNormal];
         [btn_4 setTitle:@"体智发展" forState:UIControlStateNormal];
+        [btn_4 setBackgroundColor:[UIColor whiteColor]];
+        [btn_4 setTitleColor:[UIColor colorWithRed:255/255.0f green:181/255.0f blue:30/255.0f alpha:1] forState:UIControlStateNormal];
+        btn_4.titleLabel.font=[UIFont fontWithName:@"FZSEJW--GB1-0" size:16];
+        [btn_4 setTitleEdgeInsets:UIEdgeInsetsMake(75, 0, 0, 0)];
+
         
         [btn_5 setFrame:CGRectMake(0.4122383252818*self.view.frame.size.width, 0.21920289855072*self.view.frame.size.height, 0.18518518518519*self.view.frame.size.width, 0.18518518518519*self.view.frame.size.width)];
         [btn_5 setCenter:CGPointMake(self.view.frame.size.width*0.5, bgView1.frame.size.height*0.75)];
         [btn_5 setBackgroundImage:[UIImage imageNamed:@"p_btn5"] forState:UIControlStateNormal];
         [btn_5 setTitle:@"相册" forState:UIControlStateNormal];
+        [btn_5 setTitleColor:[UIColor colorWithRed:216/255.0f green:142/255.0f blue:198/255.0f alpha:1] forState:UIControlStateNormal];
+        btn_5.titleLabel.font=[UIFont fontWithName:@"FZSEJW--GB1-0" size:16];
+        [btn_5 setTitleEdgeInsets:UIEdgeInsetsMake(75, 0, 0, 0)];
         [btn_5 setTag:5];
         [btn_5 addTarget:self action:@selector(Albumn:) forControlEvents:UIControlEventTouchUpInside];
         
@@ -188,6 +242,10 @@
         [btn_6 setBackgroundImage:[UIImage imageNamed:@"p_btn6"] forState:UIControlStateNormal];
         [btn_6 setTag:6];
         [btn_6 setTitle:@"视频" forState:UIControlStateNormal];
+        [btn_6 setTitleColor:[UIColor colorWithRed:250/255.0f green:208/255.0f blue:52/255.0f alpha:1] forState:UIControlStateNormal];
+        btn_6.titleLabel.font=[UIFont fontWithName:@"FZSEJW--GB1-0" size:16];
+        [btn_6 setTitleEdgeInsets:UIEdgeInsetsMake(75, 0, 0, 0)];
+
         [btn_6 addTarget:self action:@selector(Albumn:) forControlEvents:UIControlEventTouchUpInside];
         
         [bgView1 addSubview:btn_1];
@@ -196,7 +254,9 @@
         [bgView1 addSubview:btn_4];
         [bgView1 addSubview:btn_5];
         [bgView1 addSubview:btn_6];
-    }
+        
+        
+          }
     //老师
     else if (i_role==2) {
         

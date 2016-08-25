@@ -10,4 +10,9 @@
 
 @implementation SettingVc
 
+-(void) viewDidLoad {
+    self.tabBarItem.image=[[UIImage imageNamed:@"setting"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    self.tabBarItem.selectedImage=[[UIImage imageNamed:@"setting_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+}
+
 @end

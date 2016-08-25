@@ -7,6 +7,11 @@
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="FZSEJT.ttf">
+            <string>FZSEJW--GB1-0</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -152,7 +157,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="班级群" image="ren" selectedImage="second_selected" id="vgu-Nf-PYZ"/>
+                    <tabBarItem key="tabBarItem" title="班级群" image="second" selectedImage="second_selected" id="vgu-Nf-PYZ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3cC-Ij-ONC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -219,16 +224,16 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" backgroundImage="Message"/>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="老师" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CaG-tA-giu">
-                                        <rect key="frame" x="142" y="17" width="28" height="17"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HJ2-Tu-Ejb" userLabel="btn_zone">
                                         <rect key="frame" x="516" y="11" width="55" height="30"/>
                                         <state key="normal" backgroundImage="Zone"/>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="老师" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CaG-tA-giu">
+                                        <rect key="frame" x="142" y="17" width="28" height="17"/>
+                                        <fontDescription key="fontDescription" name="FZSEJW--GB1-0" family="FZShaoEr-M11S" pointSize="14"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.99215686274509807" green="0.90980392156862744" blue="0.77647058823529413" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -326,7 +331,7 @@
         <image name="first_selected" width="25" height="25"/>
         <image name="imgPwd" width="146" height="124"/>
         <image name="imgUsr" width="146" height="120"/>
-        <image name="ren" width="29" height="29"/>
+        <image name="second" width="29" height="29"/>
         <image name="second_selected" width="29" height="29"/>
         <image name="setting" width="29" height="29"/>
         <image name="setting_selected" width="29" height="29"/>

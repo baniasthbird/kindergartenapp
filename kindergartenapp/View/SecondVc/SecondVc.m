@@ -10,4 +10,12 @@
 
 @implementation SecondVc
 
+
+-(void) viewDidLoad {
+    self.tabBarItem.image=[[UIImage imageNamed:@"second"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    self.tabBarItem.selectedImage=[[UIImage imageNamed:@"second_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+}
+
+
+
 @end
