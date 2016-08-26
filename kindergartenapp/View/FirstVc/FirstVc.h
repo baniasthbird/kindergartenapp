@@ -18,6 +18,7 @@
 
 @property (weak, nonatomic) IBOutlet UIView *bg_Discribe;
 
+@property (weak, nonatomic) IBOutlet UIImageView *img_Header;
 
 
 @end

@@ -11,6 +11,7 @@
 #import "BaseFunc.h"
 #import "ParentInfo.h"
 #import "TeacherInfo.h"
+#import "SDCycleScrollView.h"
 
 @implementation FirstVc {
     
@@ -31,6 +32,13 @@
     ParentInfo *parent;
     
     TeacherInfo *teacher;
+    
+    SDCycleScrollView *s_scrollView;
+    
+    NSArray *arr_img_header;
+    
+    BOOL b_Launch;
+    
 }
 
 
@@ -51,10 +59,18 @@
     
     i_role=[_userInfo.str_role integerValue];
     
+    NSString *str_banner_img1=@"img_T_Header1";
+    NSString *str_banner_img2=@"img_T_Header2";
+    NSString *str_banner_img3=@"img_T_Header3";
+    NSString *str_banner_img4=@"img_T_Header4";
     if (i_role==0) {
         parent=[[ParentInfo alloc]init];
         NSData *data_parent=[[NSUserDefaults standardUserDefaults] objectForKey:@"user_parent"];
         parent=[NSKeyedUnarchiver unarchiveObjectWithData:data_parent];
+        str_banner_img1=@"img_P_Header1";
+        str_banner_img2=@"img_P_Header2";
+        str_banner_img3=@"img_P_Header3";
+        str_banner_img4=@"img_P_Header4";
     }
     else if (i_role==2) {
         teacher=[[TeacherInfo alloc]init];
@@ -63,10 +79,21 @@
     }
     
     
+    
     baseFunc =[[BaseFunc alloc]init];
     
     NSMutableArray *arr_menus=_userInfo.arr_menus;
     dic_pic=[NSMutableDictionary dictionary];
+    
+    
+    UIImage *img_banner1=[UIImage imageNamed:str_banner_img1];
+    UIImage *img_banner2=[UIImage imageNamed:str_banner_img2];
+    UIImage *img_banner3=[UIImage imageNamed:str_banner_img3];
+    UIImage *img_banner4=[UIImage imageNamed:str_banner_img4];
+    arr_img_header =[NSArray arrayWithObjects:img_banner1,img_banner2,img_banner3,img_banner4, nil];
+   
+    
+  
     
     for (int i=0;i<[arr_menus count];i++) {
         NSDictionary *dic_menu_pic=[arr_menus objectAtIndex:i];
@@ -90,17 +117,7 @@
     _lbl_name.text=str_nickname;
     [_lbl_name sizeToFit];
     
-    
-    NSArray *familyNames = [UIFont familyNames];
-    for( NSString *familyName in familyNames )
-    {
-        NSArray *fontNames = [UIFont fontNamesForFamilyName:familyName];
-        for( NSString *fontName in fontNames )
-        {
-            printf( "\tFont: %s \n", [fontName UTF8String] );
-        }
-    }
-    
+    b_Launch=YES;
     
     NSLog(@"获取成功");
     
@@ -108,74 +125,87 @@
 
 -(void)viewDidAppear:(BOOL)animated {
     
-    //家长
-    if (i_role==0) {
-        CGFloat y_bgView1=_bg_Discribe.frame.origin.y+_bg_Discribe.frame.size.height;
-        bgView1=[[UIView alloc]init];
-        bgView1.backgroundColor=[UIColor colorWithRed:254/255.0f green:250/255.0f blue:236/255.0f alpha:1];
-        [bgView1 setFrame:CGRectMake(0, y_bgView1, self.view.frame.size.width, self.view.frame.size.height*0.38315217391304)];
-        [self AddButton:i_role];
-        [bgView1 sizeToFit];
+    if (b_Launch==YES) {
+        s_scrollView=[SDCycleScrollView cycleScrollViewWithFrame:_img_Header.frame imageNamesGroup:arr_img_header];
         
+        [self.view addSubview:s_scrollView];
         
-        CGFloat y_bgView2=bgView1.frame.origin.y+bgView1.frame.size.height;
-        bgView2=[[UIView alloc]init];
-        [bgView2 setFrame:CGRectMake(0, y_bgView2, self.view.frame.size.width, 0.0606884057971*self.view.frame.size.height)];
-        bgView2.backgroundColor=[UIColor whiteColor];
-        UILabel *lbl_title=[[UILabel alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, bgView2.frame.size.height)];
-        lbl_title.text=@"最新话题";
-        lbl_title.textAlignment=NSTextAlignmentCenter;
-        lbl_title.font=[UIFont fontWithName:@"FZSEJW--GB1-0" size:12];
-        lbl_title.textColor=[UIColor colorWithRed:255/255.0f green:78/255.0f blue:0 alpha:1];
+        [self.view sendSubviewToBack:s_scrollView];
+        //家长
+        if (i_role==0) {
+            CGFloat y_bgView1=_bg_Discribe.frame.origin.y+_bg_Discribe.frame.size.height;
+            bgView1=[[UIView alloc]init];
+            bgView1.backgroundColor=[UIColor colorWithRed:254/255.0f green:250/255.0f blue:236/255.0f alpha:1];
+            [bgView1 setFrame:CGRectMake(0, y_bgView1, self.view.frame.size.width, self.view.frame.size.height*0.38315217391304)];
+            [self AddButton:i_role];
+            [bgView1 sizeToFit];
+            
+            
+            CGFloat y_bgView2=bgView1.frame.origin.y+bgView1.frame.size.height;
+            bgView2=[[UIView alloc]init];
+            [bgView2 setFrame:CGRectMake(0, y_bgView2, self.view.frame.size.width, 0.0606884057971*self.view.frame.size.height)];
+            bgView2.backgroundColor=[UIColor whiteColor];
+            UILabel *lbl_title=[[UILabel alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, bgView2.frame.size.height)];
+            lbl_title.text=@"最新话题";
+            lbl_title.textAlignment=NSTextAlignmentCenter;
+            lbl_title.font=[UIFont fontWithName:@"FZSEJW--GB1-0" size:12];
+            lbl_title.textColor=[UIColor colorWithRed:255/255.0f green:78/255.0f blue:0 alpha:1];
+            
+            UIView *line_left=[[UIView alloc]initWithFrame:CGRectMake(10, bgView2.frame.size.height/2, self.view.frame.size.width/2-45, 1)];
+            line_left.backgroundColor=[UIColor colorWithRed:240/255.0f green:240/255.0f blue:240/255.0f alpha:1];
+            
+            UIView *line_right=[[UIView alloc]initWithFrame:CGRectMake(self.view.frame.size.width/2+35, bgView2.frame.size.height/2, self.view.frame.size.width/2-100, 1)];
+            line_right.backgroundColor=[UIColor colorWithRed:240/255.0f green:240/255.0f blue:240/255.0f alpha:1];
+            
+            UILabel *lbl_more=[[UILabel alloc]initWithFrame:CGRectMake(self.view.frame.size.width-80, 0, 80, bgView2.frame.size.height)];
+            lbl_more.text=@"查看更多";
+            lbl_more.textAlignment=NSTextAlignmentCenter;
+            lbl_more.font=[UIFont systemFontOfSize:12];
+            lbl_more.textColor=[UIColor colorWithRed:234/255.0f green:202/255.0f blue:160/255.0f alpha:1];
+            
+            [bgView2 addSubview:lbl_title];
+            [bgView2 addSubview:line_left];
+            [bgView2 addSubview:line_right];
+            [bgView2 addSubview:lbl_more];
+            [bgView2 sizeToFit];
+            
+            
+            CGFloat y_bgView3=bgView2.frame.origin.y+bgView2.frame.size.height;
+            bgView3=[[UIView alloc]init];
+            [bgView3 setFrame:CGRectMake(0, y_bgView3, self.view.frame.size.width, 0.07789855072464*self.view.frame.size.height)];
+            //UIColor *bgColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"bottom"]];
+            //bgView3.backgroundColor=bgColor;
+            UIImage *img=[UIImage imageNamed:@"bottom"];
+            
+            UIImageView *img_bg=[[UIImageView alloc]initWithImage:img];
+            
+            img_bg.contentMode=UIViewContentModeScaleAspectFit;
+            img_bg.frame=bgView3.frame;
+            [self.view addSubview:img_bg];
+            [bgView3 sizeToFit];
+            
+            [self.view addSubview:bgView1];
+            [self.view addSubview:bgView2];
+            [self.view addSubview:bgView3];
+            [self.view setNeedsDisplay];
+            
+        }
+        //老师
+        else if (i_role ==2) {
+            
+        }
+        //园长
+        else if (i_role==3) {
+            
+        }
         
-        UIView *line_left=[[UIView alloc]initWithFrame:CGRectMake(10, bgView2.frame.size.height/2, self.view.frame.size.width/2-45, 1)];
-        line_left.backgroundColor=[UIColor colorWithRed:240/255.0f green:240/255.0f blue:240/255.0f alpha:1];
+        b_Launch=NO;
         
-        UIView *line_right=[[UIView alloc]initWithFrame:CGRectMake(self.view.frame.size.width/2+35, bgView2.frame.size.height/2, self.view.frame.size.width/2-100, 1)];
-        line_right.backgroundColor=[UIColor colorWithRed:240/255.0f green:240/255.0f blue:240/255.0f alpha:1];
-        
-        UILabel *lbl_more=[[UILabel alloc]initWithFrame:CGRectMake(self.view.frame.size.width-80, 0, 80, bgView2.frame.size.height)];
-        lbl_more.text=@"查看更多";
-        lbl_more.textAlignment=NSTextAlignmentCenter;
-        lbl_more.font=[UIFont systemFontOfSize:12];
-        lbl_more.textColor=[UIColor colorWithRed:234/255.0f green:202/255.0f blue:160/255.0f alpha:1];
-        
-        [bgView2 addSubview:lbl_title];
-        [bgView2 addSubview:line_left];
-        [bgView2 addSubview:line_right];
-        [bgView2 addSubview:lbl_more];
-        [bgView2 sizeToFit];
-        
-        
-        CGFloat y_bgView3=bgView2.frame.origin.y+bgView2.frame.size.height;
-        bgView3=[[UIView alloc]init];
-        [bgView3 setFrame:CGRectMake(0, y_bgView3, self.view.frame.size.width, 0.07789855072464*self.view.frame.size.height)];
-        //UIColor *bgColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"bottom"]];
-        //bgView3.backgroundColor=bgColor;
-        UIImage *img=[UIImage imageNamed:@"bottom"];
 
-        UIImageView *img_bg=[[UIImageView alloc]initWithImage:img];
-        
-        img_bg.contentMode=UIViewContentModeScaleAspectFit;
-        img_bg.frame=bgView3.frame;
-        [self.view addSubview:img_bg];
-        [bgView3 sizeToFit];
-
-        [self.view addSubview:bgView1];
-        [self.view addSubview:bgView2];
-        [self.view addSubview:bgView3];
-        [self.view setNeedsDisplay];
-        
     }
-    //老师
-    else if (i_role ==2) {
-        
+    else {
+        [s_scrollView setFrame:_img_Header.frame];
     }
-    //园长
-    else if (i_role==3) {
-        
-    }
-
     
    
 

@@ -274,6 +274,7 @@
                     <tabBarItem key="tabBarItem" title="首页" image="first" selectedImage="first_selected" id="k0t-Wi-IJb"/>
                     <connections>
                         <outlet property="bg_Discribe" destination="uA1-DQ-UOV" id="ikO-IS-nIg"/>
+                        <outlet property="img_Header" destination="VEz-17-nWz" id="uqO-yJ-s88"/>
                         <outlet property="lbl_name" destination="CaG-tA-giu" id="Ix9-6f-PSs"/>
                     </connections>
                 </viewController>
@@ -327,8 +328,8 @@
         <image name="Message" width="57" height="54"/>
         <image name="Zone" width="57" height="54"/>
         <image name="dropdown_arrow" width="157" height="120"/>
-        <image name="first" width="25" height="25"/>
-        <image name="first_selected" width="25" height="25"/>
+        <image name="first" width="29" height="29"/>
+        <image name="first_selected" width="29" height="29"/>
         <image name="imgPwd" width="146" height="124"/>
         <image name="imgUsr" width="146" height="120"/>
         <image name="second" width="29" height="29"/>

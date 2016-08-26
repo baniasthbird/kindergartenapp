@@ -33,6 +33,7 @@
 		684CB4881D6BE00A0099CEE4 /* GrayPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 684CB4821D6BE00A0099CEE4 /* GrayPageControl.m */; };
 		684CB4891D6BE00A0099CEE4 /* HcdGuideViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 684CB4851D6BE00A0099CEE4 /* HcdGuideViewCell.m */; };
 		684CB48A1D6BE00A0099CEE4 /* HcdGuideViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 684CB4871D6BE00A0099CEE4 /* HcdGuideViewManager.m */; };
+		6895AE2E1D70214C0003F2A2 /* libSDCycleScrollView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6895AE2D1D70214C0003F2A2 /* libSDCycleScrollView.a */; };
 		68F89E051D66DFA700D2C1F0 /* libAFNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68F89E041D66DFA700D2C1F0 /* libAFNetworking.a */; };
 		68F89E071D66DFAB00D2C1F0 /* libMBProgressHUD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68F89E061D66DFAB00D2C1F0 /* libMBProgressHUD.a */; };
 		68F89E091D66DFAE00D2C1F0 /* libSDWebImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68F89E081D66DFAE00D2C1F0 /* libSDWebImage.a */; };
@@ -109,6 +110,7 @@
 		684CB4851D6BE00A0099CEE4 /* HcdGuideViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HcdGuideViewCell.m; sourceTree = "<group>"; };
 		684CB4861D6BE00A0099CEE4 /* HcdGuideViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HcdGuideViewManager.h; sourceTree = "<group>"; };
 		684CB4871D6BE00A0099CEE4 /* HcdGuideViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HcdGuideViewManager.m; sourceTree = "<group>"; };
+		6895AE2D1D70214C0003F2A2 /* libSDCycleScrollView.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSDCycleScrollView.a; path = "../../Library/Developer/Xcode/DerivedData/kindergartenapp-erviqgsjzuezvweuxxgwyjysxxzl/Build/Products/Debug-iphonesimulator/libSDCycleScrollView.a"; sourceTree = "<group>"; };
 		68F89E041D66DFA700D2C1F0 /* libAFNetworking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAFNetworking.a; path = "Pods/../build/Debug-iphoneos/libAFNetworking.a"; sourceTree = "<group>"; };
 		68F89E061D66DFAB00D2C1F0 /* libMBProgressHUD.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMBProgressHUD.a; path = "Pods/../build/Debug-iphoneos/libMBProgressHUD.a"; sourceTree = "<group>"; };
 		68F89E081D66DFAE00D2C1F0 /* libSDWebImage.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSDWebImage.a; path = "Pods/../build/Debug-iphoneos/libSDWebImage.a"; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6895AE2E1D70214C0003F2A2 /* libSDCycleScrollView.a in Frameworks */,
 				68F89E091D66DFAE00D2C1F0 /* libSDWebImage.a in Frameworks */,
 				68F89E071D66DFAB00D2C1F0 /* libMBProgressHUD.a in Frameworks */,
 				68F89E051D66DFA700D2C1F0 /* libAFNetworking.a in Frameworks */,
@@ -393,6 +396,7 @@
 		58410DE252D473D1171250F7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6895AE2D1D70214C0003F2A2 /* libSDCycleScrollView.a */,
 				68F89E081D66DFAE00D2C1F0 /* libSDWebImage.a */,
 				68F89E061D66DFAB00D2C1F0 /* libMBProgressHUD.a */,
 				68F89E041D66DFA700D2C1F0 /* libAFNetworking.a */,
