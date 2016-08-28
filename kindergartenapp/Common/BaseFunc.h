@@ -14,5 +14,6 @@
 
 -(NSString*)GetValueFromArray:(NSArray*)arr_tmp index:(NSInteger)i_index;
 
+-(UIImageView*)IndicatorAnimationView;
 
 @end

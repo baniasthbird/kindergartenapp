@@ -8,7 +8,31 @@
 
 #import "BaseFunc.h"
 
-@implementation BaseFunc
+@interface BaseFunc()
+
+@property (nonatomic,strong) NSMutableArray *refreshImages;
+
+
+@end
+
+@implementation BaseFunc {
+   }
+
+
+//正在刷新状态下的图片
+- (NSMutableArray *)refreshImages
+{
+    if (_refreshImages == nil) {
+        _refreshImages = [[NSMutableArray alloc] init];
+        //				循环添加图片
+        for (NSUInteger i = 0; i<6; i++) {
+            UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"refresh_%ld", i]];
+            [self.refreshImages addObject:image];
+        }
+    }
+    return _refreshImages;
+}
+
 
 -(NSString*)GetValueFromDic:(NSDictionary*)dic_tmp key:(NSString*)str_key {
     NSObject *obj_tmp=[dic_tmp objectForKey:str_key];
@@ -36,5 +60,12 @@
     return str_tmp;
 }
 
+-(UIImageView*)IndicatorAnimationView {
+    UIImageView  *img_refresh=[[UIImageView alloc]initWithFrame:CGRectMake(Width/2-50, Height/2-50, 100, 100)];
+    img_refresh.animationImages=self.refreshImages;
+    img_refresh.animationDuration=0.5;
+    img_refresh.animationRepeatCount=0;
+    return img_refresh;
+}
 
 @end

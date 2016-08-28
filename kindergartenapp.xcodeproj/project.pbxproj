@@ -11,7 +11,6 @@
 		2C8AE9E21D5F337B0069B3BD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8AE9E11D5F337B0069B3BD /* AppDelegate.m */; };
 		2C8AE9E51D5F337B0069B3BD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8AE9E41D5F337B0069B3BD /* ViewController.m */; };
 		2C8AE9E81D5F337B0069B3BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C8AE9E61D5F337B0069B3BD /* Main.storyboard */; };
-		2C8AE9EA1D5F337B0069B3BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C8AE9E91D5F337B0069B3BD /* Assets.xcassets */; };
 		2C8AE9ED1D5F337B0069B3BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C8AE9EB1D5F337B0069B3BD /* LaunchScreen.storyboard */; };
 		2C8AE9F81D5F337C0069B3BD /* kindergartenappTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8AE9F71D5F337C0069B3BD /* kindergartenappTests.m */; };
 		2C8AEA031D5F337C0069B3BD /* kindergartenappUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8AEA021D5F337C0069B3BD /* kindergartenappUITests.m */; };
@@ -29,6 +28,10 @@
 		2C9361D51D6C8EA9002E5D4E /* Class_child.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9361D41D6C8EA9002E5D4E /* Class_child.m */; };
 		2C9361D81D6C8FD7002E5D4E /* TeacherInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9361D71D6C8FD7002E5D4E /* TeacherInfo.m */; };
 		2C9361DA1D6F2FE9002E5D4E /* FZSEJT.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2C9361D91D6F2F5F002E5D4E /* FZSEJT.ttf */; };
+		2C9361DC1D710FBF002E5D4E /* libMJRefresh.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C9361DB1D710FBF002E5D4E /* libMJRefresh.a */; };
+		2CEBEDF01D72883F000DD832 /* tb_select.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CEBEDEF1D72883F000DD832 /* tb_select.m */; };
+		2CEBEDF31D72F687000DD832 /* Headmaster.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CEBEDF21D72F687000DD832 /* Headmaster.m */; };
+		2CEBEDF51D72FCF2000DD832 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CEBEDF41D72FCF2000DD832 /* Assets.xcassets */; };
 		4DDB1AE24EA15B79A798639A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C5BBA671F146BFEDCE513B /* libPods.a */; };
 		684CB4881D6BE00A0099CEE4 /* GrayPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 684CB4821D6BE00A0099CEE4 /* GrayPageControl.m */; };
 		684CB4891D6BE00A0099CEE4 /* HcdGuideViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 684CB4851D6BE00A0099CEE4 /* HcdGuideViewCell.m */; };
@@ -67,7 +70,6 @@
 		2C8AE9E31D5F337B0069B3BD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		2C8AE9E41D5F337B0069B3BD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		2C8AE9E71D5F337B0069B3BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2C8AE9E91D5F337B0069B3BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C8AE9EC1D5F337B0069B3BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C8AE9EE1D5F337B0069B3BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C8AE9F31D5F337C0069B3BD /* kindergartenappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kindergartenappTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,6 +105,15 @@
 		2C9361D61D6C8FD7002E5D4E /* TeacherInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TeacherInfo.h; path = Common/UserAddition/TeacherInfo.h; sourceTree = "<group>"; };
 		2C9361D71D6C8FD7002E5D4E /* TeacherInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TeacherInfo.m; path = Common/UserAddition/TeacherInfo.m; sourceTree = "<group>"; };
 		2C9361D91D6F2F5F002E5D4E /* FZSEJT.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FZSEJT.ttf; sourceTree = "<group>"; };
+		2C9361DB1D710FBF002E5D4E /* libMJRefresh.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMJRefresh.a; path = "Pods/../build/Debug-iphoneos/libMJRefresh.a"; sourceTree = "<group>"; };
+		2C9361DD1D725EC9002E5D4E /* 楷体_GB2312.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "楷体_GB2312.ttf"; sourceTree = "<group>"; };
+		2C9361DF1D7267FA002E5D4E /* WxHxD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WxHxD.h; sourceTree = "<group>"; };
+		2C9361E01D7268FD002E5D4E /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		2CEBEDEE1D72883F000DD832 /* tb_select.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tb_select.h; path = View/FirstVc/tb_select.h; sourceTree = "<group>"; };
+		2CEBEDEF1D72883F000DD832 /* tb_select.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = tb_select.m; path = View/FirstVc/tb_select.m; sourceTree = "<group>"; };
+		2CEBEDF11D72F687000DD832 /* Headmaster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Headmaster.h; path = Common/UserAddition/Headmaster.h; sourceTree = "<group>"; };
+		2CEBEDF21D72F687000DD832 /* Headmaster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Headmaster.m; path = Common/UserAddition/Headmaster.m; sourceTree = "<group>"; };
+		2CEBEDF41D72FCF2000DD832 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		684CB4811D6BE00A0099CEE4 /* GrayPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrayPageControl.h; sourceTree = "<group>"; };
 		684CB4821D6BE00A0099CEE4 /* GrayPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrayPageControl.m; sourceTree = "<group>"; };
 		684CB4831D6BE00A0099CEE4 /* HcdGuideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HcdGuideView.h; sourceTree = "<group>"; };
@@ -130,6 +141,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C9361DC1D710FBF002E5D4E /* libMJRefresh.a in Frameworks */,
 				6895AE2E1D70214C0003F2A2 /* libSDCycleScrollView.a in Frameworks */,
 				68F89E091D66DFAE00D2C1F0 /* libSDWebImage.a in Frameworks */,
 				68F89E071D66DFAB00D2C1F0 /* libMBProgressHUD.a in Frameworks */,
@@ -159,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				2C9361D91D6F2F5F002E5D4E /* FZSEJT.ttf */,
+				2C9361DD1D725EC9002E5D4E /* 楷体_GB2312.ttf */,
 				2C8AE9DC1D5F337B0069B3BD /* kindergartenapp */,
 				2C8AE9F61D5F337C0069B3BD /* kindergartenappTests */,
 				2C8AEA011D5F337C0069B3BD /* kindergartenappUITests */,
@@ -181,6 +194,7 @@
 		2C8AE9DC1D5F337B0069B3BD /* kindergartenapp */ = {
 			isa = PBXGroup;
 			children = (
+				2CEBEDF41D72FCF2000DD832 /* Assets.xcassets */,
 				68F89E141D67053600D2C1F0 /* MainController */,
 				68F89E0B1D66F1E900D2C1F0 /* OpenSource */,
 				2C8AEA141D606A9C0069B3BD /* Common */,
@@ -190,7 +204,6 @@
 				2C8AE9E31D5F337B0069B3BD /* ViewController.h */,
 				2C8AE9E41D5F337B0069B3BD /* ViewController.m */,
 				2C8AE9E61D5F337B0069B3BD /* Main.storyboard */,
-				2C8AE9E91D5F337B0069B3BD /* Assets.xcassets */,
 				2C8AE9EB1D5F337B0069B3BD /* LaunchScreen.storyboard */,
 				2C8AE9EE1D5F337B0069B3BD /* Info.plist */,
 				2C8AE9DD1D5F337B0069B3BD /* Supporting Files */,
@@ -201,7 +214,9 @@
 		2C8AE9DD1D5F337B0069B3BD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2C9361DF1D7267FA002E5D4E /* WxHxD.h */,
 				2C8AE9DE1D5F337B0069B3BD /* main.m */,
+				2C9361E01D7268FD002E5D4E /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -278,6 +293,8 @@
 				2C9361AC1D6930E4002E5D4E /* FirstVc.m */,
 				2C9361C21D69D5DB002E5D4E /* WebBrowserTest.h */,
 				2C9361C31D69D5DB002E5D4E /* WebBrowserTest.m */,
+				2CEBEDEE1D72883F000DD832 /* tb_select.h */,
+				2CEBEDEF1D72883F000DD832 /* tb_select.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -380,6 +397,8 @@
 				2C9361D41D6C8EA9002E5D4E /* Class_child.m */,
 				2C9361D61D6C8FD7002E5D4E /* TeacherInfo.h */,
 				2C9361D71D6C8FD7002E5D4E /* TeacherInfo.m */,
+				2CEBEDF11D72F687000DD832 /* Headmaster.h */,
+				2CEBEDF21D72F687000DD832 /* Headmaster.m */,
 			);
 			name = UserAdditon;
 			sourceTree = "<group>";
@@ -396,6 +415,7 @@
 		58410DE252D473D1171250F7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2C9361DB1D710FBF002E5D4E /* libMJRefresh.a */,
 				6895AE2D1D70214C0003F2A2 /* libSDCycleScrollView.a */,
 				68F89E081D66DFAE00D2C1F0 /* libSDWebImage.a */,
 				68F89E061D66DFAB00D2C1F0 /* libMBProgressHUD.a */,
@@ -566,7 +586,7 @@
 			files = (
 				2C9361DA1D6F2FE9002E5D4E /* FZSEJT.ttf in Resources */,
 				2C8AE9ED1D5F337B0069B3BD /* LaunchScreen.storyboard in Resources */,
-				2C8AE9EA1D5F337B0069B3BD /* Assets.xcassets in Resources */,
+				2CEBEDF51D72FCF2000DD832 /* Assets.xcassets in Resources */,
 				2C8AE9E81D5F337B0069B3BD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -641,6 +661,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C8AE9E51D5F337B0069B3BD /* ViewController.m in Sources */,
+				2CEBEDF01D72883F000DD832 /* tb_select.m in Sources */,
 				2C8AE9E21D5F337B0069B3BD /* AppDelegate.m in Sources */,
 				2C8AEA171D606AB90069B3BD /* UserInfo.m in Sources */,
 				2C9361B31D69312A002E5D4E /* ThirdVc.m in Sources */,
@@ -652,6 +673,7 @@
 				684CB4891D6BE00A0099CEE4 /* HcdGuideViewCell.m in Sources */,
 				68F89E171D67057A00D2C1F0 /* MainTabController.m in Sources */,
 				2C9361A01D692E88002E5D4E /* NTButton.m in Sources */,
+				2CEBEDF31D72F687000DD832 /* Headmaster.m in Sources */,
 				2C9361CC1D6C8B4D002E5D4E /* ParentInfo.m in Sources */,
 				2C8AE9DF1D5F337B0069B3BD /* main.m in Sources */,
 				684CB48A1D6BE00A0099CEE4 /* HcdGuideViewManager.m in Sources */,
@@ -804,6 +826,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/kindergartenapp/PrefixHeader.pch";
 				INFOPLIST_FILE = kindergartenapp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -822,6 +845,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/kindergartenapp/PrefixHeader.pch";
 				INFOPLIST_FILE = kindergartenapp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
