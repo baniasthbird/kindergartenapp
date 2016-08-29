@@ -20,6 +20,7 @@
 }
 
 -(void)viewDidLoad {
+   
     WKWebViewConfiguration *config=[[WKWebViewConfiguration alloc]init];
     //设置偏好设置
     config.preferences=[[WKPreferences alloc]init];
@@ -28,8 +29,6 @@
     config.preferences.javaScriptCanOpenWindowsAutomatically=NO;
     config.processPool=[[WKProcessPool alloc]init];
     
-    wb_content=[[WKWebView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height-40) configuration:config];
-    wb_content.navigationDelegate=self;
     [wb_content loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:_str_url]]];
    // wb_content.URL=url;
     

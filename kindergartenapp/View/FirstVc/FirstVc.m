@@ -11,6 +11,8 @@
 #import "BaseFunc.h"
 #import "SDCycleScrollView.h"
 #import "tb_select.h"
+#import "MBProgressHUD.h"
+#import "UIImage+GIF.h"
 
 @interface FirstVc() <tableviewselectDelegate>
 
@@ -46,13 +48,27 @@
     
     Class_child *class_child;
     
-    UIImageView *img_refresh;
+    
+    MBProgressHUD *hud;
+    
+    UIButton *rightButton;
    
     
 }
 
 
 -(void)viewDidLoad {
+    baseFunc =[[BaseFunc alloc]init];
+    
+    hud=[MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.userInteractionEnabled=NO;
+    hud.dimBackground=YES;
+    hud.color=[UIColor clearColor];
+    [self.view addSubview:hud];
+    hud.mode=MBProgressHUDModeCustomView;
+    UIImage *images=[UIImage sd_animatedGIFNamed:@"loading"];
+    hud.customView=[[UIImageView alloc]initWithImage:images];
+    [hud show:YES];
     
     UITabBarItem *tmp_item=[self.tabBarController.tabBar.items objectAtIndex:1];
     tmp_item.image=[[UIImage imageNamed:@"second"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
@@ -89,7 +105,7 @@
         str_banner_img3=@"img_P_Header3";
         str_banner_img4=@"img_P_Header4";
         if ([parent.arr_baby count]>1) {
-            UIButton *rightButton = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 20, 20)];
+            rightButton = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 20, 20)];
             //[rightButton setTitle:@"切换" forState:UIControlStateNormal];
             [rightButton setImage:[UIImage imageNamed:@"switch"] forState:UIControlStateNormal];
             [rightButton addTarget:self action:@selector(Switch:) forControlEvents:UIControlEventTouchUpInside];
@@ -123,7 +139,7 @@
         NSData *data_teacher=[[NSUserDefaults standardUserDefaults] objectForKey:@"user_teacher"];
         teacher=[NSKeyedUnarchiver unarchiveObjectWithData:data_teacher];
         if ([teacher.arr_class count]>1) {
-            UIButton *rightButton = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 20, 20)];
+            rightButton = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 20, 20)];
             //[rightButton setTitle:@"切换" forState:UIControlStateNormal];
             [rightButton setImage:[UIImage imageNamed:@"switch"] forState:UIControlStateNormal];
             [rightButton addTarget:self action:@selector(Switch:) forControlEvents:UIControlEventTouchUpInside];
@@ -150,7 +166,7 @@
     
     
     
-    baseFunc =[[BaseFunc alloc]init];
+    
     
     NSMutableArray *arr_menus=_userInfo.arr_menus;
     dic_pic=[NSMutableDictionary dictionary];
@@ -162,22 +178,20 @@
     UIImage *img_banner4=[UIImage imageNamed:str_banner_img4];
     arr_img_header =[NSArray arrayWithObjects:img_banner1,img_banner2,img_banner3,img_banner4, nil];
    
-    img_refresh=[baseFunc IndicatorAnimationView];
-    [self.view addSubview:img_refresh];
     
     for (int i=0;i<[arr_menus count];i++) {
         NSDictionary *dic_menu_pic=[arr_menus objectAtIndex:i];
         NSString *str_menuname=[baseFunc GetValueFromDic:dic_menu_pic key:@"menuname"];
         NSString *str_menuurl=[baseFunc GetValueFromDic:dic_menu_pic key:@"menuurl"];
         NSString *str_remark=[baseFunc GetValueFromDic:dic_menu_pic key:@"remark"];
-        NSString *str_id=[baseFunc GetValueFromDic:dic_menu_pic key:@"id"];
-        long i_id=[str_id longLongValue];
-        if (i_id==1) {
+       // NSString *str_id=[baseFunc GetValueFromDic:dic_menu_pic key:@"id"];
+      //  long i_id=[str_id longLongValue];
+        if (i==0) {
             dic_pic[@"name"]=str_menuname;
             dic_pic[@"url"]=str_menuurl;
             dic_pic[@"remark"]=str_remark;
         }
-        else if (i_id==2) {
+        else if (i==1) {
             dic_video[@"name"]=str_menuname;
             dic_video[@"url"]=str_menuurl;
             dic_video[@"remark"]=str_remark;
@@ -218,7 +232,6 @@
     
     if (b_Launch==YES) {
         
-        [img_refresh startAnimating];
         s_scrollView=[SDCycleScrollView cycleScrollViewWithFrame:_img_Header.frame imageNamesGroup:arr_img_header];
         
         [self.view addSubview:s_scrollView];
@@ -242,15 +255,19 @@
         else if (i_role==3) {
             
         }
-        
-        [img_refresh stopAnimating];
-
+    
     }
     else {
         NSLog(@"调整");
+        self.navigationController.navigationBar.topItem.title=@"新马良幼儿园";
+        if (rightButton!=nil) {
+            self.tabBarController.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc]initWithCustomView:rightButton];
+        }
         [s_scrollView setFrame:CGRectMake(0, 0, self.view.frame.size.width, _img_Header.frame.size.height+_img_Header.frame.origin.y)];
+    
     }
     
+    [hud hide:YES];
     
 
    
@@ -445,9 +462,9 @@
     NSString *str_id=_userInfo.str_id;
     NSString *str_role=[NSString stringWithFormat:@"%ld",(long)i_role];
     str_url=[NSString stringWithFormat:@"%@?%@=%@&%@=%@",str_url,@"userid",str_id,@"role",str_role];
-    WebBrowserTest *vc=[[WebBrowserTest alloc]init];
-    vc.str_url=str_url;
-    [self.navigationController pushViewController:vc animated:YES];
+    WebBrowserTest *webbrowser = [[self storyboard] instantiateViewControllerWithIdentifier:@"WebBrowser"];
+    webbrowser.str_url=str_url;
+    [self.navigationController pushViewController:webbrowser animated:YES];
     
 }
 

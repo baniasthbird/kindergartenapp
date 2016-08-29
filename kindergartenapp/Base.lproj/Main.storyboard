@@ -10,6 +10,15 @@
     <customFonts key="customFonts">
         <mutableArray key="FZSEJT.ttf">
             <string>FZSEJW--GB1-0</string>
+            <string>FZSEJW--GB1-0</string>
+            <string>FZSEJW--GB1-0</string>
+            <string>FZSEJW--GB1-0</string>
+            <string>FZSEJW--GB1-0</string>
+            <string>FZSEJW--GB1-0</string>
+            <string>FZSEJW--GB1-0</string>
+            <string>FZSEJW--GB1-0</string>
+            <string>FZSEJW--GB1-0</string>
+            <string>FZSEJW--GB1-0</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -193,9 +202,150 @@
                     <view key="view" contentMode="scaleToFill" id="leM-Pv-279">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8IR-JH-L5Q" userLabel="btn_1">
+                                <rect key="frame" x="61" y="91" width="118" height="118"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="8IR-JH-L5Q" secondAttribute="height" multiplier="1:1" id="DAr-wd-QKM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="FZSEJW--GB1-0" family="FZShaoEr-M11S" pointSize="18"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="100" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="今日活动" backgroundImage="btn_3_1">
+                                    <color key="titleColor" red="0.94509803921568625" green="0.36078431372549019" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZsF-Wu-keS" userLabel="btn_2">
+                                <rect key="frame" x="241" y="91" width="118" height="118"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ZsF-Wu-keS" secondAttribute="height" multiplier="1:1" id="MzZ-el-TPa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="FZSEJW--GB1-0" family="FZShaoEr-M11S" pointSize="18"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="100" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="今日食谱" backgroundImage="btn_3_2">
+                                    <color key="titleColor" red="0.36078431372549019" green="0.68627450980392157" blue="0.36862745098039218" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tlG-do-nAJ" userLabel="btn_3">
+                                <rect key="frame" x="421" y="91" width="118" height="118"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="tlG-do-nAJ" secondAttribute="height" multiplier="1:1" id="Ifb-oc-Fll"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="FZSEJW--GB1-0" family="FZShaoEr-M11S" pointSize="18"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="100" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="家园互动" backgroundImage="btn_3_3">
+                                    <color key="titleColor" red="0.48627450980392156" green="0.63529411764705879" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="itu-64-jzS" userLabel="btn_4">
+                                <rect key="frame" x="61" y="241" width="118" height="118"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="itu-64-jzS" secondAttribute="height" multiplier="1:1" id="9Bj-RL-Alp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="FZSEJW--GB1-0" family="FZShaoEr-M11S" pointSize="18"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="100" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="体智发展" backgroundImage="btn_3_4">
+                                    <color key="titleColor" red="1" green="0.69803921568627447" blue="0.21568627450980393" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vcb-Pn-WZW" userLabel="btn_5">
+                                <rect key="frame" x="241" y="241" width="118" height="118"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Vcb-Pn-WZW" secondAttribute="height" multiplier="1:1" id="ksY-81-Gte"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="FZSEJW--GB1-0" family="FZShaoEr-M11S" pointSize="18"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="100" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="相册" backgroundImage="btn_3_5">
+                                    <color key="titleColor" red="0.85098039215686272" green="0.5607843137254902" blue="0.77254901960784317" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rcf-36-c5o" userLabel="btn_6">
+                                <rect key="frame" x="421" y="241" width="118" height="118"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Rcf-36-c5o" secondAttribute="height" multiplier="1:1" id="L6B-bJ-gTS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="FZSEJW--GB1-0" family="FZShaoEr-M11S" pointSize="18"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="100" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="视频" backgroundImage="btn_3_6">
+                                    <color key="titleColor" red="1" green="0.70980392156862748" blue="0.086274509803921567" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tpK-BX-Z2E" userLabel="btn_7">
+                                <rect key="frame" x="61" y="391" width="118" height="118"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="tpK-BX-Z2E" secondAttribute="height" multiplier="1:1" id="XDo-S9-vhg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="FZSEJW--GB1-0" family="FZShaoEr-M11S" pointSize="18"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="100" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="亲子商城" backgroundImage="btn_3_7">
+                                    <color key="titleColor" red="0.6588235294117647" green="0.59999999999999998" blue="0.81568627450980391" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sUq-Qr-2eB" userLabel="btn_8">
+                                <rect key="frame" x="241" y="391" width="118" height="118"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="sUq-Qr-2eB" secondAttribute="height" multiplier="1:1" id="5B7-KU-ebe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="FZSEJW--GB1-0" family="FZShaoEr-M11S" pointSize="18"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="100" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="宝宝空间" backgroundImage="btn_3_8">
+                                    <color key="titleColor" red="0.93725490196078431" green="0.62745098039215685" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Moy-kc-jsd" userLabel="btn_9">
+                                <rect key="frame" x="421" y="391" width="118" height="118"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Moy-kc-jsd" secondAttribute="height" multiplier="1:1" id="870-Ca-xzZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="FZSEJW--GB1-0" family="FZShaoEr-M11S" pointSize="18"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="100" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="学校空间" backgroundImage="btn_3_9">
+                                    <color key="titleColor" red="0.54509803921568623" green="0.77647058823529413" blue="0.24705882352941178" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.97647058823529409" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZsF-Wu-keS" firstAttribute="centerY" secondItem="leM-Pv-279" secondAttribute="bottom" multiplier="0.25" id="8CZ-KT-3iR"/>
+                            <constraint firstItem="sUq-Qr-2eB" firstAttribute="centerY" secondItem="leM-Pv-279" secondAttribute="bottom" multiplier="0.75" id="8L3-Lo-XBm"/>
+                            <constraint firstItem="itu-64-jzS" firstAttribute="centerY" secondItem="Vcb-Pn-WZW" secondAttribute="centerY" id="II3-wt-FXc"/>
+                            <constraint firstItem="Moy-kc-jsd" firstAttribute="centerX" secondItem="Rcf-36-c5o" secondAttribute="centerX" id="KO2-W6-km3"/>
+                            <constraint firstItem="Moy-kc-jsd" firstAttribute="centerY" secondItem="sUq-Qr-2eB" secondAttribute="centerY" id="LFe-GW-zRS"/>
+                            <constraint firstItem="itu-64-jzS" firstAttribute="width" secondItem="8IR-JH-L5Q" secondAttribute="width" id="Moh-5v-xPH"/>
+                            <constraint firstItem="Moy-kc-jsd" firstAttribute="width" secondItem="sUq-Qr-2eB" secondAttribute="width" id="N49-FP-bpb"/>
+                            <constraint firstItem="ZsF-Wu-keS" firstAttribute="width" secondItem="8IR-JH-L5Q" secondAttribute="width" id="Ng8-35-a6z"/>
+                            <constraint firstItem="Vcb-Pn-WZW" firstAttribute="centerX" secondItem="leM-Pv-279" secondAttribute="centerX" id="OYu-h2-Fpt"/>
+                            <constraint firstItem="8IR-JH-L5Q" firstAttribute="centerX" secondItem="leM-Pv-279" secondAttribute="trailing" multiplier="0.2" id="QRl-EP-XEQ"/>
+                            <constraint firstItem="Rcf-36-c5o" firstAttribute="centerX" secondItem="tlG-do-nAJ" secondAttribute="centerX" id="RbP-My-HDh"/>
+                            <constraint firstItem="8IR-JH-L5Q" firstAttribute="width" secondItem="leM-Pv-279" secondAttribute="width" multiplier="0.198068" id="S46-Sf-FU3"/>
+                            <constraint firstItem="ZsF-Wu-keS" firstAttribute="centerX" secondItem="leM-Pv-279" secondAttribute="centerX" id="aAd-dj-cTT"/>
+                            <constraint firstItem="8IR-JH-L5Q" firstAttribute="centerY" secondItem="ZsF-Wu-keS" secondAttribute="centerY" id="ccK-QO-7NE"/>
+                            <constraint firstItem="Vcb-Pn-WZW" firstAttribute="centerY" secondItem="leM-Pv-279" secondAttribute="centerY" id="e4A-Sa-F7x"/>
+                            <constraint firstItem="tpK-BX-Z2E" firstAttribute="centerY" secondItem="sUq-Qr-2eB" secondAttribute="centerY" id="kGj-rH-AV6"/>
+                            <constraint firstItem="itu-64-jzS" firstAttribute="centerX" secondItem="8IR-JH-L5Q" secondAttribute="centerX" id="l5H-Fr-RVo"/>
+                            <constraint firstItem="Vcb-Pn-WZW" firstAttribute="width" secondItem="itu-64-jzS" secondAttribute="width" id="lfi-FH-x68"/>
+                            <constraint firstItem="tlG-do-nAJ" firstAttribute="centerY" secondItem="ZsF-Wu-keS" secondAttribute="centerY" id="pNW-b0-RLS"/>
+                            <constraint firstItem="tpK-BX-Z2E" firstAttribute="width" secondItem="itu-64-jzS" secondAttribute="width" id="qIE-wv-dnv"/>
+                            <constraint firstItem="Rcf-36-c5o" firstAttribute="centerY" secondItem="Vcb-Pn-WZW" secondAttribute="centerY" id="rri-rt-k8x"/>
+                            <constraint firstItem="tpK-BX-Z2E" firstAttribute="centerX" secondItem="itu-64-jzS" secondAttribute="centerX" id="s9O-6e-GfJ"/>
+                            <constraint firstItem="sUq-Qr-2eB" firstAttribute="width" secondItem="tpK-BX-Z2E" secondAttribute="width" id="uc3-26-G74"/>
+                            <constraint firstItem="tlG-do-nAJ" firstAttribute="width" secondItem="ZsF-Wu-keS" secondAttribute="width" id="xbJ-QT-aYG"/>
+                            <constraint firstItem="tlG-do-nAJ" firstAttribute="centerX" secondItem="leM-Pv-279" secondAttribute="trailing" multiplier="0.8" id="yjo-1c-uUw"/>
+                            <constraint firstItem="sUq-Qr-2eB" firstAttribute="centerX" secondItem="leM-Pv-279" secondAttribute="centerX" id="yno-Bj-9mZ"/>
+                            <constraint firstItem="Rcf-36-c5o" firstAttribute="width" secondItem="Vcb-Pn-WZW" secondAttribute="width" id="zp3-2T-KWR"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="家园" image="third" selectedImage="third_selcted" id="nXq-I1-UTu"/>
+                    <connections>
+                        <outlet property="btn_1" destination="8IR-JH-L5Q" id="1dd-EV-MvH"/>
+                        <outlet property="btn_2" destination="ZsF-Wu-keS" id="Crj-WG-59U"/>
+                        <outlet property="btn_3" destination="tlG-do-nAJ" id="Idd-0F-IlH"/>
+                        <outlet property="btn_4" destination="itu-64-jzS" id="jaS-dE-1Nb"/>
+                        <outlet property="btn_5" destination="Vcb-Pn-WZW" id="OPv-68-Hka"/>
+                        <outlet property="btn_6" destination="Rcf-36-c5o" id="pPF-Gj-jA0"/>
+                        <outlet property="btn_7" destination="tpK-BX-Z2E" id="jg9-dt-AY2"/>
+                        <outlet property="btn_8" destination="sUq-Qr-2eB" id="5dh-qY-wJR"/>
+                        <outlet property="btn_9" destination="Moy-kc-jsd" id="VDP-fe-KnQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f4M-lM-T9e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -425,6 +575,7 @@
                         <outlet property="lbl_name" destination="CaG-tA-giu" id="Ix9-6f-PSs"/>
                         <outlet property="lbl_num" destination="nuD-aO-z8f" id="XpM-U4-jB1"/>
                         <outlet property="lbl_topic" destination="xmR-un-tLo" id="xNt-S2-g5W"/>
+                        <segue destination="0Zg-9B-63w" kind="push" id="PHC-Dv-PBO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ybv-dN-TBH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -459,10 +610,28 @@
             </objects>
             <point key="canvasLocation" x="4165" y="-890"/>
         </scene>
+        <!--WebBrowser-->
+        <scene sceneID="faK-hc-EK5">
+            <objects>
+                <viewController storyboardIdentifier="WebBrowser" title="WebBrowser" id="0Zg-9B-63w" customClass="WebBrowserTest" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NHM-9Z-5WV"/>
+                        <viewControllerLayoutGuide type="bottom" id="Los-4t-LYA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Eux-Nw-ZFA">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gTM-RL-tjX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="smd-3f-DuW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4174" y="-192"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="LDG-Iz-NpP">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WSq-EA-RhQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController storyboardIdentifier="navMain" id="byV-A9-VXo" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="RiB-YJ-Kbh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -472,6 +641,7 @@
                         <segue destination="ivw-WV-1gV" kind="relationship" relationship="rootViewController" id="Y8J-I8-Gyy"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WSq-EA-RhQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1446" y="411"/>
         </scene>
@@ -505,6 +675,15 @@
         <image name="Message" width="57" height="54"/>
         <image name="Zone" width="57" height="54"/>
         <image name="bottom" width="562" height="78"/>
+        <image name="btn_3_1" width="138" height="134"/>
+        <image name="btn_3_2" width="140" height="134"/>
+        <image name="btn_3_3" width="134" height="134"/>
+        <image name="btn_3_4" width="138" height="140"/>
+        <image name="btn_3_5" width="140" height="140"/>
+        <image name="btn_3_6" width="134" height="140"/>
+        <image name="btn_3_7" width="138" height="145"/>
+        <image name="btn_3_8" width="140" height="145"/>
+        <image name="btn_3_9" width="134" height="145"/>
         <image name="dropdown_arrow" width="157" height="120"/>
         <image name="first" width="29" height="29"/>
         <image name="first_selected" width="29" height="29"/>

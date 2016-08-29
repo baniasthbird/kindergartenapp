@@ -17,6 +17,7 @@
 #import "Baby.h"
 #import "Class_child.h"
 #import "MBProgressHUD.h"
+#import "UIImage+GIF.h"
 
 
 @interface ViewController ()<UITextFieldDelegate,YBMonitorNetWorkStateDelegate>
@@ -99,7 +100,7 @@
     [_txtPwd setBorderStyle:UITextBorderStyleNone];
     _bgView.layer.cornerRadius=10;
    
-    _txtUsrName.text=@"P01";
+    _txtUsrName.text=@"T01";
     _txtPwd.text=@"123456";
     _txtPwd.delegate=self;
     _txtUsrName.delegate=self;
@@ -142,7 +143,13 @@
         
         
         view_indicator=[MBProgressHUD showHUDAddedTo:self.view animated:YES];
-        view_indicator.customView=img_refresh;
+        view_indicator.userInteractionEnabled=NO;
+        view_indicator.dimBackground=YES;
+        view_indicator.color=[UIColor clearColor];
+        [self.view addSubview:view_indicator];
+        view_indicator.mode=MBProgressHUDModeCustomView;
+        UIImage *imges=[UIImage sd_animatedGIFNamed:@"loading"];
+        view_indicator.customView=[[UIImageView alloc]initWithImage:imges];
         [view_indicator show:YES];
        // [MBProgressHUD showHUDAddedTo:self.view animated:YES];
         

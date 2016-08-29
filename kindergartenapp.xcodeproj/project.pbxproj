@@ -28,7 +28,6 @@
 		2C9361D51D6C8EA9002E5D4E /* Class_child.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9361D41D6C8EA9002E5D4E /* Class_child.m */; };
 		2C9361D81D6C8FD7002E5D4E /* TeacherInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9361D71D6C8FD7002E5D4E /* TeacherInfo.m */; };
 		2C9361DA1D6F2FE9002E5D4E /* FZSEJT.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2C9361D91D6F2F5F002E5D4E /* FZSEJT.ttf */; };
-		2C9361DC1D710FBF002E5D4E /* libMJRefresh.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C9361DB1D710FBF002E5D4E /* libMJRefresh.a */; };
 		2CEBEDF01D72883F000DD832 /* tb_select.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CEBEDEF1D72883F000DD832 /* tb_select.m */; };
 		2CEBEDF31D72F687000DD832 /* Headmaster.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CEBEDF21D72F687000DD832 /* Headmaster.m */; };
 		2CEBEDF51D72FCF2000DD832 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CEBEDF41D72FCF2000DD832 /* Assets.xcassets */; };
@@ -36,6 +35,8 @@
 		684CB4881D6BE00A0099CEE4 /* GrayPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 684CB4821D6BE00A0099CEE4 /* GrayPageControl.m */; };
 		684CB4891D6BE00A0099CEE4 /* HcdGuideViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 684CB4851D6BE00A0099CEE4 /* HcdGuideViewCell.m */; };
 		684CB48A1D6BE00A0099CEE4 /* HcdGuideViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 684CB4871D6BE00A0099CEE4 /* HcdGuideViewManager.m */; };
+		6884D35F1D742F7D00BC87F8 /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6884D35E1D742F7D00BC87F8 /* loading.gif */; };
+		6884D3631D74300600BC87F8 /* UIImage+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 6884D3621D74300600BC87F8 /* UIImage+GIF.m */; };
 		6895AE2E1D70214C0003F2A2 /* libSDCycleScrollView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6895AE2D1D70214C0003F2A2 /* libSDCycleScrollView.a */; };
 		68F89E051D66DFA700D2C1F0 /* libAFNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68F89E041D66DFA700D2C1F0 /* libAFNetworking.a */; };
 		68F89E071D66DFAB00D2C1F0 /* libMBProgressHUD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68F89E061D66DFAB00D2C1F0 /* libMBProgressHUD.a */; };
@@ -121,6 +122,9 @@
 		684CB4851D6BE00A0099CEE4 /* HcdGuideViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HcdGuideViewCell.m; sourceTree = "<group>"; };
 		684CB4861D6BE00A0099CEE4 /* HcdGuideViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HcdGuideViewManager.h; sourceTree = "<group>"; };
 		684CB4871D6BE00A0099CEE4 /* HcdGuideViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HcdGuideViewManager.m; sourceTree = "<group>"; };
+		6884D35E1D742F7D00BC87F8 /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loading.gif; sourceTree = "<group>"; };
+		6884D3611D74300600BC87F8 /* UIImage+GIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GIF.h"; sourceTree = "<group>"; };
+		6884D3621D74300600BC87F8 /* UIImage+GIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GIF.m"; sourceTree = "<group>"; };
 		6895AE2D1D70214C0003F2A2 /* libSDCycleScrollView.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSDCycleScrollView.a; path = "../../Library/Developer/Xcode/DerivedData/kindergartenapp-erviqgsjzuezvweuxxgwyjysxxzl/Build/Products/Debug-iphonesimulator/libSDCycleScrollView.a"; sourceTree = "<group>"; };
 		68F89E041D66DFA700D2C1F0 /* libAFNetworking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAFNetworking.a; path = "Pods/../build/Debug-iphoneos/libAFNetworking.a"; sourceTree = "<group>"; };
 		68F89E061D66DFAB00D2C1F0 /* libMBProgressHUD.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMBProgressHUD.a; path = "Pods/../build/Debug-iphoneos/libMBProgressHUD.a"; sourceTree = "<group>"; };
@@ -141,7 +145,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C9361DC1D710FBF002E5D4E /* libMJRefresh.a in Frameworks */,
 				6895AE2E1D70214C0003F2A2 /* libSDCycleScrollView.a in Frameworks */,
 				68F89E091D66DFAE00D2C1F0 /* libSDWebImage.a in Frameworks */,
 				68F89E071D66DFAB00D2C1F0 /* libMBProgressHUD.a in Frameworks */,
@@ -194,6 +197,7 @@
 		2C8AE9DC1D5F337B0069B3BD /* kindergartenapp */ = {
 			isa = PBXGroup;
 			children = (
+				6884D35E1D742F7D00BC87F8 /* loading.gif */,
 				2CEBEDF41D72FCF2000DD832 /* Assets.xcassets */,
 				68F89E141D67053600D2C1F0 /* MainController */,
 				68F89E0B1D66F1E900D2C1F0 /* OpenSource */,
@@ -439,9 +443,19 @@
 			path = HcdGuideView;
 			sourceTree = "<group>";
 		};
+		6884D3601D74300600BC87F8 /* UIImage+GIF */ = {
+			isa = PBXGroup;
+			children = (
+				6884D3611D74300600BC87F8 /* UIImage+GIF.h */,
+				6884D3621D74300600BC87F8 /* UIImage+GIF.m */,
+			);
+			path = "UIImage+GIF";
+			sourceTree = "<group>";
+		};
 		68F89E0B1D66F1E900D2C1F0 /* OpenSource */ = {
 			isa = PBXGroup;
 			children = (
+				6884D3601D74300600BC87F8 /* UIImage+GIF */,
 				684CB4801D6BE00A0099CEE4 /* HcdGuideView */,
 				68F89E0C1D66F1E900D2C1F0 /* NetWork */,
 			);
@@ -586,6 +600,7 @@
 			files = (
 				2C9361DA1D6F2FE9002E5D4E /* FZSEJT.ttf in Resources */,
 				2C8AE9ED1D5F337B0069B3BD /* LaunchScreen.storyboard in Resources */,
+				6884D35F1D742F7D00BC87F8 /* loading.gif in Resources */,
 				2CEBEDF51D72FCF2000DD832 /* Assets.xcassets in Resources */,
 				2C8AE9E81D5F337B0069B3BD /* Main.storyboard in Resources */,
 			);
@@ -673,6 +688,7 @@
 				684CB4891D6BE00A0099CEE4 /* HcdGuideViewCell.m in Sources */,
 				68F89E171D67057A00D2C1F0 /* MainTabController.m in Sources */,
 				2C9361A01D692E88002E5D4E /* NTButton.m in Sources */,
+				6884D3631D74300600BC87F8 /* UIImage+GIF.m in Sources */,
 				2CEBEDF31D72F687000DD832 /* Headmaster.m in Sources */,
 				2C9361CC1D6C8B4D002E5D4E /* ParentInfo.m in Sources */,
 				2C8AE9DF1D5F337B0069B3BD /* main.m in Sources */,

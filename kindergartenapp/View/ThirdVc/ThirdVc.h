@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UserInfo.h"
 
 @interface ThirdVc : UIViewController
+
+
+@property (nonatomic,strong) UserInfo *userInfo;
 
 @end
