@@ -20,12 +20,14 @@
 #import "UIImage+GIF.h"
 
 
+
 @interface ViewController ()<UITextFieldDelegate,YBMonitorNetWorkStateDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *login_Parent;
 @property (weak, nonatomic) IBOutlet UIView *bgView;
 @property (weak, nonatomic) IBOutlet UITextField *txtUsrName;
 @property (weak, nonatomic) IBOutlet UITextField *txtPwd;
-@property (weak, nonatomic) IBOutlet UIImageView *imgarrow;
+@property (weak, nonatomic) IBOutlet UIButton *btn_dropdown;
+
 
 
 @property (nonatomic, strong) AFHTTPSessionManager *session;
@@ -33,6 +35,9 @@
 @property (nonatomic,strong) NSMutableArray *refreshImages;
 
 @property (nonatomic,strong) NSMutableArray *normalImages;
+
+@property (nonatomic) NSArray *dataSource;
+
 
 @end
 
@@ -78,6 +83,13 @@
     [images addObject:[UIImage imageNamed:@"slide_image2"]];
     [images addObject:[UIImage imageNamed:@"slide_image3"]];
     [images addObject:[UIImage imageNamed:@"slide_image4"]];
+    
+    _dataSource=[[NSArray alloc]initWithObjects:@"P01",@"T01",@"Y01", nil];
+    
+    
+    
+    
+    
     /*
     [[HcdGuideViewManager sharedInstance] showGuideViewWithImages:images
                                                    andButtonTitle:@"开始体验"
@@ -104,7 +116,9 @@
     _txtPwd.text=@"123456";
     _txtPwd.delegate=self;
     _txtUsrName.delegate=self;
-    [_imgarrow setHidden:YES];
+   
+    
+    
 
     _session=[AFHTTPSessionManager manager];
     _session.responseSerializer = [AFHTTPResponseSerializer serializer];
@@ -127,6 +141,8 @@
     img_refresh=[baseFunc IndicatorAnimationView];
     
 }
+
+
 
 //登陆
 -(void)Login:(UIButton*)sender {
@@ -354,6 +370,26 @@
        return arr_class;
     
 }
+
+- (IBAction)DropDown:(id)sender {
+    if ([sender isSelected]) {
+        [self hideAccountBox];
+    }
+    else {
+        [self showAccountBox];
+    }
+}
+
+
+-(void)showAccountBox {
+    [_btn_dropdown setSelected:NO];
+}
+
+
+-(void)hideAccountBox {
+    [_btn_dropdown setSelected:YES];
+}
+
 
 
 @end
