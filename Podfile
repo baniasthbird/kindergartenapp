@@ -3,4 +3,5 @@ pod 'AFNetworking'
 pod 'MBProgressHUD'
 pod 'SDWebImage'
 pod 'SDCycleScrollView'
+pod 'AKLookups'
 
