@@ -58,12 +58,10 @@ install_resource()
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_resource "AKLookups/Resources/selector_btn_arrow.png"
-  install_resource "AKLookups/Resources/selector_btn_arrow@2x.png"
+  install_resource "${BUILT_PRODUCTS_DIR}/DownPicker.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_resource "AKLookups/Resources/selector_btn_arrow.png"
-  install_resource "AKLookups/Resources/selector_btn_arrow@2x.png"
+  install_resource "${BUILT_PRODUCTS_DIR}/DownPicker.bundle"
 fi
 
 mkdir -p "${CONFIGURATION_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

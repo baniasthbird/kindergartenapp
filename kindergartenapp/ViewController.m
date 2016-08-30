@@ -18,10 +18,15 @@
 #import "Class_child.h"
 #import "MBProgressHUD.h"
 #import "UIImage+GIF.h"
+#import "ZLCGuidePageView.h"
+
+
+
 
 
 
 @interface ViewController ()<UITextFieldDelegate,YBMonitorNetWorkStateDelegate>
+
 @property (weak, nonatomic) IBOutlet UIButton *login_Parent;
 @property (weak, nonatomic) IBOutlet UIView *bgView;
 @property (weak, nonatomic) IBOutlet UITextField *txtUsrName;
@@ -49,6 +54,7 @@
     
 }
 
+
 - (NSMutableArray *)normalImages
 {
     if (_normalImages == nil) {
@@ -73,6 +79,7 @@
 }
 
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -83,6 +90,12 @@
     [images addObject:[UIImage imageNamed:@"slide_image2"]];
     [images addObject:[UIImage imageNamed:@"slide_image3"]];
     [images addObject:[UIImage imageNamed:@"slide_image4"]];
+    
+    [self.navigationController.navigationBar setHidden:YES];
+    
+    //创建引导页视图
+    ZLCGuidePageView *pageView = [[ZLCGuidePageView alloc]initWithFrame:self.view.frame WithImages:images];
+    [self.navigationController.view addSubview:pageView];
     
     _dataSource=[[NSArray alloc]initWithObjects:@"P01",@"T01",@"Y01", nil];
     
@@ -139,10 +152,26 @@
     [self.view addGestureRecognizer:singleTap];
     
     img_refresh=[baseFunc IndicatorAnimationView];
+    /*
+    _LoginLookupBtn = [[AKLookups alloc] initWithLookupViewController:_listVC];
+    _LoginLookupBtn.frame = CGRectMake(_txtUsrName.frame.origin.x,CGRectGetMaxY(_txtUsrName.frame), _txtUsrName.frame.size.width, _txtUsrName.frame.size.height);
+    [_LoginLookupBtn setBackgroundColor:[UIColor redColor]];
+    [self.view addSubview:_LoginLookupBtn];
+     */
     
+   
 }
 
-
+-(void)viewDidAppear:(BOOL)animated {
+      // create the array of data;
+    NSMutableArray *bandArray=[[NSMutableArray alloc]init];
+    
+    [bandArray addObject:@"P01"];
+    [bandArray addObject:@"T01"];
+    [bandArray addObject:@"Y01"];
+    
+    self.downPicker=[[DownPicker alloc] initWithTextField:self.txtUsrName withData:bandArray];
+}
 
 //登陆
 -(void)Login:(UIButton*)sender {

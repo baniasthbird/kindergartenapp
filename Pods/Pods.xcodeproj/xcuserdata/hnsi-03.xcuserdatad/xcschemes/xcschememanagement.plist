@@ -9,6 +9,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>DownPicker-DownPicker.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>DownPicker.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MBProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,12 +42,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1B62F5A8EED203A0B5147EA2CFC13EB0</key>
+		<key>0A90C0A7246B29CE5E90321E0C502ED5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3E0D72D69956EB55BBCD16A3A1A52552</key>
+		<key>29A27F4D784F188A57E5064D98FA0CDF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5C05FADE30EF910B83CBF24CED9FD2F6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>926A84365F6B93264AF882DA49B7E685</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -47,7 +67,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BB281299E4BD428B152F9B84020F4B6F</key>
+		<key>DF7339B850F143465DE353DF70630F25</key>
 		<dict>
 			<key>primary</key>
 			<true/>

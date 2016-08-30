@@ -170,6 +170,7 @@
     
     NSMutableArray *arr_menus=_userInfo.arr_menus;
     dic_pic=[NSMutableDictionary dictionary];
+    dic_video=[NSMutableDictionary dictionary];
     
     
     UIImage *img_banner1=[UIImage imageNamed:str_banner_img1];
@@ -392,7 +393,7 @@
         [btn_3 setTitle:@"发视频" forState:UIControlStateNormal];
         [btn_3 setTitleColor:[UIColor colorWithRed:255/255.0f green:181/255.0f blue:56/255.0f alpha:1] forState:UIControlStateNormal];
         [btn_3 setTag:6];
-        [btn_3 setTitleColor:[UIColor colorWithRed:250/255.0f green:208/255.0f blue:52/255.0f alpha:1] forState:UIControlStateNormal];
+        [btn_3 addTarget:self action:@selector(Albumn:) forControlEvents:UIControlEventTouchUpInside];
         
         [btn_4 setCenter:CGPointMake(self.view.frame.size.width*0.18, _bg_Content.frame.size.height*0.8)];
         [btn_4 setBackgroundImage:[UIImage imageNamed:@"t_btn4"] forState:UIControlStateNormal];

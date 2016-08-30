@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DownPicker.h"
 
 @interface ViewController : UIViewController
 
+@property (strong,nonatomic) DownPicker *downPicker;
 
 @end
 
