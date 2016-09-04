@@ -15,7 +15,7 @@
 #import "ParentInfo.h"
 #import "TeacherInfo.h"
 #import "Baby.h"
-#import "Class_child.h"
+#import "Class_School.h"
 #import "MBProgressHUD.h"
 #import "UIImage+GIF.h"
 #import "ZLCGuidePageView.h"
@@ -235,6 +235,10 @@
                 
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                 NSLog(@"接收失败");
+                [view_indicator hide:YES];
+                [view_indicator setLabelText:@"接受失败"];
+                view_indicator.mode=MBProgressHUDModeText;
+                [view_indicator show:YES];
             }];
         }
     }
@@ -312,6 +316,7 @@
     [defaults synchronize];
 }
 
+#pragma mark 根据接受数据保存角色内容
 -(void)saveUserAdditionInfo:(NSArray*)arr_usr_add role:(NSString*)str_role {
     NSInteger i_role=[str_role integerValue];
     if (i_role==0) {
@@ -327,8 +332,19 @@
     }
     else if (i_role==2) {
         //解析所有班级，添加教师
-        NSMutableArray *arr_class=[self GenerateClass:arr_usr_add];
-        TeacherInfo *teacher=[TeacherInfo CreateTeacher:arr_class];
+        NSMutableArray *arr_result=[self GenerateClass:arr_usr_add role:str_role];
+        NSMutableArray *arr_class=[[NSMutableArray alloc]init];
+        Class_School *dic_school=[[Class_School alloc]init];
+        for (int i=0;i<[arr_result count];i++) {
+            Class_School *tmp=[arr_result objectAtIndex:i];
+            if ([tmp.roleid isEqualToString:@"2"]) {
+                [arr_class addObject:tmp];
+            }
+            else if ([tmp.roleid isEqualToString:@"3"]) {
+                dic_school=tmp;
+            }
+        }
+        TeacherInfo *teacher=[TeacherInfo CreateTeacher:arr_class school:dic_school];
         NSData *data=[NSKeyedArchiver archivedDataWithRootObject:teacher];
         NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
         [defaults setObject:data forKey:@"user_teacher"];
@@ -376,24 +392,27 @@
     return arr_babies;
 }
 
--(NSMutableArray*)GenerateClass:(NSArray*)arr_usr_add {
+-(NSMutableArray*)GenerateClass:(NSArray*)arr_usr_add role:(NSString*)str_role{
     NSMutableArray *arr_class=[[NSMutableArray alloc]init];
     for (int i=0;i<[arr_usr_add count];i++) {
         NSDictionary *dic_class_info=[arr_usr_add objectAtIndex:i];
-        NSString *str_gradeid=[baseFunc GetValueFromDic:dic_class_info key:@"gradeid"];
-        NSString *str_class_id=[baseFunc GetValueFromDic:dic_class_info key:@"id"];
-        NSString *str_schoolid=[baseFunc GetValueFromDic:dic_class_info key:@"schoolid"];
-        NSString *str_schoolname=[baseFunc GetValueFromDic:dic_class_info key:@"schoolname"];
-        NSString *str_stunumber=[baseFunc GetValueFromDic:dic_class_info key:@"stunumber"];
-        NSString *str_classname=[baseFunc GetValueFromDic:dic_class_info key:@"classname"];
-        Class_child *o_class=[[Class_child alloc]init];
-        o_class.gradeid=str_gradeid;
-        o_class.class_id=str_class_id;
-        o_class.schoolid=str_schoolid;
-        o_class.schoolname=str_schoolname;
-        o_class.stunumber=str_stunumber;
-        o_class.classname=str_classname;
-        [arr_class addObject:o_class];
+        NSString *str_userid=[baseFunc GetValueFromDic:dic_class_info key:@"userid"];
+        NSString *str_i_id=[baseFunc GetValueFromDic:dic_class_info key:@"id"];
+        NSString *str_rolename=[baseFunc GetValueFromDic:dic_class_info key:@"rolename"];
+        NSString *str_dutyid=[baseFunc GetValueFromDic:dic_class_info key:@"dutyid"];
+        NSString *str_roleid=[baseFunc GetValueFromDic:dic_class_info key:@"roleid"];
+        NSString *str_dutyname=[baseFunc GetValueFromDic:dic_class_info key:@"dutyname"];
+       // if ([str_roleid isEqualToString:str_role]) {
+            Class_School *o_class=[[Class_School alloc]init];
+            o_class.userid=str_userid;
+            o_class.i_id=str_i_id;
+            o_class.rolename=str_rolename;
+            o_class.dutyid=str_dutyid;
+            o_class.roleid=str_roleid;
+            o_class.dutyname=str_dutyname;
+            [arr_class addObject:o_class];
+      //  }
+       
 
     }
        return arr_class;

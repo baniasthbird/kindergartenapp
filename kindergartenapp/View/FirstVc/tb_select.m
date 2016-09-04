@@ -69,8 +69,11 @@
         
     }
     if (_arr_class!=nil) {
-        Class_child *class=[_arr_class objectAtIndex:indexPath.row];
-        cell.textLabel.text=class.classname;
+        Class_School *class=[_arr_class objectAtIndex:indexPath.row];
+        if ([class.roleid isEqualToString:@"2"]) {
+            cell.textLabel.text=class.dutyname;
+        }
+        
     }
     
     
@@ -89,7 +92,7 @@
         //[self presentViewController:firstVc animated:YES completion:nil];
     }
     if (_arr_class!=nil) {
-        Class_child *class_child=[_arr_class objectAtIndex:indexPath.row];
+        Class_School *class_child=[_arr_class objectAtIndex:indexPath.row];
         [_delegate PassValue:nil childvalue:class_child];
         [self.navigationController popViewControllerAnimated:YES];
        

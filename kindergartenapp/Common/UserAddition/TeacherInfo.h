@@ -7,13 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Class_child.h"
+#import "Class_School.h"
 
 //一个老师负责多个班级
 @interface TeacherInfo : NSObject<NSCoding>
 
-+(instancetype)CreateTeacher:(NSMutableArray*)arr_class;
++(instancetype)CreateTeacher:(NSMutableArray*)arr_class school:(Class_School*)dic_school;
 
 @property (nonatomic,strong) NSMutableArray *arr_class;
+
+@property (nonatomic,strong) Class_School *dic_school;
 
 @end

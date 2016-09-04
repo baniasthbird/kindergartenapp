@@ -9,7 +9,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>AKLookups.xcscheme</key>
+		<key>DownPicker-DownPicker.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>DownPicker.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -37,17 +42,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>22626D0E893E0FE10A174F564E0C14F7</key>
+		<key>0A90C0A7246B29CE5E90321E0C502ED5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>29E426C7EF01A351A61CD5687ADC9251</key>
+		<key>29A27F4D784F188A57E5064D98FA0CDF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>63E2B4A7174F14A2BD705C92BABB882E</key>
+		<key>5C05FADE30EF910B83CBF24CED9FD2F6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>926A84365F6B93264AF882DA49B7E685</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -57,7 +67,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F98969A34AE46097E13AC2E2B7D33C84</key>
+		<key>DF7339B850F143465DE353DF70630F25</key>
 		<dict>
 			<key>primary</key>
 			<true/>

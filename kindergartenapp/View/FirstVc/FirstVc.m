@@ -46,7 +46,7 @@
     
     Baby *baby;
     
-    Class_child *class_child;
+    Class_School *class_school;
     
     
     MBProgressHUD *hud;
@@ -74,6 +74,7 @@
     tmp_item.image=[[UIImage imageNamed:@"second"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     self.tabBarItem.image=[[UIImage imageNamed:@"first"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     self.tabBarItem.selectedImage=[[UIImage imageNamed:@"first_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+
     
     self.navigationController.navigationBar.topItem.title=@"新马良幼儿园";
     
@@ -135,7 +136,7 @@
     }
     else if (i_role==2) {
         teacher=[[TeacherInfo alloc]init];
-        class_child=[[Class_child alloc]init];
+        class_school=[[Class_School alloc]init];
         NSData *data_teacher=[[NSUserDefaults standardUserDefaults] objectForKey:@"user_teacher"];
         teacher=[NSKeyedUnarchiver unarchiveObjectWithData:data_teacher];
         if ([teacher.arr_class count]>1) {
@@ -147,11 +148,20 @@
         }
         if (teacher !=nil) {
             NSMutableArray *arr_class=teacher.arr_class;
+            _lbl_label2.text=teacher.dic_school.dutyname;
             if ([arr_class count]>0) {
-                class_child=[arr_class objectAtIndex:0];
-                _lbl_label1.text=class_child.classname;
-                _lbl_label2.text=class_child.schoolname;
-                _lbl_num.text=class_child.stunumber;
+                for (int i=0;i<[arr_class count];i++) {
+                    class_school=[arr_class objectAtIndex:i];
+                    if ([class_school.roleid isEqualToString:_userInfo.str_role]) {
+                        _lbl_label1.text=class_school.dutyname;
+                        _lbl_num.text=class_school.i_id;
+
+                    }
+                }
+               
+                
+                
+               
             }
         }
        
@@ -287,29 +297,30 @@
     
 
     CGFloat i_fontsize=16;
+    CGFloat btn_w=0.185*Width;
     if (iPhone5_5s || iPhone4_4s) {
         i_fontsize=14;
     }
     
-    [btn_1 setFrame:CGRectMake(0.06441223832528*self.view.frame.size.width, 0.03170289855072*self.view.frame.size.height, 0.18518518518519*self.view.frame.size.width, 0.18518518518519*self.view.frame.size.width)];
+    [btn_1 setFrame:CGRectMake(0.06441223832528*self.view.frame.size.width, 0.03170289855072*self.view.frame.size.height, btn_w, btn_w)];
     btn_1.titleLabel.font=[UIFont fontWithName:@"FZSEJW--GB1-0" size:i_fontsize];
     [btn_1 setTitleEdgeInsets:UIEdgeInsetsMake(80, 0, 0, 0)];
     
     
-    [btn_2 setFrame:CGRectMake(0.4122383252818*self.view.frame.size.width, 0.03170289855072*self.view.frame.size.height, 0.18518518518519*self.view.frame.size.width, 0.18518518518519*self.view.frame.size.width)];
+    [btn_2 setFrame:CGRectMake(0.4122383252818*self.view.frame.size.width, 0.03170289855072*self.view.frame.size.height, btn_w, btn_w)];
     btn_2.titleLabel.font=[UIFont fontWithName:@"FZSEJW--GB1-0" size:i_fontsize];
     [btn_2 setTitleEdgeInsets:UIEdgeInsetsMake(80, 0, 0, 0)];
 
-    [btn_3 setFrame:CGRectMake(0.76167471819646*self.view.frame.size.width, 0.03170289855072*self.view.frame.size.height, 0.18518518518519*self.view.frame.size.width, 0.18518518518519*self.view.frame.size.width)];
+    [btn_3 setFrame:CGRectMake(0.76167471819646*self.view.frame.size.width, 0.03170289855072*self.view.frame.size.height, btn_w, btn_w)];
     btn_3.titleLabel.font=[UIFont fontWithName:@"FZSEJW--GB1-0" size:i_fontsize];
     [btn_3 setTitleEdgeInsets:UIEdgeInsetsMake(80, 0, 0, 0)];
     
     
-    [btn_4 setFrame:CGRectMake(0.06441223832528*self.view.frame.size.width, 0.21920289855072*self.view.frame.size.height, 0.18518518518519*self.view.frame.size.width, 0.18518518518519*self.view.frame.size.width)];
+    [btn_4 setFrame:CGRectMake(0.06441223832528*self.view.frame.size.width, 0.21920289855072*self.view.frame.size.height, btn_w, btn_w)];
     btn_4.titleLabel.font=[UIFont fontWithName:@"FZSEJW--GB1-0" size:i_fontsize];
     [btn_4 setTitleEdgeInsets:UIEdgeInsetsMake(80, 0, 0, 0)];
 
-    [btn_5 setFrame:CGRectMake(0.4122383252818*self.view.frame.size.width, 0.21920289855072*self.view.frame.size.height, 0.18518518518519*self.view.frame.size.width, 0.18518518518519*self.view.frame.size.width)];
+    [btn_5 setFrame:CGRectMake(0.4122383252818*self.view.frame.size.width, 0.21920289855072*self.view.frame.size.height, btn_w, btn_w)];
     btn_5.titleLabel.font=[UIFont fontWithName:@"FZSEJW--GB1-0" size:i_fontsize];
     [btn_5 setTitleEdgeInsets:UIEdgeInsetsMake(80, 0, 0, 0)];
 
@@ -350,7 +361,7 @@
         [btn_5 setTag:5];
         [btn_5 addTarget:self action:@selector(Albumn:) forControlEvents:UIControlEventTouchUpInside];
         
-        [btn_6 setFrame:CGRectMake(0.76167471819646*self.view.frame.size.width, 0.21920289855072*self.view.frame.size.height, 0.18518518518519*self.view.frame.size.width, 0.18518518518519*self.view.frame.size.width)];
+        [btn_6 setFrame:CGRectMake(0.76167471819646*self.view.frame.size.width, 0.21920289855072*self.view.frame.size.height, btn_w, btn_w)];
         [btn_6 setCenter:CGPointMake(self.view.frame.size.width*0.82, _bg_Content.frame.size.height*0.75)];
         [btn_6 setBackgroundImage:[UIImage imageNamed:@"p_btn6"] forState:UIControlStateNormal];
         [btn_6 setTag:6];
@@ -465,7 +476,11 @@
     str_url=[NSString stringWithFormat:@"%@?%@=%@&%@=%@",str_url,@"userid",str_id,@"role",str_role];
     WebBrowserTest *webbrowser = [[self storyboard] instantiateViewControllerWithIdentifier:@"WebBrowser"];
     webbrowser.str_url=str_url;
-    [self.navigationController pushViewController:webbrowser animated:YES];
+    [UIApplication sharedApplication].keyWindow.rootViewController=webbrowser;
+    [self presentViewController:webbrowser animated:YES completion:^{
+       // [self dismissViewControllerAnimated:YES completion:nil];
+    }];
+    //[self.navigationController pushViewController:webbrowser animated:YES];
     
 }
 
@@ -482,7 +497,7 @@
     [self.navigationController pushViewController:tb_select animated:YES];
 }
 
--(void)PassValue:(Baby *)v_baby childvalue:(Class_child *)v_class_child {
+-(void)PassValue:(Baby *)v_baby childvalue:(Class_School *)v_class_child {
     if (v_baby!=nil && v_class_child==nil) {
         baby=v_baby;
         _lbl_name.text=[NSString stringWithFormat:@"%@%@",baby.name,@"妈妈"];
@@ -490,10 +505,10 @@
         _lbl_age.text=[self ClacAge];
     }
     else if (v_baby==nil && v_class_child!=nil) {
-        class_child=v_class_child;
-        _lbl_label1.text=class_child.classname;
-        _lbl_label2.text=class_child.schoolname;
-        _lbl_num.text=class_child.stunumber;
+        class_school=v_class_child;
+        _lbl_label1.text=class_school.dutyname;
+        //_lbl_label2.text=class_child.schoolname;
+        _lbl_num.text=class_school.rolename;
     }
     [self.view setNeedsDisplay];
 }

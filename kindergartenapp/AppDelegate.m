@@ -24,6 +24,8 @@
     
     [[UINavigationBar appearance] setTitleTextAttributes:dict];
     
+    [[UITabBarItem appearance] setTitleTextAttributes:@{ NSForegroundColorAttributeName : [UIColor blackColor],NSFontAttributeName:[UIFont fontWithName:@"FZSEJW--GB1-0" size:12.0]}            forState:UIControlStateNormal];
+    
     self.window=[[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];

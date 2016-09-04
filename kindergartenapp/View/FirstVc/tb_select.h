@@ -7,14 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Class_child.h"
+#import "Class_School.h"
 #import "Baby.h"
 
 @class tb_select;
 
 @protocol tableviewselectDelegate <NSObject>
 
--(void)PassValue:(Baby*)v_baby childvalue:(Class_child*)v_class_child;
+-(void)PassValue:(Baby*)v_baby childvalue:(Class_School*)v_class_child;
 
 @end
 
