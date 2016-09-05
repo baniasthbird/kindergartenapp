@@ -270,6 +270,8 @@
     }
     else {
         NSLog(@"调整");
+        UINavigationController *navMain=[[self storyboard] instantiateViewControllerWithIdentifier:@"navMain"];
+        [UIApplication sharedApplication].keyWindow.rootViewController=navMain;
         self.navigationController.navigationBar.topItem.title=@"新马良幼儿园";
         if (rightButton!=nil) {
             self.tabBarController.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc]initWithCustomView:rightButton];
@@ -476,12 +478,15 @@
     str_url=[NSString stringWithFormat:@"%@?%@=%@&%@=%@",str_url,@"userid",str_id,@"role",str_role];
     WebBrowserTest *webbrowser = [[self storyboard] instantiateViewControllerWithIdentifier:@"WebBrowser"];
     webbrowser.str_url=str_url;
-    [UIApplication sharedApplication].keyWindow.rootViewController=webbrowser;
+    UINavigationController *navi1=[[UINavigationController alloc]initWithRootViewController:self];
+    [UIApplication sharedApplication].keyWindow.rootViewController=navi1;
+    /*
     [self presentViewController:webbrowser animated:YES completion:^{
        // [self dismissViewControllerAnimated:YES completion:nil];
     }];
-    //[self.navigationController pushViewController:webbrowser animated:YES];
-    
+     */
+   // [self.navigationController presentViewController:webbrowser animated:YES completion:nil];
+    [navi1 pushViewController:webbrowser animated:YES];
 }
 
 -(void)Switch:(UIButton*)sender {

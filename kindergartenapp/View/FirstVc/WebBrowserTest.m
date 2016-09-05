@@ -24,6 +24,25 @@
 }
 
 -(void)viewDidLoad {
+    
+    NSDictionary * dict;
+    if (iPad) {
+        dict=@{NSForegroundColorAttributeName:[UIColor whiteColor],NSFontAttributeName:[UIFont systemFontOfSize:25]};
+    }
+    else {
+        dict =@{
+                NSForegroundColorAttributeName:   [UIColor whiteColor]};
+    }
+    
+    self.navigationController.navigationBar.titleTextAttributes=dict;
+    
+    UIButton *btn_back=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 40, 40)];
+    [btn_back setTitle:@"  " forState:UIControlStateNormal];
+    [btn_back setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [btn_back setTintColor:[UIColor whiteColor]];
+    [btn_back setImage:[UIImage imageNamed:@"returnlogo"] forState:UIControlStateNormal];
+    [btn_back addTarget:self action:@selector(BackToAppCenter:) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.leftBarButtonItem=[[UIBarButtonItem alloc]initWithCustomView:btn_back];
    
     WKWebViewConfiguration *config=[[WKWebViewConfiguration alloc]init];
     //设置偏好设置
@@ -33,7 +52,7 @@
     config.preferences.javaScriptCanOpenWindowsAutomatically=NO;
     config.processPool=[[WKProcessPool alloc]init];
     
-    wb_content=[[WKWebView alloc]initWithFrame:CGRectMake(0, 30, Width, Height) configuration:config];
+    wb_content=[[WKWebView alloc]initWithFrame:CGRectMake(0, 0, Width, Height) configuration:config];
     wb_content.navigationDelegate=self;
     [wb_content loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:_str_url]]];
    // wb_content.URL=url;
@@ -56,6 +75,11 @@
 
 }
 
+-(void)BackToAppCenter:(UIButton*)Btn {
+    [self.navigationController popViewControllerAnimated:NO];
+   
+}
+
 -(void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation {
     [self.view addSubview:hud];
     [hud show:YES];
@@ -63,6 +87,13 @@
 
 -(void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
     [hud hide:YES];
+}
+
+-(void)dismissViewControllerAnimated:(BOOL)flag completion:(void (^)(void))completion {
+    if ( self.presentedViewController)
+    {
+        [super dismissViewControllerAnimated:flag completion:completion];
+    }
 }
 
 @end
