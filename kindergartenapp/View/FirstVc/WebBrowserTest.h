@@ -7,12 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TeacherInfo.h"
+#import "ParentInfo.h"
 
 @import WebKit;
 
 @interface WebBrowserTest : UIViewController
 
 @property (nonatomic,strong) NSString *str_url;
+
+@property (nonatomic,strong) NSString *str_category;
+
+@property (nonatomic,strong) NSString *str_xuejihao;
+
+
 
 
 @end

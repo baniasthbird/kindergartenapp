@@ -32,6 +32,8 @@
 		2CEBEDF31D72F687000DD832 /* Headmaster.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CEBEDF21D72F687000DD832 /* Headmaster.m */; };
 		2CEBEDF51D72FCF2000DD832 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CEBEDF41D72FCF2000DD832 /* Assets.xcassets */; };
 		2CEBEE041D7C23C4000DD832 /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2CEBEE031D7C23C4000DD832 /* loading.gif */; };
+		2CEBEE551D7F75EB000DD832 /* BabyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CEBEE541D7F75EB000DD832 /* BabyVC.m */; };
+		2CEBEE581D7F7611000DD832 /* ClassVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CEBEE571D7F7611000DD832 /* ClassVC.m */; };
 		4DDB1AE24EA15B79A798639A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C5BBA671F146BFEDCE513B /* libPods.a */; };
 		684CB4881D6BE00A0099CEE4 /* GrayPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 684CB4821D6BE00A0099CEE4 /* GrayPageControl.m */; };
 		684CB4891D6BE00A0099CEE4 /* HcdGuideViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 684CB4851D6BE00A0099CEE4 /* HcdGuideViewCell.m */; };
@@ -122,6 +124,10 @@
 		2CEBEDF21D72F687000DD832 /* Headmaster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Headmaster.m; path = Common/UserAddition/Headmaster.m; sourceTree = "<group>"; };
 		2CEBEDF41D72FCF2000DD832 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2CEBEE031D7C23C4000DD832 /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loading.gif; sourceTree = "<group>"; };
+		2CEBEE531D7F75EB000DD832 /* BabyVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BabyVC.h; path = View/FirstVc/BabyVC.h; sourceTree = "<group>"; };
+		2CEBEE541D7F75EB000DD832 /* BabyVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BabyVC.m; path = View/FirstVc/BabyVC.m; sourceTree = "<group>"; };
+		2CEBEE561D7F7611000DD832 /* ClassVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ClassVC.h; path = View/FirstVc/ClassVC.h; sourceTree = "<group>"; };
+		2CEBEE571D7F7611000DD832 /* ClassVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ClassVC.m; path = View/FirstVc/ClassVC.m; sourceTree = "<group>"; };
 		684CB4811D6BE00A0099CEE4 /* GrayPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrayPageControl.h; sourceTree = "<group>"; };
 		684CB4821D6BE00A0099CEE4 /* GrayPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrayPageControl.m; sourceTree = "<group>"; };
 		684CB4831D6BE00A0099CEE4 /* HcdGuideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HcdGuideView.h; sourceTree = "<group>"; };
@@ -315,6 +321,10 @@
 				2C9361C31D69D5DB002E5D4E /* WebBrowserTest.m */,
 				2CEBEDEE1D72883F000DD832 /* tb_select.h */,
 				2CEBEDEF1D72883F000DD832 /* tb_select.m */,
+				2CEBEE531D7F75EB000DD832 /* BabyVC.h */,
+				2CEBEE541D7F75EB000DD832 /* BabyVC.m */,
+				2CEBEE561D7F7611000DD832 /* ClassVC.h */,
+				2CEBEE571D7F7611000DD832 /* ClassVC.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -737,6 +747,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C8AE9E51D5F337B0069B3BD /* ViewController.m in Sources */,
+				2CEBEE581D7F7611000DD832 /* ClassVC.m in Sources */,
 				2CEBEDF01D72883F000DD832 /* tb_select.m in Sources */,
 				2C8AE9E21D5F337B0069B3BD /* AppDelegate.m in Sources */,
 				2C8AEA171D606AB90069B3BD /* UserInfo.m in Sources */,
@@ -755,6 +766,7 @@
 				2C9361CC1D6C8B4D002E5D4E /* ParentInfo.m in Sources */,
 				2C8AE9DF1D5F337B0069B3BD /* main.m in Sources */,
 				684CB48A1D6BE00A0099CEE4 /* HcdGuideViewManager.m in Sources */,
+				2CEBEE551D7F75EB000DD832 /* BabyVC.m in Sources */,
 				6884D3891D75489A00BC87F8 /* UIImage+FSAdditions.m in Sources */,
 				6884D39A1D75623900BC87F8 /* ZLCGuidePageView.m in Sources */,
 				2C9361B01D6930F9002E5D4E /* SecondVc.m in Sources */,

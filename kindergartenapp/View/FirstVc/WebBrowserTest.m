@@ -7,20 +7,28 @@
 //
 
 #import "WebBrowserTest.h"
-#import "AFNetworking.h"
-#import "MBProgressHUD.h"
-#import "UIImage+GIF.h"
+#import "BabyVC.h"
+#import "ClassVC.h"
+#import "UserInfo.h"
 
-@interface WebBrowserTest()<WKNavigationDelegate>
+
+
+@interface WebBrowserTest()
+
+@property (nonatomic,strong) UserInfo *userInfo;
 
 @end
 
 @implementation WebBrowserTest {
-     WKWebView *wb_content;
+    BabyVC *baby_vc;
+    ClassVC *class_vc;
+    NSInteger i_role;
+    ParentInfo *parent;
+    TeacherInfo *teacher;
+    Baby *baby;
+    Class_School *class_school;
+
     
-     AFHTTPSessionManager *session;
-    
-     MBProgressHUD *hud;
 }
 
 -(void)viewDidLoad {
@@ -36,57 +44,90 @@
     
     self.navigationController.navigationBar.titleTextAttributes=dict;
     
-    UIButton *btn_back=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 40, 40)];
-    [btn_back setTitle:@"  " forState:UIControlStateNormal];
+    UIButton *btn_back=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 80, 50)];
+    [btn_back setTitle:@"返回" forState:UIControlStateNormal];
     [btn_back setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [btn_back setTintColor:[UIColor whiteColor]];
     [btn_back setImage:[UIImage imageNamed:@"returnlogo"] forState:UIControlStateNormal];
+    [btn_back setTitleEdgeInsets:UIEdgeInsetsMake(0, 20, 0, 0)];
     [btn_back addTarget:self action:@selector(BackToAppCenter:) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.leftBarButtonItem=[[UIBarButtonItem alloc]initWithCustomView:btn_back];
    
-    WKWebViewConfiguration *config=[[WKWebViewConfiguration alloc]init];
-    //设置偏好设置
-    config.preferences=[[WKPreferences alloc]init];
-    config.preferences.minimumFontSize=10;
-    config.preferences.javaScriptEnabled=YES;
-    config.preferences.javaScriptCanOpenWindowsAutomatically=NO;
-    config.processPool=[[WKProcessPool alloc]init];
+    self.view.backgroundColor=[UIColor whiteColor];
     
-    wb_content=[[WKWebView alloc]initWithFrame:CGRectMake(0, 0, Width, Height) configuration:config];
-    wb_content.navigationDelegate=self;
-    [wb_content loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:_str_url]]];
-   // wb_content.URL=url;
+    NSData *data=[[NSUserDefaults standardUserDefaults] objectForKey:@"user"];
+    _userInfo=[[UserInfo alloc]init];
+    _userInfo=[NSKeyedUnarchiver unarchiveObjectWithData:data];
     
-    hud=[MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    hud.userInteractionEnabled=NO;
-    hud.dimBackground=YES;
-    hud.color=[UIColor clearColor];
-    [self.view addSubview:hud];
-    hud.mode=MBProgressHUDModeCustomView;
-    UIImage *images=[UIImage sd_animatedGIFNamed:@"loading"];
-    hud.customView=[[UIImageView alloc]initWithImage:images];
+    i_role=[_userInfo.str_role integerValue];
     
-    [self.view addSubview:wb_content];
+    NSMutableArray *arr_segment=[[NSMutableArray alloc]init];
+    if (i_role==0) {
+
+        if ([_str_category isEqualToString:@"相册"]) {
+            [arr_segment addObject:@"宝宝相册"];
+            [arr_segment addObject:@"班级相册"];
+        }
+        else if ([_str_category isEqualToString:@"视频"]) {
+            [arr_segment addObject:@"宝宝视频"];
+            [arr_segment addObject:@"班级视频"];
+        }
+    }
+    else if (i_role==2) {
+        if ([_str_category isEqualToString:@"相册"]) {
+            
+        }
+        else if ([_str_category isEqualToString:@"视频"]) {
+            
+        }
+    }
     
-    session=[AFHTTPSessionManager manager];
-    session.responseSerializer= [AFHTTPResponseSerializer serializer];
-    [session.requestSerializer setHTTPShouldHandleCookies:YES];
-    [session.requestSerializer setTimeoutInterval:10.0f];
+   
+    
+    UISegmentedControl *segment = [[UISegmentedControl alloc] initWithItems:arr_segment];
+    segment.tintColor = [UIColor whiteColor];
+    segment.selectedSegmentIndex = 0;
+    [segment addTarget:self action:@selector(segmentClick:) forControlEvents:UIControlEventValueChanged];
+    self.navigationItem.titleView = segment;
+    
+    baby_vc=[[BabyVC alloc]init];
+    NSString *str_baby_url=[NSString stringWithFormat:@"%@%@%@%@",@"http://123.56.238.120:8080/album/p_albumList.jsp?user_key=",_str_xuejihao,@"&rtype=bb&roleid=",_userInfo.str_role];
+    baby_vc.str_url=str_baby_url;
+    class_vc=[[ClassVC alloc]init];
+    NSString *str_class_url=[NSString stringWithFormat:@"%@%@%@%@",@"http://123.56.238.120:8080/album/p_albumList.jsp?user_key=",_str_xuejihao,@"&rtype=bj&roleid=",_userInfo.str_role];
+    class_vc.str_url=str_class_url;
+    [self.view addSubview:baby_vc.view];
+    
 
 }
 
 -(void)BackToAppCenter:(UIButton*)Btn {
-    [self.navigationController popViewControllerAnimated:NO];
+    /*
+    if (wb_content.canGoBack) {
+        [wb_content goBack];
+    }
+    else {
+     */
+        [self.navigationController popViewControllerAnimated:NO];
+  //  }
+    
    
 }
 
--(void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation {
-    [self.view addSubview:hud];
-    [hud show:YES];
-}
-
--(void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
-    [hud hide:YES];
+-(void)segmentClick:(UISegmentedControl *)segment{
+    switch (segment.selectedSegmentIndex) {
+        case 0:
+            //第一个界面
+            [self.view addSubview:baby_vc.view];
+            [class_vc.view removeFromSuperview];
+            break;
+        case 1:
+            [self.view addSubview:class_vc.view];
+            [baby_vc.view removeFromSuperview];
+            break;
+        default:
+            break;
+    }
 }
 
 -(void)dismissViewControllerAnimated:(BOOL)flag completion:(void (^)(void))completion {

@@ -125,7 +125,7 @@
     [_txtPwd setBorderStyle:UITextBorderStyleNone];
     _bgView.layer.cornerRadius=10;
    
-    _txtUsrName.text=@"T01";
+    _txtUsrName.text=@"P01";
     _txtPwd.text=@"123456";
     _txtPwd.delegate=self;
     _txtUsrName.delegate=self;
@@ -219,12 +219,56 @@
                     [_session POST:str_url parameters:usr_params progress:^(NSProgress * _Nonnull uploadProgress) {
                         
                     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                        NSArray *JSON=[NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+                        NSMutableArray *arr_JSON=[NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
                         NSLog(@"接收数据成功");
-                        if (JSON!=nil && [JSON count]>0) {
-                            [self saveUserAdditionInfo:JSON role:str_role];
+                        if (arr_JSON!=nil && [arr_JSON count]>0) {
+                            NSInteger i_role=[str_role integerValue];
+                            if (i_role==0) {
+                                 [self saveParentAdditionInfo:arr_JSON];
+                                 [self MoveToNextPage:usrInfo];
+                            }
+                            else if (i_role==2) {
+                                for (int i=0;i< [arr_JSON count];i++) {
+                                    NSMutableDictionary *dic_class=[arr_JSON objectAtIndex:i];
+                                    NSString  *str_roleid=[baseFunc GetValueFromDic:dic_class key:@"roleid"];
+                                    NSInteger i_sub_roleid=[str_roleid integerValue];
+                                    if (i_sub_roleid==2) {
+                                        NSString *str_classid=[baseFunc GetValueFromDic:dic_class key:@"dutyid"];
+                                        NSMutableDictionary *num_param=[NSMutableDictionary dictionary];
+                                        num_param[@"reqtype"]=@"get_class_student_count";
+                                        num_param[@"classid"]=str_classid;
+                                        [_session POST:str_url parameters:num_param progress:^(NSProgress * _Nonnull uploadProgress) {
+                                            
+                                        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                                            NSDictionary *dic_count=[NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+                                            [dic_class addEntriesFromDictionary:dic_count];
+                                            BOOL b_enter=YES;
+                                            for (int j=0;j<[arr_JSON count];j++) {
+                                                NSDictionary *dic_test=[arr_JSON objectAtIndex:j];
+                                                NSString  *str_roleid=[baseFunc GetValueFromDic:dic_test key:@"roleid"];
+                                                NSInteger i_sub_roleid=[str_roleid integerValue];
+                                                if (i_sub_roleid==2) {
+                                                    if (dic_test.allKeys.count==6) {
+                                                        b_enter=NO;
+                                                    }
+                                                }
+                                            }
+                                            if (b_enter==YES) {
+                                                [self SaveTeacherAdditionInfo:arr_JSON];
+                                                [self MoveToNextPage:usrInfo];
+                                            }
+                                        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                                            
+                                        }];
+                                    }
+                                    else {
+                                       
+                                    }
+                                }
+                            }
+                           
                         }
-                        [self MoveToNextPage:usrInfo];
+                       
                         
                     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                         
@@ -317,9 +361,8 @@
 }
 
 #pragma mark 根据接受数据保存角色内容
--(void)saveUserAdditionInfo:(NSArray*)arr_usr_add role:(NSString*)str_role {
-    NSInteger i_role=[str_role integerValue];
-    if (i_role==0) {
+-(void)saveParentAdditionInfo:(NSArray*)arr_usr_add{
+
         //解析所有孩子，添加家长
         NSMutableArray *arr_babies=[self GenerateBabies:arr_usr_add];
         ParentInfo *parent=[ParentInfo CreateParent:arr_babies];
@@ -328,33 +371,39 @@
         [defaults setObject:data forKey:@"user_parent"];
         [defaults synchronize];
         NSLog(@"家长数据保存成功!");
-        
-    }
-    else if (i_role==2) {
-        //解析所有班级，添加教师
-        NSMutableArray *arr_result=[self GenerateClass:arr_usr_add role:str_role];
-        NSMutableArray *arr_class=[[NSMutableArray alloc]init];
-        Class_School *dic_school=[[Class_School alloc]init];
-        for (int i=0;i<[arr_result count];i++) {
-            Class_School *tmp=[arr_result objectAtIndex:i];
-            if ([tmp.roleid isEqualToString:@"2"]) {
-                [arr_class addObject:tmp];
-            }
-            else if ([tmp.roleid isEqualToString:@"3"]) {
-                dic_school=tmp;
-            }
-        }
-        TeacherInfo *teacher=[TeacherInfo CreateTeacher:arr_class school:dic_school];
-        NSData *data=[NSKeyedArchiver archivedDataWithRootObject:teacher];
-        NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
-        [defaults setObject:data forKey:@"user_teacher"];
-        [defaults synchronize];
-        NSLog(@"老师数据保存成功");
-    }
-    else if (i_role==3) {
-        NSLog(@"园长");
-    }
    
+}
+
+
+-(void)SaveTeacherAdditionInfo:(NSMutableArray*)arr_usr_add {
+    //解析所有班级，添加教师
+    NSMutableArray *arr_result=[self GenerateClass:arr_usr_add];
+    NSMutableArray *arr_class=[[NSMutableArray alloc]init];
+    Class_School *dic_school=[[Class_School alloc]init];
+    for (int i=0;i<[arr_result count];i++) {
+        Class_School *tmp=[arr_result objectAtIndex:i];
+        NSString *str_roleid=tmp.roleid;
+        NSInteger i_roleid=[str_roleid integerValue];
+        if (i_roleid==2) {
+            [arr_class addObject:tmp];
+        }
+        else if (i_roleid==3) {
+            dic_school=tmp;
+        }
+    }
+    TeacherInfo *teacher=[TeacherInfo CreateTeacher:arr_class school:dic_school];
+    NSData *data=[NSKeyedArchiver archivedDataWithRootObject:teacher];
+    NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
+    [defaults setObject:data forKey:@"user_teacher"];
+    [defaults synchronize];
+    NSLog(@"老师数据保存成功");
+}
+
+//园长
+-(void)SaveLeaderAdditionInfo {
+   
+       NSLog(@"园长");
+    
 }
 
 //转换成孩子
@@ -392,7 +441,7 @@
     return arr_babies;
 }
 
--(NSMutableArray*)GenerateClass:(NSArray*)arr_usr_add role:(NSString*)str_role{
+-(NSMutableArray*)GenerateClass:(NSArray*)arr_usr_add{
     NSMutableArray *arr_class=[[NSMutableArray alloc]init];
     for (int i=0;i<[arr_usr_add count];i++) {
         NSDictionary *dic_class_info=[arr_usr_add objectAtIndex:i];
@@ -402,6 +451,12 @@
         NSString *str_dutyid=[baseFunc GetValueFromDic:dic_class_info key:@"dutyid"];
         NSString *str_roleid=[baseFunc GetValueFromDic:dic_class_info key:@"roleid"];
         NSString *str_dutyname=[baseFunc GetValueFromDic:dic_class_info key:@"dutyname"];
+        NSInteger i_roleid=[str_roleid integerValue];
+        NSString *str_count=@"0";
+        if (i_roleid==2) {
+            str_count=[baseFunc GetValueFromDic:dic_class_info key:@"count"];
+        }
+        
        // if ([str_roleid isEqualToString:str_role]) {
             Class_School *o_class=[[Class_School alloc]init];
             o_class.userid=str_userid;
@@ -410,6 +465,7 @@
             o_class.dutyid=str_dutyid;
             o_class.roleid=str_roleid;
             o_class.dutyname=str_dutyname;
+            o_class.count=str_count;
             [arr_class addObject:o_class];
       //  }
        

@@ -139,6 +139,7 @@
         class_school=[[Class_School alloc]init];
         NSData *data_teacher=[[NSUserDefaults standardUserDefaults] objectForKey:@"user_teacher"];
         teacher=[NSKeyedUnarchiver unarchiveObjectWithData:data_teacher];
+        _lbl_label2.text=teacher.dic_school.dutyname;
         if ([teacher.arr_class count]>1) {
             rightButton = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 20, 20)];
             //[rightButton setTitle:@"切换" forState:UIControlStateNormal];
@@ -146,23 +147,10 @@
             [rightButton addTarget:self action:@selector(Switch:) forControlEvents:UIControlEventTouchUpInside];
             self.tabBarController.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc]initWithCustomView:rightButton];
         }
-        if (teacher !=nil) {
-            NSMutableArray *arr_class=teacher.arr_class;
-            _lbl_label2.text=teacher.dic_school.dutyname;
-            if ([arr_class count]>0) {
-                for (int i=0;i<[arr_class count];i++) {
-                    class_school=[arr_class objectAtIndex:i];
-                    if ([class_school.roleid isEqualToString:_userInfo.str_role]) {
-                        _lbl_label1.text=class_school.dutyname;
-                        _lbl_num.text=class_school.i_id;
-
-                    }
-                }
-               
-                
-                
-               
-            }
+        else {
+             class_school=[teacher.arr_class objectAtIndex:0];
+            _lbl_label1.text=class_school.dutyname;
+            _lbl_num.text=class_school.count;
         }
        
         [_lbl_age setHidden:YES];
@@ -467,17 +455,24 @@
 
 -(void)Albumn:(UIButton*)sender {
     NSString *str_url=@"";
+    NSString *str_category=@"";
     if (sender.tag==5) {
         str_url=[dic_pic objectForKey:@"url"];
+        str_category=@"相册";
     }
     else if (sender.tag==6) {
         str_url=[dic_video objectForKey:@"url"];
+        str_category=@"视频";
     }
     NSString *str_id=_userInfo.str_id;
     NSString *str_role=[NSString stringWithFormat:@"%ld",(long)i_role];
     str_url=[NSString stringWithFormat:@"%@?%@=%@&%@=%@",str_url,@"userid",str_id,@"role",str_role];
     WebBrowserTest *webbrowser = [[self storyboard] instantiateViewControllerWithIdentifier:@"WebBrowser"];
-    webbrowser.str_url=str_url;
+    webbrowser.str_category=str_category;
+    if (baby!=nil) {
+        webbrowser.str_xuejihao=baby.xuejihao;
+    }
+   // webbrowser.str_url=str_url;
     UINavigationController *navi1=[[UINavigationController alloc]initWithRootViewController:self];
     [UIApplication sharedApplication].keyWindow.rootViewController=navi1;
     /*
@@ -513,7 +508,7 @@
         class_school=v_class_child;
         _lbl_label1.text=class_school.dutyname;
         //_lbl_label2.text=class_child.schoolname;
-        _lbl_num.text=class_school.rolename;
+        _lbl_num.text=class_school.count;
     }
     [self.view setNeedsDisplay];
 }

@@ -25,4 +25,6 @@
 
 @property (nonatomic,strong) NSString *dutyname;
 
+@property (nonatomic,strong) NSString *count;
+
 @end

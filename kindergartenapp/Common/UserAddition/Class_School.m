@@ -18,7 +18,7 @@
         self.dutyid=[aDecoder decodeObjectForKey:@"dutyid"];
         self.roleid=[aDecoder decodeObjectForKey:@"roleid"];
         self.dutyname=[aDecoder decodeObjectForKey:@"dutyname"];
-
+        self.count=[aDecoder decodeObjectForKey:@"count"];
     }
     return self;
 }
@@ -30,6 +30,7 @@
     [aCoder encodeObject:self.dutyid forKey:@"dutyid"];
     [aCoder encodeObject:self.roleid forKey:@"roleid"];
     [aCoder encodeObject:self.dutyname forKey:@"dutyname"];
+    [aCoder encodeObject:self.count forKey:@"count"];
 
 
 }
