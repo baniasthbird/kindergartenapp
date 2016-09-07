@@ -22,9 +22,6 @@
     
     NSInteger i_role;
     
-    NSMutableDictionary *dic_pic;
-    
-    NSMutableDictionary *dic_video;
     
     UIView *bgView1;
     
@@ -166,9 +163,7 @@
     
     
     
-    NSMutableArray *arr_menus=_userInfo.arr_menus;
-    dic_pic=[NSMutableDictionary dictionary];
-    dic_video=[NSMutableDictionary dictionary];
+   
     
     
     UIImage *img_banner1=[UIImage imageNamed:str_banner_img1];
@@ -178,24 +173,6 @@
     arr_img_header =[NSArray arrayWithObjects:img_banner1,img_banner2,img_banner3,img_banner4, nil];
    
     
-    for (int i=0;i<[arr_menus count];i++) {
-        NSDictionary *dic_menu_pic=[arr_menus objectAtIndex:i];
-        NSString *str_menuname=[baseFunc GetValueFromDic:dic_menu_pic key:@"menuname"];
-        NSString *str_menuurl=[baseFunc GetValueFromDic:dic_menu_pic key:@"menuurl"];
-        NSString *str_remark=[baseFunc GetValueFromDic:dic_menu_pic key:@"remark"];
-       // NSString *str_id=[baseFunc GetValueFromDic:dic_menu_pic key:@"id"];
-      //  long i_id=[str_id longLongValue];
-        if (i==0) {
-            dic_pic[@"name"]=str_menuname;
-            dic_pic[@"url"]=str_menuurl;
-            dic_pic[@"remark"]=str_remark;
-        }
-        else if (i==1) {
-            dic_video[@"name"]=str_menuname;
-            dic_video[@"url"]=str_menuurl;
-            dic_video[@"remark"]=str_remark;
-        }
-    }
     
     NSString *str_nickname=_userInfo.nickname;
     
@@ -454,19 +431,18 @@
 }
 
 -(void)Albumn:(UIButton*)sender {
-    NSString *str_url=@"";
+   // NSString *str_url=@"";
     NSString *str_category=@"";
     if (sender.tag==5) {
-        str_url=[dic_pic objectForKey:@"url"];
+        
         str_category=@"相册";
     }
     else if (sender.tag==6) {
-        str_url=[dic_video objectForKey:@"url"];
         str_category=@"视频";
     }
-    NSString *str_id=_userInfo.str_id;
-    NSString *str_role=[NSString stringWithFormat:@"%ld",(long)i_role];
-    str_url=[NSString stringWithFormat:@"%@?%@=%@&%@=%@",str_url,@"userid",str_id,@"role",str_role];
+  //  NSString *str_id=_userInfo.str_id;
+  //  NSString *str_role=[NSString stringWithFormat:@"%ld",(long)i_role];
+ //   str_url=[NSString stringWithFormat:@"%@?%@=%@&%@=%@",str_url,@"userid",str_id,@"role",str_role];
     WebBrowserTest *webbrowser = [[self storyboard] instantiateViewControllerWithIdentifier:@"WebBrowser"];
     webbrowser.str_category=str_category;
     if (baby!=nil) {

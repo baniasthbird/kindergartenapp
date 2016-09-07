@@ -24,6 +24,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //班级相册或视频的tag
+    self.view.tag=1002;
     // Do any additional setup after loading the view.
     WKWebViewConfiguration *config=[[WKWebViewConfiguration alloc]init];
     //设置偏好设置
