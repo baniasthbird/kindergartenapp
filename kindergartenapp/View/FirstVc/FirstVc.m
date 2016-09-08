@@ -16,6 +16,8 @@
 
 @interface FirstVc() <tableviewselectDelegate>
 
+
+
 @end
 
 @implementation FirstVc {
@@ -49,141 +51,161 @@
     MBProgressHUD *hud;
     
     UIButton *rightButton;
-   
     
+    NSInteger i_Load;
+   
 }
 
 
 -(void)viewDidLoad {
-    baseFunc =[[BaseFunc alloc]init];
-    
-    hud=[MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    hud.userInteractionEnabled=NO;
-    hud.dimBackground=YES;
-    hud.color=[UIColor clearColor];
-    [self.view addSubview:hud];
-    hud.mode=MBProgressHUDModeCustomView;
-    UIImage *images=[UIImage sd_animatedGIFNamed:@"loading"];
-    hud.customView=[[UIImageView alloc]initWithImage:images];
-    [hud show:YES];
-    
-    UITabBarItem *tmp_item=[self.tabBarController.tabBar.items objectAtIndex:1];
-    tmp_item.image=[[UIImage imageNamed:@"second"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    self.tabBarItem.image=[[UIImage imageNamed:@"first"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    self.tabBarItem.selectedImage=[[UIImage imageNamed:@"first_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-
-    
-    self.navigationController.navigationBar.topItem.title=@"新马良幼儿园";
     
    
-
-   // UIView *view=
- //   self.navigationController.navigationBar.topItem.titleView.backgroundColor=[UIColor colorWithRed:226/255.0f green:101/255.0f blue:51/255.0f alpha:1];
-    //self.navigationController.navigationBar.backgroundColor=[UIColor colorWithRed:226/255.0f green:101/255.0f blue:51/255.0f alpha:1];
-    //self.view.=@"新马良幼儿园";
-       
-    NSData *data=[[NSUserDefaults standardUserDefaults] objectForKey:@"user"];
-   _userInfo=[[UserInfo alloc]init];
-   _userInfo=[NSKeyedUnarchiver unarchiveObjectWithData:data];
+        baseFunc =[[BaseFunc alloc]init];
+        
+        hud=[MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        hud.userInteractionEnabled=NO;
+        hud.dimBackground=YES;
+        hud.color=[UIColor clearColor];
+        [self.view addSubview:hud];
+        hud.mode=MBProgressHUDModeCustomView;
+        UIImage *images=[UIImage sd_animatedGIFNamed:@"loading"];
+        hud.customView=[[UIImageView alloc]initWithImage:images];
+        [hud show:YES];
+        
+        UITabBarItem *tmp_item=[self.tabBarController.tabBar.items objectAtIndex:1];
+        tmp_item.image=[[UIImage imageNamed:@"second"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        self.tabBarItem.image=[[UIImage imageNamed:@"first"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        self.tabBarItem.selectedImage=[[UIImage imageNamed:@"first_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        
+        
+        self.navigationController.navigationBar.topItem.title=@"新马良幼儿园";
+        
+    Baby *baby_now;
     
-    i_role=[_userInfo.str_role integerValue];
-    
-    NSString *str_banner_img1=@"img_T_Header1";
-    NSString *str_banner_img2=@"img_T_Header2";
-    NSString *str_banner_img3=@"img_T_Header3";
-    NSString *str_banner_img4=@"img_T_Header4";
-    
-    if (i_role==0) {
-        parent=[[ParentInfo alloc]init];
-        baby=[[Baby alloc]init];
-        NSData *data_parent=[[NSUserDefaults standardUserDefaults] objectForKey:@"user_parent"];
-        parent=[NSKeyedUnarchiver unarchiveObjectWithData:data_parent];
-        str_banner_img1=@"img_P_Header1";
-        str_banner_img2=@"img_P_Header2";
-        str_banner_img3=@"img_P_Header3";
-        str_banner_img4=@"img_P_Header4";
-        if ([parent.arr_baby count]>1) {
-            rightButton = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 20, 20)];
-            //[rightButton setTitle:@"切换" forState:UIControlStateNormal];
-            [rightButton setImage:[UIImage imageNamed:@"switch"] forState:UIControlStateNormal];
-            [rightButton addTarget:self action:@selector(Switch:) forControlEvents:UIControlEventTouchUpInside];
-            self.tabBarController.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc]initWithCustomView:rightButton];
+        // UIView *view=
+        //   self.navigationController.navigationBar.topItem.titleView.backgroundColor=[UIColor colorWithRed:226/255.0f green:101/255.0f blue:51/255.0f alpha:1];
+        //self.navigationController.navigationBar.backgroundColor=[UIColor colorWithRed:226/255.0f green:101/255.0f blue:51/255.0f alpha:1];
+        //self.view.=@"新马良幼儿园";
+        
+        NSData *data=[[NSUserDefaults standardUserDefaults] objectForKey:@"user"];
+        _userInfo=[[UserInfo alloc]init];
+        _userInfo=[NSKeyedUnarchiver unarchiveObjectWithData:data];
+        
+        i_role=[_userInfo.str_role integerValue];
+        
+        NSString *str_banner_img1=@"img_T_Header1";
+        NSString *str_banner_img2=@"img_T_Header2";
+        NSString *str_banner_img3=@"img_T_Header3";
+        NSString *str_banner_img4=@"img_T_Header4";
+        
+        if (i_role==0) {
+            if (parent==nil && baby==nil) {
+                parent=[[ParentInfo alloc]init];
+                baby=[[Baby alloc]init];
+                NSData *data_parent=[[NSUserDefaults standardUserDefaults] objectForKey:@"user_parent"];
+                parent=[NSKeyedUnarchiver unarchiveObjectWithData:data_parent];
+                baby=[parent.arr_baby objectAtIndex:0];
+            }
+           
+            NSData *data_baby_now=[[NSUserDefaults standardUserDefaults] objectForKey:@"baby_now"];
+            baby_now=[NSKeyedUnarchiver unarchiveObjectWithData:data_baby_now];
+            if (baby_now!=nil) {
+                baby=baby_now;
+            }
+            str_banner_img1=@"img_P_Header1";
+            str_banner_img2=@"img_P_Header2";
+            str_banner_img3=@"img_P_Header3";
+            str_banner_img4=@"img_P_Header4";
+            if ([parent.arr_baby count]>1) {
+                rightButton = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 20, 20)];
+                //[rightButton setTitle:@"切换" forState:UIControlStateNormal];
+                [rightButton setImage:[UIImage imageNamed:@"switch"] forState:UIControlStateNormal];
+                [rightButton addTarget:self action:@selector(Switch:) forControlEvents:UIControlEventTouchUpInside];
+                self.tabBarController.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc]initWithCustomView:rightButton];
+            }
+            
+            
+            
+            
+            
+            
+            
+            /*
+             NSString *str_birthday=baby.birthday;
+             NSDateFormatter *formatter = [[NSDateFormatter alloc] init] ;
+             [formatter setDateFormat:@"yyyy-MM-dd"];
+             NSDate *date_birth=[formatter dateFromString:str_birthday];
+             NSTimeInterval timeInterval=[date_birth timeIntervalSinceNow];
+             timeInterval=-timeInterval;
+             long temp_min=(timeInterval/60);
+             long temp_hour=temp_min/60;
+             long temp_day=temp_hour/24;
+             long temp_year=temp_day/365;
+             long temp_day_left=temp_day-temp_year*365;
+             long temp_month=temp_day_left/30;
+             */
+            [_lbl_age setHidden:NO];
+            _lbl_age.text=[self ClacAge];
+            NSLog(@"相差");
+            
         }
-        
-        baby=[parent.arr_baby objectAtIndex:0];
-        
-        /*
-        NSString *str_birthday=baby.birthday;
-        NSDateFormatter *formatter = [[NSDateFormatter alloc] init] ;
-        [formatter setDateFormat:@"yyyy-MM-dd"];
-        NSDate *date_birth=[formatter dateFromString:str_birthday];
-        NSTimeInterval timeInterval=[date_birth timeIntervalSinceNow];
-        timeInterval=-timeInterval;
-        long temp_min=(timeInterval/60);
-        long temp_hour=temp_min/60;
-        long temp_day=temp_hour/24;
-        long temp_year=temp_day/365;
-        long temp_day_left=temp_day-temp_year*365;
-        long temp_month=temp_day_left/30;
-         */
-        [_lbl_age setHidden:NO];
-        _lbl_age.text=[self ClacAge];
-        NSLog(@"相差");
-        
-    }
-    else if (i_role==2) {
-        teacher=[[TeacherInfo alloc]init];
-        class_school=[[Class_School alloc]init];
-        NSData *data_teacher=[[NSUserDefaults standardUserDefaults] objectForKey:@"user_teacher"];
-        teacher=[NSKeyedUnarchiver unarchiveObjectWithData:data_teacher];
-        _lbl_label2.text=teacher.dic_school.dutyname;
-        if ([teacher.arr_class count]>1) {
-            rightButton = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 20, 20)];
-            //[rightButton setTitle:@"切换" forState:UIControlStateNormal];
-            [rightButton setImage:[UIImage imageNamed:@"switch"] forState:UIControlStateNormal];
-            [rightButton addTarget:self action:@selector(Switch:) forControlEvents:UIControlEventTouchUpInside];
-            self.tabBarController.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc]initWithCustomView:rightButton];
+        else if (i_role==2) {
+            teacher=[[TeacherInfo alloc]init];
+            class_school=[[Class_School alloc]init];
+            NSData *data_teacher=[[NSUserDefaults standardUserDefaults] objectForKey:@"user_teacher"];
+            teacher=[NSKeyedUnarchiver unarchiveObjectWithData:data_teacher];
+            _lbl_label2.text=teacher.dic_school.dutyname;
+            if ([teacher.arr_class count]>1) {
+                rightButton = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 20, 20)];
+                //[rightButton setTitle:@"切换" forState:UIControlStateNormal];
+                [rightButton setImage:[UIImage imageNamed:@"switch"] forState:UIControlStateNormal];
+                [rightButton addTarget:self action:@selector(Switch:) forControlEvents:UIControlEventTouchUpInside];
+                self.tabBarController.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc]initWithCustomView:rightButton];
+            }
+            else {
+                class_school=[teacher.arr_class objectAtIndex:0];
+                _lbl_label1.text=class_school.dutyname;
+                _lbl_num.text=class_school.count;
+            }
+            
+            [_lbl_age setHidden:YES];
+            _lbl_topic.text=@"热点话题";
         }
-        else {
-             class_school=[teacher.arr_class objectAtIndex:0];
-            _lbl_label1.text=class_school.dutyname;
-            _lbl_num.text=class_school.count;
+        else if (i_role==3) {
+            [_lbl_age setHidden:YES];
+            
+            _lbl_topic.text=@"热点话题";
         }
-       
-        [_lbl_age setHidden:YES];
-        _lbl_topic.text=@"热点话题";
-    }
-    else if (i_role==3) {
-        [_lbl_age setHidden:YES];
+    
+        UIImage *img_banner1=[UIImage imageNamed:str_banner_img1];
+        UIImage *img_banner2=[UIImage imageNamed:str_banner_img2];
+        UIImage *img_banner3=[UIImage imageNamed:str_banner_img3];
+        UIImage *img_banner4=[UIImage imageNamed:str_banner_img4];
+        arr_img_header =[NSArray arrayWithObjects:img_banner1,img_banner2,img_banner3,img_banner4, nil];
         
-        _lbl_topic.text=@"热点话题";
+        
+        
+        NSString *str_nickname=_userInfo.nickname;
+    
+    if (baby_now==nil) {
+        _lbl_name.text=str_nickname;
+    }
+    else {
+        _lbl_name.text=[NSString stringWithFormat:@"%@%@",baby.name,@"妈妈"];
     }
     
-    
-    
-    
-    
+        [_lbl_name sizeToFit];
+        
+        b_Launch=YES;
+        
+        NSLog(@"获取成功");
+        
+        [self.view setNeedsDisplay];
    
+    i_Load++;
     
     
-    UIImage *img_banner1=[UIImage imageNamed:str_banner_img1];
-    UIImage *img_banner2=[UIImage imageNamed:str_banner_img2];
-    UIImage *img_banner3=[UIImage imageNamed:str_banner_img3];
-    UIImage *img_banner4=[UIImage imageNamed:str_banner_img4];
-    arr_img_header =[NSArray arrayWithObjects:img_banner1,img_banner2,img_banner3,img_banner4, nil];
-   
     
-    
-    NSString *str_nickname=_userInfo.nickname;
-    
-    _lbl_name.text=str_nickname;
-    [_lbl_name sizeToFit];
-    
-    b_Launch=YES;
-    
-    NSLog(@"获取成功");
-    
-    [self.view setNeedsDisplay];
     
 }
 
@@ -243,6 +265,7 @@
         }
         [s_scrollView setFrame:CGRectMake(0, 0, self.view.frame.size.width, _img_Header.frame.size.height+_img_Header.frame.origin.y)];
     
+        
     }
     
     [hud hide:YES];
@@ -470,23 +493,24 @@
         tb_select.arr_class=teacher.arr_class;
     }
     tb_select.delegate=self;
-    [self.navigationController pushViewController:tb_select animated:YES];
+    UINavigationController *navi1=[[UINavigationController alloc]initWithRootViewController:self];
+    [UIApplication sharedApplication].keyWindow.rootViewController=navi1;
+    [navi1 pushViewController:tb_select animated:YES];
 }
 
--(void)PassValue:(Baby *)v_baby childvalue:(Class_School *)v_class_child {
+-(void)PassValue:(Baby *)v_baby childvalue:(Class_School *)v_class_child refresh:(BOOL)b_refresh {
+     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     if (v_baby!=nil && v_class_child==nil) {
-        baby=v_baby;
-        _lbl_name.text=[NSString stringWithFormat:@"%@%@",baby.name,@"妈妈"];
-        [_lbl_age setHidden:NO];
-        _lbl_age.text=[self ClacAge];
+        NSData *data=[NSKeyedArchiver archivedDataWithRootObject:v_baby];
+        [defaults setObject:data forKey:@"baby_now"];
     }
     else if (v_baby==nil && v_class_child!=nil) {
-        class_school=v_class_child;
-        _lbl_label1.text=class_school.dutyname;
-        //_lbl_label2.text=class_child.schoolname;
-        _lbl_num.text=class_school.count;
+        NSData *data=[NSKeyedArchiver archivedDataWithRootObject:v_class_child];
+        [defaults setObject:data forKey:@"class_now"];
     }
-    [self.view setNeedsDisplay];
+     [defaults synchronize];
+   
+   // [self.view setNeedsDisplay];
 }
 
 @end

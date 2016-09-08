@@ -14,7 +14,7 @@
 
 @protocol tableviewselectDelegate <NSObject>
 
--(void)PassValue:(Baby*)v_baby childvalue:(Class_School*)v_class_child;
+-(void)PassValue:(Baby*)v_baby childvalue:(Class_School*)v_class_child refresh:(BOOL)b_refresh;
 
 @end
 

@@ -111,6 +111,15 @@
                                              andButtonBorderColor:[UIColor blueColor]];
     */
     
+    //去掉所有保存
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSDictionary *dic = [defaults dictionaryRepresentation];
+    for (id  key in dic) {
+        [defaults removeObjectForKey:key];
+    }
+    [defaults synchronize];
+
+    
     // Do any additional setup after loading the view, typically from a nib.
     baseFunc=[[BaseFunc alloc]init];
     self.view.backgroundColor=[UIColor colorWithRed:240/255.0f green:240/255.0f blue:240/255.0f alpha:1];

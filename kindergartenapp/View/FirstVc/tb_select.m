@@ -87,13 +87,13 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (_arr_baby!=nil) {
         Baby *baby=[_arr_baby objectAtIndex:indexPath.row];
-        [_delegate PassValue:baby childvalue:nil];
+        [_delegate PassValue:baby childvalue:nil refresh:YES];
         [self.navigationController popViewControllerAnimated:YES];
         //[self presentViewController:firstVc animated:YES completion:nil];
     }
     if (_arr_class!=nil) {
         Class_School *class_child=[_arr_class objectAtIndex:indexPath.row];
-        [_delegate PassValue:nil childvalue:class_child];
+        [_delegate PassValue:nil childvalue:class_child refresh:YES];
         [self.navigationController popViewControllerAnimated:YES];
        
         
