@@ -46,6 +46,12 @@
 		6884D38B1D75494E00BC87F8 /* libDownPicker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6884D38A1D75494E00BC87F8 /* libDownPicker.a */; };
 		6884D39A1D75623900BC87F8 /* ZLCGuidePageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6884D3941D75623900BC87F8 /* ZLCGuidePageView.m */; };
 		6895AE2E1D70214C0003F2A2 /* libSDCycleScrollView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6895AE2D1D70214C0003F2A2 /* libSDCycleScrollView.a */; };
+		68B710B11D824036006F741D /* AutocompletionTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B710B01D824036006F741D /* AutocompletionTableView.m */; };
+		68B710BA1D824D76006F741D /* MLPAutoCompleteTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B710B41D824D76006F741D /* MLPAutoCompleteTextField.m */; };
+		68B710BB1D824D76006F741D /* NSString+Levenshtein.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B710B91D824D76006F741D /* NSString+Levenshtein.m */; };
+		68B710C31D826EE7006F741D /* UsrTxField.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B710C21D826EE7006F741D /* UsrTxField.m */; };
+		68B710CF1D8271F4006F741D /* UsrNameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B710CD1D8271F4006F741D /* UsrNameVC.m */; };
+		68B710D01D8271F4006F741D /* UsrNameVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68B710CE1D8271F4006F741D /* UsrNameVC.xib */; };
 		68F89E051D66DFA700D2C1F0 /* libAFNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68F89E041D66DFA700D2C1F0 /* libAFNetworking.a */; };
 		68F89E071D66DFAB00D2C1F0 /* libMBProgressHUD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68F89E061D66DFAB00D2C1F0 /* libMBProgressHUD.a */; };
 		68F89E091D66DFAE00D2C1F0 /* libSDWebImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68F89E081D66DFAE00D2C1F0 /* libSDWebImage.a */; };
@@ -148,6 +154,20 @@
 		6884D3931D75623900BC87F8 /* ZLCGuidePageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLCGuidePageView.h; sourceTree = "<group>"; };
 		6884D3941D75623900BC87F8 /* ZLCGuidePageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLCGuidePageView.m; sourceTree = "<group>"; };
 		6895AE2D1D70214C0003F2A2 /* libSDCycleScrollView.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSDCycleScrollView.a; path = "../../Library/Developer/Xcode/DerivedData/kindergartenapp-erviqgsjzuezvweuxxgwyjysxxzl/Build/Products/Debug-iphonesimulator/libSDCycleScrollView.a"; sourceTree = "<group>"; };
+		68B710AF1D824036006F741D /* AutocompletionTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AutocompletionTableView.h; path = Login/Modal/AutocompletionTableView.h; sourceTree = "<group>"; };
+		68B710B01D824036006F741D /* AutocompletionTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AutocompletionTableView.m; path = Login/Modal/AutocompletionTableView.m; sourceTree = "<group>"; };
+		68B710B31D824D76006F741D /* MLPAutoCompleteTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPAutoCompleteTextField.h; sourceTree = "<group>"; };
+		68B710B41D824D76006F741D /* MLPAutoCompleteTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLPAutoCompleteTextField.m; sourceTree = "<group>"; };
+		68B710B51D824D76006F741D /* MLPAutoCompleteTextFieldDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPAutoCompleteTextFieldDataSource.h; sourceTree = "<group>"; };
+		68B710B61D824D76006F741D /* MLPAutoCompleteTextFieldDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPAutoCompleteTextFieldDelegate.h; sourceTree = "<group>"; };
+		68B710B71D824D76006F741D /* MLPAutoCompletionObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPAutoCompletionObject.h; sourceTree = "<group>"; };
+		68B710B81D824D76006F741D /* NSString+Levenshtein.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Levenshtein.h"; sourceTree = "<group>"; };
+		68B710B91D824D76006F741D /* NSString+Levenshtein.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Levenshtein.m"; sourceTree = "<group>"; };
+		68B710C11D826EE7006F741D /* UsrTxField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UsrTxField.h; path = Login/Modal/UsrTxField.h; sourceTree = "<group>"; };
+		68B710C21D826EE7006F741D /* UsrTxField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UsrTxField.m; path = Login/Modal/UsrTxField.m; sourceTree = "<group>"; };
+		68B710CC1D8271F4006F741D /* UsrNameVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsrNameVC.h; sourceTree = "<group>"; };
+		68B710CD1D8271F4006F741D /* UsrNameVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsrNameVC.m; sourceTree = "<group>"; };
+		68B710CE1D8271F4006F741D /* UsrNameVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UsrNameVC.xib; sourceTree = "<group>"; };
 		68F89E041D66DFA700D2C1F0 /* libAFNetworking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAFNetworking.a; path = "Pods/../build/Debug-iphoneos/libAFNetworking.a"; sourceTree = "<group>"; };
 		68F89E061D66DFAB00D2C1F0 /* libMBProgressHUD.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMBProgressHUD.a; path = "Pods/../build/Debug-iphoneos/libMBProgressHUD.a"; sourceTree = "<group>"; };
 		68F89E081D66DFAE00D2C1F0 /* libSDWebImage.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSDWebImage.a; path = "Pods/../build/Debug-iphoneos/libSDWebImage.a"; sourceTree = "<group>"; };
@@ -493,6 +513,13 @@
 		6884D3661D75113800BC87F8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				68B710CC1D8271F4006F741D /* UsrNameVC.h */,
+				68B710CD1D8271F4006F741D /* UsrNameVC.m */,
+				68B710CE1D8271F4006F741D /* UsrNameVC.xib */,
+				68B710AF1D824036006F741D /* AutocompletionTableView.h */,
+				68B710B01D824036006F741D /* AutocompletionTableView.m */,
+				68B710C11D826EE7006F741D /* UsrTxField.h */,
+				68B710C21D826EE7006F741D /* UsrTxField.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -519,9 +546,24 @@
 			path = ZLCGuidePage;
 			sourceTree = "<group>";
 		};
+		68B710B21D824D75006F741D /* MLPAutoCompleteTextField */ = {
+			isa = PBXGroup;
+			children = (
+				68B710B31D824D76006F741D /* MLPAutoCompleteTextField.h */,
+				68B710B41D824D76006F741D /* MLPAutoCompleteTextField.m */,
+				68B710B51D824D76006F741D /* MLPAutoCompleteTextFieldDataSource.h */,
+				68B710B61D824D76006F741D /* MLPAutoCompleteTextFieldDelegate.h */,
+				68B710B71D824D76006F741D /* MLPAutoCompletionObject.h */,
+				68B710B81D824D76006F741D /* NSString+Levenshtein.h */,
+				68B710B91D824D76006F741D /* NSString+Levenshtein.m */,
+			);
+			path = MLPAutoCompleteTextField;
+			sourceTree = "<group>";
+		};
 		68F89E0B1D66F1E900D2C1F0 /* OpenSource */ = {
 			isa = PBXGroup;
 			children = (
+				68B710B21D824D75006F741D /* MLPAutoCompleteTextField */,
 				6884D38C1D75623900BC87F8 /* ZLCGuidePage */,
 				6884D37F1D75489A00BC87F8 /* FSComboListView */,
 				6884D3601D74300600BC87F8 /* UIImage+GIF */,
@@ -669,6 +711,7 @@
 			files = (
 				2C9361DA1D6F2FE9002E5D4E /* FZSEJT.ttf in Resources */,
 				6884D3871D75489A00BC87F8 /* comboDownArrow@2x.png in Resources */,
+				68B710D01D8271F4006F741D /* UsrNameVC.xib in Resources */,
 				2C8AE9ED1D5F337B0069B3BD /* LaunchScreen.storyboard in Resources */,
 				6884D3861D75489A00BC87F8 /* comboDownArrow.png in Resources */,
 				2CEBEE041D7C23C4000DD832 /* loading.gif in Resources */,
@@ -753,6 +796,7 @@
 				2C8AEA171D606AB90069B3BD /* UserInfo.m in Sources */,
 				2C9361B31D69312A002E5D4E /* ThirdVc.m in Sources */,
 				2C9361D81D6C8FD7002E5D4E /* TeacherInfo.m in Sources */,
+				68B710B11D824036006F741D /* AutocompletionTableView.m in Sources */,
 				6884D3881D75489A00BC87F8 /* FSComboListView.m in Sources */,
 				2C9361BB1D6932AF002E5D4E /* SettingVc.m in Sources */,
 				2C9361D51D6C8EA9002E5D4E /* Class_School.m in Sources */,
@@ -762,19 +806,23 @@
 				68F89E171D67057A00D2C1F0 /* MainTabController.m in Sources */,
 				2C9361A01D692E88002E5D4E /* NTButton.m in Sources */,
 				6884D3631D74300600BC87F8 /* UIImage+GIF.m in Sources */,
+				68B710CF1D8271F4006F741D /* UsrNameVC.m in Sources */,
 				2CEBEDF31D72F687000DD832 /* Headmaster.m in Sources */,
 				2C9361CC1D6C8B4D002E5D4E /* ParentInfo.m in Sources */,
 				2C8AE9DF1D5F337B0069B3BD /* main.m in Sources */,
 				684CB48A1D6BE00A0099CEE4 /* HcdGuideViewManager.m in Sources */,
+				68B710BB1D824D76006F741D /* NSString+Levenshtein.m in Sources */,
 				2CEBEE551D7F75EB000DD832 /* BabyVC.m in Sources */,
 				6884D3891D75489A00BC87F8 /* UIImage+FSAdditions.m in Sources */,
 				6884D39A1D75623900BC87F8 /* ZLCGuidePageView.m in Sources */,
 				2C9361B01D6930F9002E5D4E /* SecondVc.m in Sources */,
+				68B710BA1D824D76006F741D /* MLPAutoCompleteTextField.m in Sources */,
 				2C9361C41D69D5DB002E5D4E /* WebBrowserTest.m in Sources */,
 				2C9361CF1D6C8D44002E5D4E /* Baby.m in Sources */,
 				2C9361C81D69DDF9002E5D4E /* BaseFunc.m in Sources */,
 				684CB4881D6BE00A0099CEE4 /* GrayPageControl.m in Sources */,
 				2C9361B81D693222002E5D4E /* FourthVc.m in Sources */,
+				68B710C31D826EE7006F741D /* UsrTxField.m in Sources */,
 				2C9361AD1D6930E4002E5D4E /* FirstVc.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

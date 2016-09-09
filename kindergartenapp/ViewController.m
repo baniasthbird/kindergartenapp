@@ -19,20 +19,25 @@
 #import "MBProgressHUD.h"
 #import "UIImage+GIF.h"
 #import "ZLCGuidePageView.h"
+#import "UsrNameVC.h"
 
 
 
 
 
 
-@interface ViewController ()<UITextFieldDelegate,YBMonitorNetWorkStateDelegate>
+
+@interface ViewController ()<UITextFieldDelegate,YBMonitorNetWorkStateDelegate,YLSearchDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *login_Parent;
 @property (weak, nonatomic) IBOutlet UIView *bgView;
-@property (weak, nonatomic) IBOutlet UITextField *txtUsrName;
 @property (weak, nonatomic) IBOutlet UITextField *txtPwd;
-@property (weak, nonatomic) IBOutlet UIButton *btn_dropdown;
 
+@property (nonatomic,strong) UsrNameVC *ursNameVC;
+
+@property (weak, nonatomic) IBOutlet UIView *view_usr_bg;
+
+@property (weak, nonatomic) IBOutlet UIImageView *bg_Login;
 
 
 @property (nonatomic, strong) AFHTTPSessionManager *session;
@@ -44,6 +49,7 @@
 @property (nonatomic) NSArray *dataSource;
 
 
+
 @end
 
 @implementation ViewController {
@@ -51,6 +57,7 @@
     BaseFunc *baseFunc;
     UIImageView *img_refresh;
     MBProgressHUD *view_indicator;
+    NSMutableArray *bandArray;
     
 }
 
@@ -120,6 +127,7 @@
     [defaults synchronize];
 
     
+    
     // Do any additional setup after loading the view, typically from a nib.
     baseFunc=[[BaseFunc alloc]init];
     self.view.backgroundColor=[UIColor colorWithRed:240/255.0f green:240/255.0f blue:240/255.0f alpha:1];
@@ -130,14 +138,14 @@
     _login_Parent.layer.cornerRadius=10;
     [_login_Parent addTarget:self action:@selector(Login:) forControlEvents:UIControlEventTouchUpInside];
     [_login_Parent setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [_txtUsrName setBorderStyle:UITextBorderStyleNone];
+   // [_txtUsrName setBorderStyle:UITextBorderStyleNone];
     [_txtPwd setBorderStyle:UITextBorderStyleNone];
     _bgView.layer.cornerRadius=10;
    
-    _txtUsrName.text=@"P01";
+   // _txtUsrName.text=@"P01";
     _txtPwd.text=@"123456";
     _txtPwd.delegate=self;
-    _txtUsrName.delegate=self;
+  //  _txtUsrName.delegate=self;
    
     
     
@@ -154,11 +162,12 @@
     
     [self netWorkStateChanged];
 
-    self.view.userInteractionEnabled = YES;
     
+    self.bg_Login.userInteractionEnabled=YES;
     UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(fingerTapped:)];
+
     
-    [self.view addGestureRecognizer:singleTap];
+    [self.bg_Login addGestureRecognizer:singleTap];
     
     img_refresh=[baseFunc IndicatorAnimationView];
     /*
@@ -167,24 +176,41 @@
     [_LoginLookupBtn setBackgroundColor:[UIColor redColor]];
     [self.view addSubview:_LoginLookupBtn];
      */
+    self.ursNameVC=[[UsrNameVC alloc]init];
+    
+    self.ursNameVC.delegate=self;
+    
+    self.ursNameVC.view.layer.cornerRadius=10;
+    
+    
+    bandArray=[[NSMutableArray alloc]init];
+    
+    [bandArray addObject:@"P01"];
+    [bandArray addObject:@"T01"];
+    [bandArray addObject:@"Y01"];
+    self.ursNameVC.listData=bandArray;
+   
+    [self.view sendSubviewToBack:_view_usr_bg];
+
     
    
 }
 
 -(void)viewDidAppear:(BOOL)animated {
+    
+    self.ursNameVC.Frame=CGRectMake(_bgView.frame.origin.x+_txtPwd.frame.origin.x, _bgView.frame.origin.y+5, self.view_usr_bg.frame.size.width, self.view_usr_bg.frame.size.height);
+    self.ursNameVC.bgColor=self.bgView.backgroundColor;
+    
+    [self.view addSubview:self.ursNameVC.view];
       // create the array of data;
-    NSMutableArray *bandArray=[[NSMutableArray alloc]init];
-    
-    [bandArray addObject:@"P01"];
-    [bandArray addObject:@"T01"];
-    [bandArray addObject:@"Y01"];
-    
-    self.downPicker=[[DownPicker alloc] initWithTextField:self.txtUsrName withData:bandArray];
+  
+        //self.downPicker=[[DownPicker alloc] initWithTextField:self.txtUsrName withData:bandArray];
 }
 
 //登陆
 -(void)Login:(UIButton*)sender {
-    NSString *str_usrname=_txtUsrName.text;
+   // NSString *str_usrname=_txtUsrName.text;
+    NSString *str_usrname=_ursNameVC.txt_usr.text;
     NSString *str_pwd=_txtPwd.text;
     if (![str_usrname isEqualToString:@""] && ![str_pwd isEqualToString:@""]) {
         NSString *str_url=@"http://123.56.238.120:8080/Base/MobileAccessService";
@@ -323,7 +349,8 @@
 
 -(void)fingerTapped:(UITapGestureRecognizer *)gestureRecognizer {
     [_txtPwd resignFirstResponder];
-    [_txtUsrName resignFirstResponder];
+    [_ursNameVC.txt_usr resignFirstResponder];
+   // [_txtUsrName resignFirstResponder];
 }
 
 
@@ -484,24 +511,18 @@
     
 }
 
-- (IBAction)DropDown:(id)sender {
-    if ([sender isSelected]) {
-        [self hideAccountBox];
-    }
-    else {
-        [self showAccountBox];
-    }
+-(void)tableViewDidSelectRow:(NSString*)str_text {
+    _ursNameVC.txt_usr.text=str_text;
+    
+}
+
+-(void)searchTextDidChange:(NSString *)searchText {
+    
 }
 
 
--(void)showAccountBox {
-    [_btn_dropdown setSelected:NO];
-}
 
 
--(void)hideAccountBox {
-    [_btn_dropdown setSelected:YES];
-}
 
 
 

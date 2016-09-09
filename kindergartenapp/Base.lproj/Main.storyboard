@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -46,12 +47,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2C9-rY-1UU" userLabel="bgView">
                                 <rect key="frame" x="53" y="249" width="494" height="97"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GLT-4g-e6B" userLabel="txtUsrName">
-                                        <rect key="frame" x="84" y="0.0" width="405" height="49"/>
-                                        <color key="backgroundColor" red="0.97647058823529409" green="0.97254901960784312" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GHB-eD-Qfq" userLabel="txtPwd">
                                         <rect key="frame" x="84" y="49" width="405" height="49"/>
                                         <color key="backgroundColor" red="0.97647058823529409" green="0.97254901960784312" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
@@ -71,39 +66,33 @@
                                             <constraint firstAttribute="height" constant="1" id="Hts-9M-Wam"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ejw-zN-scB" userLabel="btn_arrow">
-                                        <rect key="frame" x="404" y="8" width="75" height="33"/>
-                                        <state key="normal" backgroundImage="dropdown_arrow"/>
-                                        <connections>
-                                            <action selector="DropDown:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mb4-hD-rD8"/>
-                                        </connections>
-                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3f4-ii-Bag" userLabel="view_usr_bg">
+                                        <rect key="frame" x="84" y="5" width="405" height="39"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.97647058823529409" green="0.97254901960784312" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="SAY-SY-ZzB" firstAttribute="height" secondItem="E9G-Af-Lnt" secondAttribute="height" id="3BN-Xg-1DO"/>
+                                    <constraint firstItem="3f4-ii-Bag" firstAttribute="leading" secondItem="GHB-eD-Qfq" secondAttribute="leading" id="5eG-99-mxf"/>
+                                    <constraint firstItem="GHB-eD-Qfq" firstAttribute="top" secondItem="8ve-fb-xRv" secondAttribute="bottom" id="5ro-aO-4l2"/>
                                     <constraint firstItem="GHB-eD-Qfq" firstAttribute="height" secondItem="2C9-rY-1UU" secondAttribute="height" multiplier="0.5" id="AOy-NM-qr4"/>
-                                    <constraint firstItem="ejw-zN-scB" firstAttribute="trailing" secondItem="2C9-rY-1UU" secondAttribute="trailing" constant="-15" id="Fqj-ST-rDI"/>
+                                    <constraint firstItem="3f4-ii-Bag" firstAttribute="width" secondItem="GHB-eD-Qfq" secondAttribute="width" id="FWL-9h-Sw3"/>
                                     <constraint firstItem="E9G-Af-Lnt" firstAttribute="leading" secondItem="2C9-rY-1UU" secondAttribute="trailing" multiplier="0.015" id="FuP-1Q-HYT"/>
+                                    <constraint firstItem="E9G-Af-Lnt" firstAttribute="top" secondItem="2C9-rY-1UU" secondAttribute="topMargin" id="HJ3-Vx-hBi"/>
                                     <constraint firstItem="E9G-Af-Lnt" firstAttribute="height" secondItem="2C9-rY-1UU" secondAttribute="height" multiplier="0.337079" id="HTV-Lg-uKZ"/>
                                     <constraint firstItem="8ve-fb-xRv" firstAttribute="top" secondItem="2C9-rY-1UU" secondAttribute="bottom" multiplier="0.5" id="IRL-yO-Epx"/>
-                                    <constraint firstItem="GHB-eD-Qfq" firstAttribute="leading" secondItem="GLT-4g-e6B" secondAttribute="leading" id="Ifm-gb-BIo"/>
-                                    <constraint firstItem="GLT-4g-e6B" firstAttribute="top" secondItem="2C9-rY-1UU" secondAttribute="top" id="IvV-Fs-goM"/>
+                                    <constraint firstItem="GHB-eD-Qfq" firstAttribute="leading" secondItem="SAY-SY-ZzB" secondAttribute="trailing" constant="7" id="L6y-7q-OBi"/>
+                                    <constraint firstItem="3f4-ii-Bag" firstAttribute="trailing" secondItem="GHB-eD-Qfq" secondAttribute="trailing" id="NkO-KR-bDK"/>
                                     <constraint firstItem="SAY-SY-ZzB" firstAttribute="width" secondItem="E9G-Af-Lnt" secondAttribute="width" id="O3J-N3-7mQ"/>
-                                    <constraint firstItem="GLT-4g-e6B" firstAttribute="width" secondItem="2C9-rY-1UU" secondAttribute="width" multiplier="0.82" id="S7y-QF-omo"/>
-                                    <constraint firstItem="ejw-zN-scB" firstAttribute="width" secondItem="2C9-rY-1UU" secondAttribute="width" multiplier="0.15096" id="TgJ-LB-uu0"/>
-                                    <constraint firstItem="GHB-eD-Qfq" firstAttribute="top" secondItem="GLT-4g-e6B" secondAttribute="bottom" id="XHy-vt-fQe"/>
-                                    <constraint firstItem="GHB-eD-Qfq" firstAttribute="width" secondItem="GLT-4g-e6B" secondAttribute="width" id="h4z-Pu-boq"/>
+                                    <constraint firstAttribute="trailing" secondItem="GHB-eD-Qfq" secondAttribute="trailing" constant="5" id="Qf5-ZH-JeC"/>
+                                    <constraint firstItem="3f4-ii-Bag" firstAttribute="height" secondItem="GHB-eD-Qfq" secondAttribute="height" constant="-10" id="XGH-5l-rbE"/>
                                     <constraint firstItem="8ve-fb-xRv" firstAttribute="leading" secondItem="2C9-rY-1UU" secondAttribute="leading" id="hPH-0Q-mP0"/>
-                                    <constraint firstItem="ejw-zN-scB" firstAttribute="centerY" secondItem="GLT-4g-e6B" secondAttribute="centerY" id="jja-I7-kKT"/>
                                     <constraint firstItem="8ve-fb-xRv" firstAttribute="width" secondItem="2C9-rY-1UU" secondAttribute="width" id="kAS-uP-deN"/>
+                                    <constraint firstItem="3f4-ii-Bag" firstAttribute="centerY" secondItem="E9G-Af-Lnt" secondAttribute="centerY" id="lZz-qJ-22u"/>
                                     <constraint firstItem="SAY-SY-ZzB" firstAttribute="centerY" secondItem="GHB-eD-Qfq" secondAttribute="centerY" id="mL1-sr-jAO"/>
-                                    <constraint firstItem="GLT-4g-e6B" firstAttribute="trailing" secondItem="2C9-rY-1UU" secondAttribute="trailing" constant="-5" id="nG5-Qx-C6b"/>
                                     <constraint firstItem="E9G-Af-Lnt" firstAttribute="width" secondItem="2C9-rY-1UU" secondAttribute="width" multiplier="0.140384" id="oGC-Se-Fgl"/>
-                                    <constraint firstItem="ejw-zN-scB" firstAttribute="height" secondItem="2C9-rY-1UU" secondAttribute="height" multiplier="0.33708" id="rX2-uo-GmJ"/>
-                                    <constraint firstItem="E9G-Af-Lnt" firstAttribute="centerY" secondItem="GLT-4g-e6B" secondAttribute="centerY" id="rZ6-hT-JCu"/>
                                     <constraint firstItem="SAY-SY-ZzB" firstAttribute="leading" secondItem="E9G-Af-Lnt" secondAttribute="leading" id="tuv-m1-wij"/>
-                                    <constraint firstItem="GLT-4g-e6B" firstAttribute="height" secondItem="2C9-rY-1UU" secondAttribute="height" multiplier="0.5" id="wGu-c1-Ckz"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sA4-ck-eWU" userLabel="btn_Login">
@@ -147,10 +136,10 @@
                     <navigationItem key="navigationItem" id="bgu-E9-WPL"/>
                     <connections>
                         <outlet property="bgView" destination="2C9-rY-1UU" id="7qb-l4-t8F"/>
-                        <outlet property="btn_dropdown" destination="ejw-zN-scB" id="1vh-0h-W3W"/>
+                        <outlet property="bg_Login" destination="fsn-Es-O6P" id="VB7-Rl-tn8"/>
                         <outlet property="login_Parent" destination="sA4-ck-eWU" id="AGQ-ql-Q0F"/>
                         <outlet property="txtPwd" destination="GHB-eD-Qfq" id="ajq-9K-K6M"/>
-                        <outlet property="txtUsrName" destination="GLT-4g-e6B" id="ccH-8t-cLF"/>
+                        <outlet property="view_usr_bg" destination="3f4-ii-Bag" id="6UT-7c-Qzd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -678,16 +667,15 @@
         <image name="Message" width="57" height="54"/>
         <image name="Zone" width="57" height="54"/>
         <image name="bottom" width="562" height="78"/>
-        <image name="btn_3_1" width="138" height="134"/>
-        <image name="btn_3_2" width="140" height="134"/>
-        <image name="btn_3_3" width="134" height="134"/>
-        <image name="btn_3_4" width="138" height="140"/>
-        <image name="btn_3_5" width="140" height="140"/>
-        <image name="btn_3_6" width="134" height="140"/>
-        <image name="btn_3_7" width="138" height="145"/>
-        <image name="btn_3_8" width="140" height="145"/>
-        <image name="btn_3_9" width="134" height="145"/>
-        <image name="dropdown_arrow" width="157" height="120"/>
+        <image name="btn_3_1" width="130" height="130"/>
+        <image name="btn_3_2" width="130" height="130"/>
+        <image name="btn_3_3" width="130" height="130"/>
+        <image name="btn_3_4" width="130" height="130"/>
+        <image name="btn_3_5" width="130" height="130"/>
+        <image name="btn_3_6" width="130" height="130"/>
+        <image name="btn_3_7" width="130" height="130"/>
+        <image name="btn_3_8" width="130" height="130"/>
+        <image name="btn_3_9" width="130" height="130"/>
         <image name="first" width="29" height="29"/>
         <image name="first_selected" width="29" height="29"/>
         <image name="home_next" width="9" height="12"/>
