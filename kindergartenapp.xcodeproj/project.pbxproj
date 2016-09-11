@@ -34,6 +34,11 @@
 		2CEBEE041D7C23C4000DD832 /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2CEBEE031D7C23C4000DD832 /* loading.gif */; };
 		2CEBEE551D7F75EB000DD832 /* BabyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CEBEE541D7F75EB000DD832 /* BabyVC.m */; };
 		2CEBEE581D7F7611000DD832 /* ClassVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CEBEE571D7F7611000DD832 /* ClassVC.m */; };
+		2CEBEE5D1D82DF4C000DD832 /* CellLogo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CEBEE5B1D82DF4C000DD832 /* CellLogo.m */; };
+		2CEBEE5E1D82DF4C000DD832 /* CellLogo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CEBEE5C1D82DF4C000DD832 /* CellLogo.xib */; };
+		2CEBEE621D82DF6B000DD832 /* CellSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CEBEE601D82DF6B000DD832 /* CellSetting.m */; };
+		2CEBEE631D82DF6B000DD832 /* CellSetting.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CEBEE611D82DF6B000DD832 /* CellSetting.xib */; };
+		2CEBEE6B1D837B8B000DD832 /* AboutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CEBEE6A1D837B8B000DD832 /* AboutVC.m */; };
 		4DDB1AE24EA15B79A798639A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C5BBA671F146BFEDCE513B /* libPods.a */; };
 		684CB4881D6BE00A0099CEE4 /* GrayPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 684CB4821D6BE00A0099CEE4 /* GrayPageControl.m */; };
 		684CB4891D6BE00A0099CEE4 /* HcdGuideViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 684CB4851D6BE00A0099CEE4 /* HcdGuideViewCell.m */; };
@@ -134,6 +139,14 @@
 		2CEBEE541D7F75EB000DD832 /* BabyVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BabyVC.m; path = View/FirstVc/BabyVC.m; sourceTree = "<group>"; };
 		2CEBEE561D7F7611000DD832 /* ClassVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ClassVC.h; path = View/FirstVc/ClassVC.h; sourceTree = "<group>"; };
 		2CEBEE571D7F7611000DD832 /* ClassVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ClassVC.m; path = View/FirstVc/ClassVC.m; sourceTree = "<group>"; };
+		2CEBEE5A1D82DF4C000DD832 /* CellLogo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CellLogo.h; path = View/SettingVc/Modal/CellLogo.h; sourceTree = "<group>"; };
+		2CEBEE5B1D82DF4C000DD832 /* CellLogo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CellLogo.m; path = View/SettingVc/Modal/CellLogo.m; sourceTree = "<group>"; };
+		2CEBEE5C1D82DF4C000DD832 /* CellLogo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CellLogo.xib; path = View/SettingVc/Modal/CellLogo.xib; sourceTree = "<group>"; };
+		2CEBEE5F1D82DF6B000DD832 /* CellSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CellSetting.h; path = View/SettingVc/Modal/CellSetting.h; sourceTree = "<group>"; };
+		2CEBEE601D82DF6B000DD832 /* CellSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CellSetting.m; path = View/SettingVc/Modal/CellSetting.m; sourceTree = "<group>"; };
+		2CEBEE611D82DF6B000DD832 /* CellSetting.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CellSetting.xib; path = View/SettingVc/Modal/CellSetting.xib; sourceTree = "<group>"; };
+		2CEBEE691D837B8B000DD832 /* AboutVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AboutVC.h; path = View/SettingVc/AboutVC.h; sourceTree = "<group>"; };
+		2CEBEE6A1D837B8B000DD832 /* AboutVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AboutVC.m; path = View/SettingVc/AboutVC.m; sourceTree = "<group>"; };
 		684CB4811D6BE00A0099CEE4 /* GrayPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrayPageControl.h; sourceTree = "<group>"; };
 		684CB4821D6BE00A0099CEE4 /* GrayPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrayPageControl.m; sourceTree = "<group>"; };
 		684CB4831D6BE00A0099CEE4 /* HcdGuideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HcdGuideView.h; sourceTree = "<group>"; };
@@ -403,6 +416,7 @@
 		2C9361BC1D6932B9002E5D4E /* SettingVc */ = {
 			isa = PBXGroup;
 			children = (
+				2CEBEE591D82DF1E000DD832 /* Modal */,
 				2C9361BD1D6932C2002E5D4E /* Controller */,
 			);
 			name = SettingVc;
@@ -413,6 +427,8 @@
 			children = (
 				2C9361B91D6932AF002E5D4E /* SettingVc.h */,
 				2C9361BA1D6932AF002E5D4E /* SettingVc.m */,
+				2CEBEE691D837B8B000DD832 /* AboutVC.h */,
+				2CEBEE6A1D837B8B000DD832 /* AboutVC.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -461,6 +477,19 @@
 				2C8AE9E41D5F337B0069B3BD /* ViewController.m */,
 			);
 			name = Login;
+			sourceTree = "<group>";
+		};
+		2CEBEE591D82DF1E000DD832 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				2CEBEE5A1D82DF4C000DD832 /* CellLogo.h */,
+				2CEBEE5B1D82DF4C000DD832 /* CellLogo.m */,
+				2CEBEE5C1D82DF4C000DD832 /* CellLogo.xib */,
+				2CEBEE5F1D82DF6B000DD832 /* CellSetting.h */,
+				2CEBEE601D82DF6B000DD832 /* CellSetting.m */,
+				2CEBEE611D82DF6B000DD832 /* CellSetting.xib */,
+			);
+			name = Modal;
 			sourceTree = "<group>";
 		};
 		3886FF6AB1FA59CD77E9A151 /* Pods */ = {
@@ -716,6 +745,8 @@
 				6884D3861D75489A00BC87F8 /* comboDownArrow.png in Resources */,
 				2CEBEE041D7C23C4000DD832 /* loading.gif in Resources */,
 				2CEBEDF51D72FCF2000DD832 /* Assets.xcassets in Resources */,
+				2CEBEE5E1D82DF4C000DD832 /* CellLogo.xib in Resources */,
+				2CEBEE631D82DF6B000DD832 /* CellSetting.xib in Resources */,
 				2C8AE9E81D5F337B0069B3BD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -799,6 +830,8 @@
 				68B710B11D824036006F741D /* AutocompletionTableView.m in Sources */,
 				6884D3881D75489A00BC87F8 /* FSComboListView.m in Sources */,
 				2C9361BB1D6932AF002E5D4E /* SettingVc.m in Sources */,
+				2CEBEE621D82DF6B000DD832 /* CellSetting.m in Sources */,
+				2CEBEE5D1D82DF4C000DD832 /* CellLogo.m in Sources */,
 				2C9361D51D6C8EA9002E5D4E /* Class_School.m in Sources */,
 				68F89E121D66F1E900D2C1F0 /* Reachability.m in Sources */,
 				68F89E131D66F1E900D2C1F0 /* YBMonitorNetWorkState.m in Sources */,
@@ -809,6 +842,7 @@
 				68B710CF1D8271F4006F741D /* UsrNameVC.m in Sources */,
 				2CEBEDF31D72F687000DD832 /* Headmaster.m in Sources */,
 				2C9361CC1D6C8B4D002E5D4E /* ParentInfo.m in Sources */,
+				2CEBEE6B1D837B8B000DD832 /* AboutVC.m in Sources */,
 				2C8AE9DF1D5F337B0069B3BD /* main.m in Sources */,
 				684CB48A1D6BE00A0099CEE4 /* HcdGuideViewManager.m in Sources */,
 				68B710BB1D824D76006F741D /* NSString+Levenshtein.m in Sources */,

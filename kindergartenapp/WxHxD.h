@@ -29,3 +29,4 @@
 #define  iPhone6      (Width == 375.f && Height == 667.f ? YES : NO)
 #define  iPhone6_plus (Width == 414.f && Height == 736.f ? YES : NO)
 #define  iPad         (Width == 768.f && Height == 1024.f ? YES : NO)
+

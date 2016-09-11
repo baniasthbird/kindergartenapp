@@ -303,10 +303,14 @@
                             }
                            
                         }
+                        else {
+                            [self MoveToNextPage:usrInfo];
+                        }
                        
                         
                     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                        
+                         [view_indicator hide:YES];
+                        NSLog(@"失败");
                     }];
                     
                 }

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="162" id="KGk-i7-Jjw" customClass="CellLogo">
+            <rect key="frame" x="0.0" y="0.0" width="386" height="162"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="386" height="161"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BSY-gE-tWL" userLabel="img_bg">
+                        <rect key="frame" x="0.0" y="0.0" width="386" height="161"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="InS-da-GuG" userLabel="img_Logo">
+                        <rect key="frame" x="166" y="11" width="55" height="55"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="InS-da-GuG" secondAttribute="height" multiplier="1:1" id="get-Qj-MtL"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="BSY-gE-tWL" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="KoY-VD-1qo"/>
+                    <constraint firstItem="BSY-gE-tWL" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" id="LCM-Cg-KuU"/>
+                    <constraint firstItem="BSY-gE-tWL" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="P0E-zk-uE2"/>
+                    <constraint firstItem="BSY-gE-tWL" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" id="UUS-4L-T23"/>
+                    <constraint firstItem="InS-da-GuG" firstAttribute="height" secondItem="BSY-gE-tWL" secondAttribute="height" multiplier="0.342029" id="q8x-dH-xCt"/>
+                    <constraint firstItem="InS-da-GuG" firstAttribute="centerX" secondItem="BSY-gE-tWL" secondAttribute="centerX" id="qMe-yK-Lzw"/>
+                    <constraint firstItem="InS-da-GuG" firstAttribute="centerY" secondItem="BSY-gE-tWL" secondAttribute="bottom" multiplier="0.242" id="uNw-Pa-8k6"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="598" y="442"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Logo" width="79" height="79"/>
+    </resources>
+</document>

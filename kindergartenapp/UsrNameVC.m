@@ -91,7 +91,7 @@
     self.width = CGRectGetWidth(Frame);
     self.hight = CGRectGetHeight(Frame);
     self.view.frame = Frame;
-    [self.view setNeedsDisplay];
+
 }
 
 -(void)textFieldDidEndEditing:(UITextField *)textField {

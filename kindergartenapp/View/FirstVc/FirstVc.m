@@ -257,12 +257,18 @@
     }
     else {
         NSLog(@"调整");
-        UINavigationController *navMain=[[self storyboard] instantiateViewControllerWithIdentifier:@"navMain"];
-        [UIApplication sharedApplication].keyWindow.rootViewController=navMain;
-        self.navigationController.navigationBar.topItem.title=@"新马良幼儿园";
-        if (rightButton!=nil) {
-            self.tabBarController.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc]initWithCustomView:rightButton];
+        UIViewController *RootVC=[self.navigationController.viewControllers objectAtIndex:0];
+        if ([RootVC isKindOfClass:[FirstVc class]]) {
+             UINavigationController *navMain=[[self storyboard] instantiateViewControllerWithIdentifier:@"navMain"];
+             [UIApplication sharedApplication].keyWindow.rootViewController=navMain;
+            if (rightButton!=nil) {
+                self.tabBarController.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc]initWithCustomView:rightButton];
+            }
         }
+        else if ([RootVC isKindOfClass:[UITabBarController class]]) {
+            
+        }
+        self.navigationController.navigationBar.topItem.title=@"新马良幼儿园";
         [s_scrollView setFrame:CGRectMake(0, 0, self.view.frame.size.width, _img_Header.frame.size.height+_img_Header.frame.origin.y)];
     
         
@@ -472,8 +478,11 @@
         webbrowser.str_xuejihao=baby.xuejihao;
     }
    // webbrowser.str_url=str_url;
+    
     UINavigationController *navi1=[[UINavigationController alloc]initWithRootViewController:self];
     [UIApplication sharedApplication].keyWindow.rootViewController=navi1;
+    
+    
     /*
     [self presentViewController:webbrowser animated:YES completion:^{
        // [self dismissViewControllerAnimated:YES completion:nil];
@@ -493,9 +502,7 @@
         tb_select.arr_class=teacher.arr_class;
     }
     tb_select.delegate=self;
-    UINavigationController *navi1=[[UINavigationController alloc]initWithRootViewController:self];
-    [UIApplication sharedApplication].keyWindow.rootViewController=navi1;
-    [navi1 pushViewController:tb_select animated:YES];
+    [self.navigationController pushViewController:tb_select animated:YES];
 }
 
 -(void)PassValue:(Baby *)v_baby childvalue:(Class_School *)v_class_child refresh:(BOOL)b_refresh {
@@ -503,12 +510,16 @@
     if (v_baby!=nil && v_class_child==nil) {
         NSData *data=[NSKeyedArchiver archivedDataWithRootObject:v_baby];
         [defaults setObject:data forKey:@"baby_now"];
+        _lbl_name.text=[NSString stringWithFormat:@"%@%@",v_baby.name,@"妈妈"];
+        baby=v_baby;
+        _lbl_age.text=[self ClacAge];
     }
     else if (v_baby==nil && v_class_child!=nil) {
         NSData *data=[NSKeyedArchiver archivedDataWithRootObject:v_class_child];
         [defaults setObject:data forKey:@"class_now"];
     }
      [defaults synchronize];
+    
    
    // [self.view setNeedsDisplay];
 }
