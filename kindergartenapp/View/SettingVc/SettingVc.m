@@ -229,6 +229,7 @@
         [UIApplication sharedApplication].keyWindow.rootViewController=navi1;
         [navi1 pushViewController:vc_about animated:YES];
          */
+        vc_about.str_title=@"关于我们";
         [self.navigationController pushViewController:vc_about animated:YES];
     }
 }

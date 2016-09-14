@@ -13,6 +13,7 @@
 #import "tb_select.h"
 #import "MBProgressHUD.h"
 #import "UIImage+GIF.h"
+#import "StayTuneVC.h"
 
 @interface FirstVc() <tableviewselectDelegate>
 
@@ -257,14 +258,15 @@
     }
     else {
         NSLog(@"调整");
+        if (rightButton!=nil) {
+            self.tabBarController.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc]initWithCustomView:rightButton];
+        }
+
         UIViewController *RootVC=[self.navigationController.viewControllers objectAtIndex:0];
         if ([RootVC isKindOfClass:[FirstVc class]]) {
              UINavigationController *navMain=[[self storyboard] instantiateViewControllerWithIdentifier:@"navMain"];
              [UIApplication sharedApplication].keyWindow.rootViewController=navMain;
-            if (rightButton!=nil) {
-                self.tabBarController.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc]initWithCustomView:rightButton];
-            }
-        }
+                   }
         else if ([RootVC isKindOfClass:[UITabBarController class]]) {
             
         }
@@ -329,24 +331,29 @@
         [btn_1 setBackgroundImage:[UIImage imageNamed:@"p_btn1"] forState:UIControlStateNormal];
         [btn_1 setTitle:@"今日活动" forState:UIControlStateNormal];
         [btn_1 setTitleColor:[UIColor colorWithRed:240/255.0f green:92/255.0f blue:122/255.0f alpha:1] forState:UIControlStateNormal];
+        [btn_1 addTarget:self action:@selector(btn_Click:) forControlEvents:UIControlEventTouchUpInside];
         
         [btn_2 setCenter:CGPointMake(self.view.frame.size.width*0.5, _bg_Content.frame.size.height*0.25)];
         [btn_2 setBackgroundImage:[UIImage imageNamed:@"p_btn2"] forState:UIControlStateNormal];
         [btn_2 setTitle:@"今日食谱" forState:UIControlStateNormal];
         [btn_2 setTitleColor:[UIColor colorWithRed:91/255.0f green:176/255.0f blue:85/255.0f alpha:1] forState:UIControlStateNormal];
-       
+        [btn_2 addTarget:self action:@selector(btn_Click:) forControlEvents:UIControlEventTouchUpInside];
         
         
         [btn_3 setCenter:CGPointMake(self.view.frame.size.width*0.82, _bg_Content.frame.size.height*0.25)];
         [btn_3 setBackgroundImage:[UIImage imageNamed:@"p_btn3"] forState:UIControlStateNormal];
         [btn_3 setTitle:@"家园互动" forState:UIControlStateNormal];
         [btn_3 setTitleColor:[UIColor colorWithRed:124/255.0f green:162/255.0f blue:232/255.0f alpha:1] forState:UIControlStateNormal];
+        [btn_3 addTarget:self action:@selector(btn_Click:) forControlEvents:UIControlEventTouchUpInside];
+
         
        
         [btn_4 setCenter:CGPointMake(self.view.frame.size.width*0.18, _bg_Content.frame.size.height*0.75)];
         [btn_4 setBackgroundImage:[UIImage imageNamed:@"p_btn4"] forState:UIControlStateNormal];
         [btn_4 setTitle:@"体智发展" forState:UIControlStateNormal];
         [btn_4 setTitleColor:[UIColor colorWithRed:255/255.0f green:181/255.0f blue:30/255.0f alpha:1] forState:UIControlStateNormal];
+        [btn_4 addTarget:self action:@selector(btn_Click:) forControlEvents:UIControlEventTouchUpInside];
+
        
         
         
@@ -356,6 +363,7 @@
         [btn_5 setTitleColor:[UIColor colorWithRed:216/255.0f green:142/255.0f blue:198/255.0f alpha:1] forState:UIControlStateNormal];
         [btn_5 setTag:5];
         [btn_5 addTarget:self action:@selector(Albumn:) forControlEvents:UIControlEventTouchUpInside];
+        
         
         [btn_6 setFrame:CGRectMake(0.76167471819646*self.view.frame.size.width, 0.21920289855072*self.view.frame.size.height, btn_w, btn_w)];
         [btn_6 setCenter:CGPointMake(self.view.frame.size.width*0.82, _bg_Content.frame.size.height*0.75)];
@@ -386,6 +394,7 @@
         [btn_1 setBackgroundImage:[UIImage imageNamed:@"t_btn1"] forState:UIControlStateNormal];
         [btn_1 setTitle:@"发通知" forState:UIControlStateNormal];
         [btn_1 setTitleColor:[UIColor colorWithRed:238/255.0f green:104/255.0f blue:72/255.0f alpha:1] forState:UIControlStateNormal];
+        [btn_1 addTarget:self action:@selector(btn_Click:) forControlEvents:UIControlEventTouchUpInside];
         
         [btn_2 setCenter:CGPointMake(self.view.frame.size.width*0.5, _bg_Content.frame.size.height*0.4)];
         [btn_2 setBackgroundImage:[UIImage imageNamed:@"t_btn2"] forState:UIControlStateNormal];
@@ -406,11 +415,13 @@
         [btn_4 setBackgroundImage:[UIImage imageNamed:@"t_btn4"] forState:UIControlStateNormal];
         [btn_4 setTitle:@"家园互动" forState:UIControlStateNormal];
         [btn_4 setTitleColor:[UIColor colorWithRed:116/255.0f green:163/255.0f blue:229/255.0f alpha:1] forState:UIControlStateNormal];
+        [btn_4 addTarget:self action:@selector(btn_Click:) forControlEvents:UIControlEventTouchUpInside];
         
         [btn_5 setCenter:CGPointMake(self.view.frame.size.width*0.5, _bg_Content.frame.size.height*0.8)];
         [btn_5 setBackgroundImage:[UIImage imageNamed:@"t_btn5"] forState:UIControlStateNormal];
         [btn_5 setTitle:@"班级空间" forState:UIControlStateNormal];
         [btn_5 setTitleColor:[UIColor colorWithRed:216/255.0f green:193/255.0f blue:115/255.0f alpha:1] forState:UIControlStateNormal];
+        [btn_5 addTarget:self action:@selector(btn_Click:) forControlEvents:UIControlEventTouchUpInside];
         
         [_bg_Content addSubview:btn_1];
         [_bg_Content addSubview:btn_2];
@@ -424,6 +435,7 @@
         [btn_1 setBackgroundImage:[UIImage imageNamed:@"h_btn1"] forState:UIControlStateNormal];
         [btn_1 setTitle:@"发通知" forState:UIControlStateNormal];
         [btn_1 setTitleColor:[UIColor colorWithRed:238/255.0f green:104/255.0f blue:72/255.0f alpha:1] forState:UIControlStateNormal];
+        [btn_1 addTarget:self action:@selector(btn_Click:) forControlEvents:UIControlEventTouchUpInside];
         
         [btn_2 setCenter:CGPointMake(self.view.frame.size.width*0.5, _bg_Content.frame.size.height*0.4)];
         [btn_2 setBackgroundImage:[UIImage imageNamed:@"h_btn2"] forState:UIControlStateNormal];
@@ -439,16 +451,19 @@
         [btn_3 setTitleColor:[UIColor colorWithRed:255/255.0f green:181/255.0f blue:56/255.0f alpha:1] forState:UIControlStateNormal];
         [btn_3 setTag:6];
         [btn_3 setTitleColor:[UIColor colorWithRed:250/255.0f green:208/255.0f blue:52/255.0f alpha:1] forState:UIControlStateNormal];
+        [btn_3 addTarget:self action:@selector(btn_Click:) forControlEvents:UIControlEventTouchUpInside];
         
         [btn_4 setCenter:CGPointMake(self.view.frame.size.width*0.18, _bg_Content.frame.size.height*0.8)];
         [btn_4 setBackgroundImage:[UIImage imageNamed:@"h_btn4"] forState:UIControlStateNormal];
         [btn_4 setTitle:@"学校空间" forState:UIControlStateNormal];
         [btn_4 setTitleColor:[UIColor colorWithRed:116/255.0f green:163/255.0f blue:229/255.0f alpha:1] forState:UIControlStateNormal];
+        [btn_4 addTarget:self action:@selector(btn_Click:) forControlEvents:UIControlEventTouchUpInside];
         
         [btn_5 setCenter:CGPointMake(self.view.frame.size.width*0.5, _bg_Content.frame.size.height*0.8)];
         [btn_5 setBackgroundImage:[UIImage imageNamed:@"h_btn5"] forState:UIControlStateNormal];
         [btn_5 setTitle:@"家园互动" forState:UIControlStateNormal];
         [btn_5 setTitleColor:[UIColor colorWithRed:216/255.0f green:193/255.0f blue:115/255.0f alpha:1] forState:UIControlStateNormal];
+        [btn_5 addTarget:self action:@selector(btn_Click:) forControlEvents:UIControlEventTouchUpInside];
         
         [_bg_Content addSubview:btn_1];
         [_bg_Content addSubview:btn_2];
@@ -522,6 +537,12 @@
     
    
    // [self.view setNeedsDisplay];
+}
+
+-(void)btn_Click:(UIButton*)btn {
+    StayTuneVC *vc_staytune=[[self storyboard] instantiateViewControllerWithIdentifier:@"view_staytune"];
+    [self.navigationController pushViewController:vc_staytune animated:YES];
+
 }
 
 @end

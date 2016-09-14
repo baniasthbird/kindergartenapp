@@ -17,5 +17,9 @@
 }
 
 
+-(void)viewDidAppear:(BOOL)animated {
+    self.tabBarController.navigationItem.rightBarButtonItem=nil;
+    
+}
 
 @end

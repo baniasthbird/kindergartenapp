@@ -1,14 +1,14 @@
 //
-//  AboutVC.h
+//  StayTuneVC.h
 //  kindergartenapp
 //
-//  Created by zr-mac on 16/9/10.
+//  Created by hnsi-03 on 16/9/12.
 //  Copyright © 2016年 zr-mac. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import "BaseVC.h"
 
-@interface AboutVC :BaseVC
+@interface StayTuneVC : BaseVC
 
 @end

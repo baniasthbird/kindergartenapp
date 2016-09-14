@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -38,11 +38,11 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Login" translatesAutoresizingMaskIntoConstraints="NO" id="fsn-Es-O6P">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Login_Logo" translatesAutoresizingMaskIntoConstraints="NO" id="mQ5-vo-TFp" userLabel="Login_Logo">
-                                <rect key="frame" x="77" y="48" width="445" height="48"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Login_Pic" translatesAutoresizingMaskIntoConstraints="NO" id="Ccb-n7-7c8" userLabel="LoginPic">
-                                <rect key="frame" x="138" y="126" width="324" height="93"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="LoginAppLogo" translatesAutoresizingMaskIntoConstraints="NO" id="mQ5-vo-TFp" userLabel="Login_Logo">
+                                <rect key="frame" x="203" y="73" width="193" height="194"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="mQ5-vo-TFp" secondAttribute="height" multiplier="1:1" id="GBW-Vh-aah"/>
+                                </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2C9-rY-1UU" userLabel="bgView">
                                 <rect key="frame" x="53" y="249" width="494" height="97"/>
@@ -115,22 +115,17 @@
                             <constraint firstItem="2C9-rY-1UU" firstAttribute="height" secondItem="fsn-Es-O6P" secondAttribute="height" multiplier="0.1605" id="9fl-Kx-IZt"/>
                             <constraint firstItem="sA4-ck-eWU" firstAttribute="width" secondItem="fsn-Es-O6P" secondAttribute="width" multiplier="0.8229" id="Cod-V7-McL"/>
                             <constraint firstItem="2C9-rY-1UU" firstAttribute="top" secondItem="fsn-Es-O6P" secondAttribute="bottom" multiplier="0.415" id="ERc-b2-Z4M"/>
-                            <constraint firstItem="mQ5-vo-TFp" firstAttribute="width" secondItem="fsn-Es-O6P" secondAttribute="width" multiplier="0.74133" id="NIs-ck-OeK"/>
                             <constraint firstItem="sA4-ck-eWU" firstAttribute="top" secondItem="fsn-Es-O6P" secondAttribute="bottom" multiplier="0.6413" id="Obi-3D-vUV"/>
-                            <constraint firstItem="mQ5-vo-TFp" firstAttribute="height" secondItem="fsn-Es-O6P" secondAttribute="height" multiplier="0.08" id="RBD-vm-xcq"/>
+                            <constraint firstItem="mQ5-vo-TFp" firstAttribute="width" secondItem="fsn-Es-O6P" secondAttribute="width" multiplier="0.322061" id="Pi7-Mj-Qcv"/>
                             <constraint firstItem="mQ5-vo-TFp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="REf-pz-Vub"/>
                             <constraint firstItem="sA4-ck-eWU" firstAttribute="height" secondItem="fsn-Es-O6P" secondAttribute="height" multiplier="0.077" id="TvE-Hs-8pt"/>
                             <constraint firstItem="2C9-rY-1UU" firstAttribute="width" secondItem="fsn-Es-O6P" secondAttribute="width" multiplier="0.823" id="WY7-RY-5wj"/>
-                            <constraint firstItem="mQ5-vo-TFp" firstAttribute="top" secondItem="fsn-Es-O6P" secondAttribute="bottom" multiplier="0.08" id="Wt2-1o-cTi"/>
+                            <constraint firstItem="mQ5-vo-TFp" firstAttribute="top" secondItem="fsn-Es-O6P" secondAttribute="bottom" multiplier="0.122283" id="Wt2-1o-cTi"/>
                             <constraint firstItem="fsn-Es-O6P" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="ahd-mF-xM1"/>
-                            <constraint firstItem="Ccb-n7-7c8" firstAttribute="height" secondItem="fsn-Es-O6P" secondAttribute="height" multiplier="0.1558" id="bdB-6n-6b7"/>
-                            <constraint firstItem="Ccb-n7-7c8" firstAttribute="width" secondItem="fsn-Es-O6P" secondAttribute="width" multiplier="0.5395" id="fNE-WD-glC"/>
                             <constraint firstItem="fsn-Es-O6P" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="imW-wf-4yJ"/>
                             <constraint firstItem="fsn-Es-O6P" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ldr-SC-yqm"/>
                             <constraint firstItem="fsn-Es-O6P" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="muS-YQ-Vfo"/>
                             <constraint firstItem="sA4-ck-eWU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pL5-Df-7DX"/>
-                            <constraint firstItem="Ccb-n7-7c8" firstAttribute="top" secondItem="fsn-Es-O6P" secondAttribute="bottom" multiplier="0.2097" id="tUm-NX-XfB"/>
-                            <constraint firstItem="Ccb-n7-7c8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yRR-4G-rBs"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bgu-E9-WPL"/>
@@ -334,6 +329,9 @@
                                 <state key="normal" title="今日活动" backgroundImage="btn_3_1">
                                     <color key="titleColor" red="0.94509803921568625" green="0.36078431372549019" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="btn_1_Click:" destination="LGY-re-7Ww" eventType="touchUpInside" id="dwq-jq-Nfr"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZsF-Wu-keS" userLabel="btn_2">
                                 <rect key="frame" x="241" y="91" width="118" height="118"/>
@@ -345,6 +343,9 @@
                                 <state key="normal" title="今日食谱" backgroundImage="btn_3_2">
                                     <color key="titleColor" red="0.36078431372549019" green="0.68627450980392157" blue="0.36862745098039218" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="btn_2_Click:" destination="LGY-re-7Ww" eventType="touchUpInside" id="vZ8-Ar-heq"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tlG-do-nAJ" userLabel="btn_3">
                                 <rect key="frame" x="421" y="91" width="118" height="118"/>
@@ -356,6 +357,9 @@
                                 <state key="normal" title="家园互动" backgroundImage="btn_3_3">
                                     <color key="titleColor" red="0.48627450980392156" green="0.63529411764705879" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="btn_3_Click:" destination="LGY-re-7Ww" eventType="touchUpInside" id="bml-eB-ydB"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="itu-64-jzS" userLabel="btn_4">
                                 <rect key="frame" x="61" y="241" width="118" height="118"/>
@@ -367,6 +371,9 @@
                                 <state key="normal" title="体智发展" backgroundImage="btn_3_4">
                                     <color key="titleColor" red="1" green="0.69803921568627447" blue="0.21568627450980393" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="btn_4_Click:" destination="LGY-re-7Ww" eventType="touchUpInside" id="TfS-gO-0B3"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vcb-Pn-WZW" userLabel="btn_5">
                                 <rect key="frame" x="241" y="241" width="118" height="118"/>
@@ -378,6 +385,9 @@
                                 <state key="normal" title="相册" backgroundImage="btn_3_5">
                                     <color key="titleColor" red="0.85098039215686272" green="0.5607843137254902" blue="0.77254901960784317" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="btn_5_Click:" destination="LGY-re-7Ww" eventType="touchUpInside" id="5gd-fg-lS2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rcf-36-c5o" userLabel="btn_6">
                                 <rect key="frame" x="421" y="241" width="118" height="118"/>
@@ -389,6 +399,9 @@
                                 <state key="normal" title="视频" backgroundImage="btn_3_6">
                                     <color key="titleColor" red="1" green="0.70980392156862748" blue="0.086274509803921567" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="btn_6_Click:" destination="LGY-re-7Ww" eventType="touchUpInside" id="oSg-kp-078"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tpK-BX-Z2E" userLabel="btn_7">
                                 <rect key="frame" x="61" y="391" width="118" height="118"/>
@@ -411,6 +424,10 @@
                                 <state key="normal" title="宝宝空间" backgroundImage="btn_3_8">
                                     <color key="titleColor" red="0.93725490196078431" green="0.62745098039215685" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="btn_7_Click:" destination="LGY-re-7Ww" eventType="touchUpInside" id="dqC-Ug-Spc"/>
+                                    <action selector="btn_9_Click:" destination="LGY-re-7Ww" eventType="touchUpInside" id="XGk-ei-4qU"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Moy-kc-jsd" userLabel="btn_9">
                                 <rect key="frame" x="421" y="391" width="118" height="118"/>
@@ -422,6 +439,9 @@
                                 <state key="normal" title="学校空间" backgroundImage="btn_3_9">
                                     <color key="titleColor" red="0.54509803921568623" green="0.77647058823529413" blue="0.24705882352941178" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="btn_8_Click:" destination="LGY-re-7Ww" eventType="touchUpInside" id="V3R-Ia-PJI"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.97647058823529409" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
@@ -752,7 +772,7 @@
         <!--敬请期待-->
         <scene sceneID="3rE-kh-KgV">
             <objects>
-                <viewController storyboardIdentifier="view_staytune" title="敬请期待" id="Gbj-Y9-fkQ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="view_staytune" title="敬请期待" id="Gbj-Y9-fkQ" customClass="StayTuneVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="65m-jl-MKb"/>
                         <viewControllerLayoutGuide type="bottom" id="Njs-e1-AEH"/>
@@ -821,8 +841,7 @@
     <resources>
         <image name="AppLogo" width="60" height="60"/>
         <image name="Login" width="375" height="667"/>
-        <image name="Login_Logo" width="521" height="125"/>
-        <image name="Login_Pic" width="349" height="191"/>
+        <image name="LoginAppLogo" width="211" height="217"/>
         <image name="Logo" width="79" height="79"/>
         <image name="Message" width="57" height="54"/>
         <image name="StayTune" width="525" height="525"/>

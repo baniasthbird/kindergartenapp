@@ -43,6 +43,8 @@
 		684CB4881D6BE00A0099CEE4 /* GrayPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 684CB4821D6BE00A0099CEE4 /* GrayPageControl.m */; };
 		684CB4891D6BE00A0099CEE4 /* HcdGuideViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 684CB4851D6BE00A0099CEE4 /* HcdGuideViewCell.m */; };
 		684CB48A1D6BE00A0099CEE4 /* HcdGuideViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 684CB4871D6BE00A0099CEE4 /* HcdGuideViewManager.m */; };
+		6875729C1D86358A00AEA354 /* StayTuneVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6875729B1D86358A00AEA354 /* StayTuneVC.m */; };
+		6875729F1D86397E00AEA354 /* BaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6875729E1D86397E00AEA354 /* BaseVC.m */; };
 		6884D3631D74300600BC87F8 /* UIImage+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 6884D3621D74300600BC87F8 /* UIImage+GIF.m */; };
 		6884D3861D75489A00BC87F8 /* comboDownArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 6884D3801D75489A00BC87F8 /* comboDownArrow.png */; };
 		6884D3871D75489A00BC87F8 /* comboDownArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6884D3811D75489A00BC87F8 /* comboDownArrow@2x.png */; };
@@ -154,6 +156,10 @@
 		684CB4851D6BE00A0099CEE4 /* HcdGuideViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HcdGuideViewCell.m; sourceTree = "<group>"; };
 		684CB4861D6BE00A0099CEE4 /* HcdGuideViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HcdGuideViewManager.h; sourceTree = "<group>"; };
 		684CB4871D6BE00A0099CEE4 /* HcdGuideViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HcdGuideViewManager.m; sourceTree = "<group>"; };
+		6875729A1D86358A00AEA354 /* StayTuneVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StayTuneVC.h; path = View/SecondVc/StayTuneVC.h; sourceTree = "<group>"; };
+		6875729B1D86358A00AEA354 /* StayTuneVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StayTuneVC.m; path = View/SecondVc/StayTuneVC.m; sourceTree = "<group>"; };
+		6875729D1D86397E00AEA354 /* BaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseVC.h; path = Common/BaseVC.h; sourceTree = "<group>"; };
+		6875729E1D86397E00AEA354 /* BaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseVC.m; path = Common/BaseVC.m; sourceTree = "<group>"; };
 		6884D3611D74300600BC87F8 /* UIImage+GIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GIF.h"; sourceTree = "<group>"; };
 		6884D3621D74300600BC87F8 /* UIImage+GIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GIF.m"; sourceTree = "<group>"; };
 		6884D3641D750BC200BC87F8 /* libAKLookups.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAKLookups.a; path = "Pods/../build/Debug-iphoneos/libAKLookups.a"; sourceTree = "<group>"; };
@@ -375,6 +381,8 @@
 			children = (
 				2C9361AE1D6930F9002E5D4E /* SecondVc.h */,
 				2C9361AF1D6930F9002E5D4E /* SecondVc.m */,
+				6875729A1D86358A00AEA354 /* StayTuneVC.h */,
+				6875729B1D86358A00AEA354 /* StayTuneVC.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -448,6 +456,8 @@
 			children = (
 				2C9361C61D69DDF9002E5D4E /* BaseFunc.h */,
 				2C9361C71D69DDF9002E5D4E /* BaseFunc.m */,
+				6875729D1D86397E00AEA354 /* BaseVC.h */,
+				6875729E1D86397E00AEA354 /* BaseVC.m */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -838,10 +848,12 @@
 				684CB4891D6BE00A0099CEE4 /* HcdGuideViewCell.m in Sources */,
 				68F89E171D67057A00D2C1F0 /* MainTabController.m in Sources */,
 				2C9361A01D692E88002E5D4E /* NTButton.m in Sources */,
+				6875729C1D86358A00AEA354 /* StayTuneVC.m in Sources */,
 				6884D3631D74300600BC87F8 /* UIImage+GIF.m in Sources */,
 				68B710CF1D8271F4006F741D /* UsrNameVC.m in Sources */,
 				2CEBEDF31D72F687000DD832 /* Headmaster.m in Sources */,
 				2C9361CC1D6C8B4D002E5D4E /* ParentInfo.m in Sources */,
+				6875729F1D86397E00AEA354 /* BaseVC.m in Sources */,
 				2CEBEE6B1D837B8B000DD832 /* AboutVC.m in Sources */,
 				2C8AE9DF1D5F337B0069B3BD /* main.m in Sources */,
 				684CB48A1D6BE00A0099CEE4 /* HcdGuideViewManager.m in Sources */,

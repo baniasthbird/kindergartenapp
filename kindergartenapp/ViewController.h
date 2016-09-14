@@ -13,7 +13,9 @@
 
 @interface ViewController : UIViewController
 
+@property BOOL b_update;
 
+@property BOOL b_showLaunch;
 
 @end
 

@@ -7,6 +7,7 @@
 //
 
 #import "ThirdVc.h"
+#import "StayTuneVC.h"
 
 @implementation ThirdVc {
     NSInteger i_role;
@@ -46,6 +47,12 @@
     
     i_role=[_userInfo.str_role integerValue];
     
+    CGFloat i_fontsize=16;
+    if (iPhone5_5s || iPhone4_4s) {
+        i_fontsize=14;
+    }
+
+    
     if (i_role==0) {
         
     }
@@ -78,9 +85,16 @@
         [btn_9 setBackgroundImage:[UIImage imageNamed:@"btn_3_7"] forState:UIControlStateNormal];
         [btn_9 setTitle:@"亲子商城" forState:UIControlStateNormal];
         [btn_9 setTitleColor:[UIColor colorWithRed:168/255.0f green:153/255.0f blue:208/255.0f alpha:1] forState:UIControlStateNormal];
-       
-        
     }
+     btn_1.titleLabel.font=[UIFont fontWithName:@"FZSEJW--GB1-0" size:i_fontsize];
+     btn_2.titleLabel.font=[UIFont fontWithName:@"FZSEJW--GB1-0" size:i_fontsize];
+     btn_3.titleLabel.font=[UIFont fontWithName:@"FZSEJW--GB1-0" size:i_fontsize];
+     btn_4.titleLabel.font=[UIFont fontWithName:@"FZSEJW--GB1-0" size:i_fontsize];
+     btn_5.titleLabel.font=[UIFont fontWithName:@"FZSEJW--GB1-0" size:i_fontsize];
+     btn_6.titleLabel.font=[UIFont fontWithName:@"FZSEJW--GB1-0" size:i_fontsize];
+     btn_7.titleLabel.font=[UIFont fontWithName:@"FZSEJW--GB1-0" size:i_fontsize];
+     btn_8.titleLabel.font=[UIFont fontWithName:@"FZSEJW--GB1-0" size:i_fontsize];
+     btn_9.titleLabel.font=[UIFont fontWithName:@"FZSEJW--GB1-0" size:i_fontsize];
     
     //[self.view setNeedsDisplay];
     
@@ -90,6 +104,52 @@
     self.navigationController.navigationBar.topItem.title=@"马良宝";
     self.tabBarController.navigationItem.rightBarButtonItem=nil;
     
+}
+- (IBAction)btn_1_Click:(id)sender {
+    [self MoveToStayTune:sender];
+}
+
+- (IBAction)btn_2_Click:(id)sender {
+     [self MoveToStayTune:sender];
+}
+- (IBAction)btn_3_Click:(id)sender {
+     [self MoveToStayTune:sender];
+}
+
+- (IBAction)btn_4_Click:(id)sender {
+     [self MoveToStayTune:sender];
+}
+
+- (IBAction)btn_5_Click:(id)sender {
+     [self MoveToStayTune:sender];
+}
+
+- (IBAction)btn_6_Click:(id)sender {
+     [self MoveToStayTune:sender];
+}
+
+- (IBAction)btn_7_Click:(id)sender {
+     [self MoveToStayTune:sender];
+}
+
+- (IBAction)btn_8_Click:(id)sender {
+     [self MoveToStayTune:sender];
+}
+
+- (IBAction)btn_9_Click:(id)sender {
+     [self MoveToStayTune:sender];
+}
+
+
+-(void)MoveToStayTune:(UIButton*)btn {
+    NSString *str_title=btn.titleLabel.text;
+    NSRange range1=[str_title rangeOfString:@"相册"];
+    NSRange range2=[str_title rangeOfString:@"视频"];
+    if (range1.location==NSNotFound && range2.location==NSNotFound) {
+        StayTuneVC *vc_staytune=[[self storyboard] instantiateViewControllerWithIdentifier:@"view_staytune"];
+        vc_staytune.str_title=@"敬请期待";
+        [self.navigationController pushViewController:vc_staytune animated:YES];
+    }
 }
 
 @end

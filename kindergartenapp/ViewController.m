@@ -102,7 +102,12 @@
     
     //创建引导页视图
     ZLCGuidePageView *pageView = [[ZLCGuidePageView alloc]initWithFrame:self.view.frame WithImages:images];
-    [self.navigationController.view addSubview:pageView];
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"firstLaunch"]) {
+        [self.navigationController.view addSubview:pageView];
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"everLaunched"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+    
     
     _dataSource=[[NSArray alloc]initWithObjects:@"P01",@"T01",@"Y01", nil];
     
@@ -117,6 +122,9 @@
                                                  andButtonBGColor:[UIColor clearColor]
                                              andButtonBorderColor:[UIColor blueColor]];
     */
+    
+    if (_b_update==YES) {
+    }
     
     //去掉所有保存
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
