@@ -7,13 +7,11 @@
 //
 
 #import "UsrNameVC.h"
+#import "UsrCell.h"
 
 @interface UsrNameVC ()<UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tb_usr;
 @property (weak, nonatomic) IBOutlet UIButton *btn_show;
-
-
-
 
 
 @property (nonatomic,assign) float x;//自身的x坐标
@@ -45,7 +43,7 @@
     _tb_usr.delegate=self;
     _tb_usr.dataSource=self;
     _tb_usr.hidden=YES;
-    
+    //_tb_usr.backgroundColor=[UIColor clearColor];
     
 }
 
@@ -68,7 +66,8 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
         
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        cell.backgroundColor=[UIColor colorWithRed:249/255.0f green:248/255.0f blue:246/255.0f alpha:1];
+       // cell.backgroundColor=[UIColor colorWithRed:249/255.0f green:248/255.0f blue:246/255.0f alpha:1];
+        cell.backgroundColor=[UIColor clearColor];
         
     }
     cell.textLabel.text = self.listData[indexPath.row];

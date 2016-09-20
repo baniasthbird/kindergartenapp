@@ -30,3 +30,8 @@
 #define  iPhone6_plus (Width == 414.f && Height == 736.f ? YES : NO)
 #define  iPad         (Width == 768.f && Height == 1024.f ? YES : NO)
 
+//版本表
+#define TB_VERSION    @"TB_VERSION"
+#define TB_ID         @"V_ID"
+#define TB_V_VERSION    @"V_VERSION"
+#define TB_MARK       @"V_MARK"

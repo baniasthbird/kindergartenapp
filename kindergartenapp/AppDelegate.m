@@ -82,6 +82,7 @@
         else {
             [defaults setBool:NO forKey:@"firstLaunch"];
         }
+    
     [defaults synchronize];
     
     

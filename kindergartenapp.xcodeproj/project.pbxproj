@@ -40,11 +40,15 @@
 		2CEBEE631D82DF6B000DD832 /* CellSetting.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CEBEE611D82DF6B000DD832 /* CellSetting.xib */; };
 		2CEBEE6B1D837B8B000DD832 /* AboutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CEBEE6A1D837B8B000DD832 /* AboutVC.m */; };
 		4DDB1AE24EA15B79A798639A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C5BBA671F146BFEDCE513B /* libPods.a */; };
+		680FB7B81D913A9B0093DA38 /* UsrCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 680FB7B61D913A9B0093DA38 /* UsrCell.m */; };
+		680FB7B91D913A9B0093DA38 /* UsrCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 680FB7B71D913A9B0093DA38 /* UsrCell.xib */; };
 		684CB4881D6BE00A0099CEE4 /* GrayPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 684CB4821D6BE00A0099CEE4 /* GrayPageControl.m */; };
 		684CB4891D6BE00A0099CEE4 /* HcdGuideViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 684CB4851D6BE00A0099CEE4 /* HcdGuideViewCell.m */; };
 		684CB48A1D6BE00A0099CEE4 /* HcdGuideViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 684CB4871D6BE00A0099CEE4 /* HcdGuideViewManager.m */; };
 		6875729C1D86358A00AEA354 /* StayTuneVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6875729B1D86358A00AEA354 /* StayTuneVC.m */; };
 		6875729F1D86397E00AEA354 /* BaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6875729E1D86397E00AEA354 /* BaseVC.m */; };
+		68794A541D8E38CB00DF901D /* DataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 68794A531D8E38CB00DF901D /* DataBase.m */; };
+		68794A561D8E39BA00DF901D /* libFMDB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68794A551D8E39BA00DF901D /* libFMDB.a */; };
 		6884D3631D74300600BC87F8 /* UIImage+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 6884D3621D74300600BC87F8 /* UIImage+GIF.m */; };
 		6884D3861D75489A00BC87F8 /* comboDownArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 6884D3801D75489A00BC87F8 /* comboDownArrow.png */; };
 		6884D3871D75489A00BC87F8 /* comboDownArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6884D3811D75489A00BC87F8 /* comboDownArrow@2x.png */; };
@@ -149,6 +153,9 @@
 		2CEBEE611D82DF6B000DD832 /* CellSetting.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CellSetting.xib; path = View/SettingVc/Modal/CellSetting.xib; sourceTree = "<group>"; };
 		2CEBEE691D837B8B000DD832 /* AboutVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AboutVC.h; path = View/SettingVc/AboutVC.h; sourceTree = "<group>"; };
 		2CEBEE6A1D837B8B000DD832 /* AboutVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AboutVC.m; path = View/SettingVc/AboutVC.m; sourceTree = "<group>"; };
+		680FB7B51D913A9B0093DA38 /* UsrCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UsrCell.h; path = Login/Modal/UsrCell.h; sourceTree = "<group>"; };
+		680FB7B61D913A9B0093DA38 /* UsrCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UsrCell.m; path = Login/Modal/UsrCell.m; sourceTree = "<group>"; };
+		680FB7B71D913A9B0093DA38 /* UsrCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UsrCell.xib; path = Login/Modal/UsrCell.xib; sourceTree = "<group>"; };
 		684CB4811D6BE00A0099CEE4 /* GrayPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrayPageControl.h; sourceTree = "<group>"; };
 		684CB4821D6BE00A0099CEE4 /* GrayPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrayPageControl.m; sourceTree = "<group>"; };
 		684CB4831D6BE00A0099CEE4 /* HcdGuideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HcdGuideView.h; sourceTree = "<group>"; };
@@ -160,6 +167,9 @@
 		6875729B1D86358A00AEA354 /* StayTuneVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StayTuneVC.m; path = View/SecondVc/StayTuneVC.m; sourceTree = "<group>"; };
 		6875729D1D86397E00AEA354 /* BaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseVC.h; path = Common/BaseVC.h; sourceTree = "<group>"; };
 		6875729E1D86397E00AEA354 /* BaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseVC.m; path = Common/BaseVC.m; sourceTree = "<group>"; };
+		68794A521D8E38CB00DF901D /* DataBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataBase.h; path = Common/DataBase/DataBase.h; sourceTree = "<group>"; };
+		68794A531D8E38CB00DF901D /* DataBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataBase.m; path = Common/DataBase/DataBase.m; sourceTree = "<group>"; };
+		68794A551D8E39BA00DF901D /* libFMDB.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFMDB.a; path = "../../Library/Developer/Xcode/DerivedData/kindergartenapp-erviqgsjzuezvweuxxgwyjysxxzl/Build/Products/Debug-iphonesimulator/libFMDB.a"; sourceTree = "<group>"; };
 		6884D3611D74300600BC87F8 /* UIImage+GIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GIF.h"; sourceTree = "<group>"; };
 		6884D3621D74300600BC87F8 /* UIImage+GIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GIF.m"; sourceTree = "<group>"; };
 		6884D3641D750BC200BC87F8 /* libAKLookups.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAKLookups.a; path = "Pods/../build/Debug-iphoneos/libAKLookups.a"; sourceTree = "<group>"; };
@@ -206,6 +216,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68794A561D8E39BA00DF901D /* libFMDB.a in Frameworks */,
 				6884D38B1D75494E00BC87F8 /* libDownPicker.a in Frameworks */,
 				6895AE2E1D70214C0003F2A2 /* libSDCycleScrollView.a in Frameworks */,
 				68F89E091D66DFAE00D2C1F0 /* libSDWebImage.a in Frameworks */,
@@ -319,6 +330,7 @@
 		2C8AEA141D606A9C0069B3BD /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				68794A511D8E37CD00DF901D /* DataBase */,
 				2C9361C51D69DDB7002E5D4E /* Base */,
 				2C9361BE1D696F10002E5D4E /* User */,
 			);
@@ -514,6 +526,7 @@
 		58410DE252D473D1171250F7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				68794A551D8E39BA00DF901D /* libFMDB.a */,
 				6884D38A1D75494E00BC87F8 /* libDownPicker.a */,
 				6884D3641D750BC200BC87F8 /* libAKLookups.a */,
 				2C9361DB1D710FBF002E5D4E /* libMJRefresh.a */,
@@ -540,6 +553,15 @@
 			path = HcdGuideView;
 			sourceTree = "<group>";
 		};
+		68794A511D8E37CD00DF901D /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				68794A521D8E38CB00DF901D /* DataBase.h */,
+				68794A531D8E38CB00DF901D /* DataBase.m */,
+			);
+			name = DataBase;
+			sourceTree = "<group>";
+		};
 		6884D3601D74300600BC87F8 /* UIImage+GIF */ = {
 			isa = PBXGroup;
 			children = (
@@ -559,6 +581,9 @@
 				68B710B01D824036006F741D /* AutocompletionTableView.m */,
 				68B710C11D826EE7006F741D /* UsrTxField.h */,
 				68B710C21D826EE7006F741D /* UsrTxField.m */,
+				680FB7B51D913A9B0093DA38 /* UsrCell.h */,
+				680FB7B61D913A9B0093DA38 /* UsrCell.m */,
+				680FB7B71D913A9B0093DA38 /* UsrCell.xib */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -756,6 +781,7 @@
 				2CEBEE041D7C23C4000DD832 /* loading.gif in Resources */,
 				2CEBEDF51D72FCF2000DD832 /* Assets.xcassets in Resources */,
 				2CEBEE5E1D82DF4C000DD832 /* CellLogo.xib in Resources */,
+				680FB7B91D913A9B0093DA38 /* UsrCell.xib in Resources */,
 				2CEBEE631D82DF6B000DD832 /* CellSetting.xib in Resources */,
 				2C8AE9E81D5F337B0069B3BD /* Main.storyboard in Resources */,
 			);
@@ -843,6 +869,7 @@
 				2CEBEE621D82DF6B000DD832 /* CellSetting.m in Sources */,
 				2CEBEE5D1D82DF4C000DD832 /* CellLogo.m in Sources */,
 				2C9361D51D6C8EA9002E5D4E /* Class_School.m in Sources */,
+				68794A541D8E38CB00DF901D /* DataBase.m in Sources */,
 				68F89E121D66F1E900D2C1F0 /* Reachability.m in Sources */,
 				68F89E131D66F1E900D2C1F0 /* YBMonitorNetWorkState.m in Sources */,
 				684CB4891D6BE00A0099CEE4 /* HcdGuideViewCell.m in Sources */,
@@ -869,6 +896,7 @@
 				684CB4881D6BE00A0099CEE4 /* GrayPageControl.m in Sources */,
 				2C9361B81D693222002E5D4E /* FourthVc.m in Sources */,
 				68B710C31D826EE7006F741D /* UsrTxField.m in Sources */,
+				680FB7B81D913A9B0093DA38 /* UsrCell.m in Sources */,
 				2C9361AD1D6930E4002E5D4E /* FirstVc.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

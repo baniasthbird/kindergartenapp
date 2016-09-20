@@ -90,7 +90,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
     NSMutableArray *images = [NSMutableArray new];
     
     [images addObject:[UIImage imageNamed:@"slide_image1"]];
@@ -126,14 +125,18 @@
     if (_b_update==YES) {
     }
     
+    
     //去掉所有保存
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSDictionary *dic = [defaults dictionaryRepresentation];
     for (id  key in dic) {
+        if ([key isEqualToString:@"systemversion"] || [key isEqualToString:@"firstLaunch"]) {
+            continue;
+        }
         [defaults removeObjectForKey:key];
     }
     [defaults synchronize];
-
+    
     
     
     // Do any additional setup after loading the view, typically from a nib.
@@ -151,8 +154,9 @@
     _bgView.layer.cornerRadius=10;
    
    // _txtUsrName.text=@"P01";
-    _txtPwd.text=@"123456";
     _txtPwd.delegate=self;
+    _txtPwd.secureTextEntry=YES;
+    _txtPwd.layer.borderWidth=0;
   //  _txtUsrName.delegate=self;
    
     
@@ -525,7 +529,7 @@
 
 -(void)tableViewDidSelectRow:(NSString*)str_text {
     _ursNameVC.txt_usr.text=str_text;
-    
+    _txtPwd.text=@"123456";
 }
 
 -(void)searchTextDidChange:(NSString *)searchText {

@@ -61,7 +61,7 @@
 }
 
 -(UIImageView*)IndicatorAnimationView {
-    UIImageView  *img_refresh=[[UIImageView alloc]initWithFrame:CGRectMake(Width/2-100, Height/2-100, 200, 200)];
+    UIImageView  *img_refresh=[[UIImageView alloc]initWithFrame:CGRectMake(5*Width/12, Height/2-Width/12, Width/6, Width/6)];
     img_refresh.animationImages=self.refreshImages;
     img_refresh.animationDuration=0.5;
     img_refresh.animationRepeatCount=0;
