@@ -53,6 +53,7 @@
     hud.mode=MBProgressHUDModeCustomView;
     UIImage *images=[UIImage sd_animatedGIFNamed:@"loading"];
     hud.customView=[[UIImageView alloc]initWithImage:images];
+    [hud.customView setFrame:CGRectMake(0, 0, 0.2*Width, 0.2*Width)];
     
     [self.view addSubview:self.wb_content];
     

@@ -242,6 +242,7 @@
         view_indicator.mode=MBProgressHUDModeCustomView;
         UIImage *imges=[UIImage sd_animatedGIFNamed:@"loading"];
         view_indicator.customView=[[UIImageView alloc]initWithImage:imges];
+        [view_indicator.customView setFrame:CGRectMake(0, 0, 0.2*Width, 0.2*Width)];
         [view_indicator show:YES];
        // [MBProgressHUD showHUDAddedTo:self.view animated:YES];
         

@@ -68,9 +68,17 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
        // cell.backgroundColor=[UIColor colorWithRed:249/255.0f green:248/255.0f blue:246/255.0f alpha:1];
         cell.backgroundColor=[UIColor clearColor];
+        cell.textLabel.text = self.listData[indexPath.row];
+        cell.tag=indexPath.row;
+        UIButton *btn_cross=[[UIButton alloc]initWithFrame:CGRectMake(_width-60, 10, 60, 30)];
+        [btn_cross setTitle:@"删除" forState:UIControlStateNormal];
+        [btn_cross setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [btn_cross addTarget:self action:@selector(cellDelete:) forControlEvents:UIControlEventTouchUpInside];
+        
+        [cell.contentView addSubview:btn_cross];
         
     }
-    cell.textLabel.text = self.listData[indexPath.row];
+    
     
     return cell;
 
@@ -102,6 +110,17 @@
     return YES;
 }
 
+
+-(void)cellDelete:(UIButton*)sender {
+    NSLog(@"选择");
+    UITableViewCell *cell=(UITableViewCell*)sender.superview.superview;
+    NSString *label= cell.textLabel.text;
+    [_listData removeObject:label];
+    NSInteger row = cell.tag;
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:row inSection:0];
+    NSArray *arr_indexPath = [NSArray arrayWithObjects:indexPath, nil];
+    [_tb_usr deleteRowsAtIndexPaths:arr_indexPath withRowAnimation:UITableViewRowAnimationNone];
+}
 /*
 #pragma mark - Navigation
 

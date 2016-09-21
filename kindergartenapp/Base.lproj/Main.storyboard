@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -174,7 +174,7 @@
                                         <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2Iy-Hc-8aJ" id="QYO-K6-CYi">
-                                            <frame key="frameInset" width="600" height="43"/>
+                                            <frame key="frameInset" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -182,7 +182,7 @@
                                         <rect key="frame" x="0.0" y="136" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="chj-bj-hz0" id="aw6-0c-JTs">
-                                            <frame key="frameInset" width="600" height="43"/>
+                                            <frame key="frameInset" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -299,8 +299,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8IR-JH-L5Q" userLabel="btn_1">
-                                <frame key="frameInset" minX="61" minY="91" width="118" height="118"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8IR-JH-L5Q" userLabel="btn_1">
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="8IR-JH-L5Q" secondAttribute="height" multiplier="1:1" id="DAr-wd-QKM"/>
                                 </constraints>
@@ -313,8 +312,7 @@
                                     <action selector="btn_1_Click:" destination="LGY-re-7Ww" eventType="touchUpInside" id="dwq-jq-Nfr"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZsF-Wu-keS" userLabel="btn_2">
-                                <frame key="frameInset" minX="241" minY="91" width="118" height="118"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZsF-Wu-keS" userLabel="btn_2">
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ZsF-Wu-keS" secondAttribute="height" multiplier="1:1" id="MzZ-el-TPa"/>
                                 </constraints>
@@ -327,8 +325,7 @@
                                     <action selector="btn_2_Click:" destination="LGY-re-7Ww" eventType="touchUpInside" id="vZ8-Ar-heq"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tlG-do-nAJ" userLabel="btn_3">
-                                <frame key="frameInset" minX="421" minY="91" width="118" height="118"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tlG-do-nAJ" userLabel="btn_3">
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="tlG-do-nAJ" secondAttribute="height" multiplier="1:1" id="Ifb-oc-Fll"/>
                                 </constraints>
@@ -341,8 +338,7 @@
                                     <action selector="btn_3_Click:" destination="LGY-re-7Ww" eventType="touchUpInside" id="bml-eB-ydB"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="itu-64-jzS" userLabel="btn_4">
-                                <frame key="frameInset" minX="61" minY="241" width="118" height="118"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="itu-64-jzS" userLabel="btn_4">
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="itu-64-jzS" secondAttribute="height" multiplier="1:1" id="9Bj-RL-Alp"/>
                                 </constraints>
@@ -355,8 +351,7 @@
                                     <action selector="btn_4_Click:" destination="LGY-re-7Ww" eventType="touchUpInside" id="TfS-gO-0B3"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vcb-Pn-WZW" userLabel="btn_5">
-                                <frame key="frameInset" minX="241" minY="241" width="118" height="118"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vcb-Pn-WZW" userLabel="btn_5">
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Vcb-Pn-WZW" secondAttribute="height" multiplier="1:1" id="ksY-81-Gte"/>
                                 </constraints>
@@ -369,8 +364,7 @@
                                     <action selector="btn_5_Click:" destination="LGY-re-7Ww" eventType="touchUpInside" id="5gd-fg-lS2"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rcf-36-c5o" userLabel="btn_6">
-                                <frame key="frameInset" minX="421" minY="241" width="118" height="118"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rcf-36-c5o" userLabel="btn_6">
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Rcf-36-c5o" secondAttribute="height" multiplier="1:1" id="L6B-bJ-gTS"/>
                                 </constraints>
@@ -383,8 +377,7 @@
                                     <action selector="btn_6_Click:" destination="LGY-re-7Ww" eventType="touchUpInside" id="oSg-kp-078"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tpK-BX-Z2E" userLabel="btn_7">
-                                <frame key="frameInset" minX="61" minY="391" width="118" height="118"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tpK-BX-Z2E" userLabel="btn_7">
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="tpK-BX-Z2E" secondAttribute="height" multiplier="1:1" id="XDo-S9-vhg"/>
                                 </constraints>
@@ -393,9 +386,11 @@
                                 <state key="normal" title="亲子商城" backgroundImage="btn_3_7">
                                     <color key="titleColor" red="0.6588235294117647" green="0.59999999999999998" blue="0.81568627450980391" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="btn_9_Click:" destination="LGY-re-7Ww" eventType="touchUpInside" id="EEX-JP-7il"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sUq-Qr-2eB" userLabel="btn_8">
-                                <frame key="frameInset" minX="241" minY="391" width="118" height="118"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sUq-Qr-2eB" userLabel="btn_8">
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="sUq-Qr-2eB" secondAttribute="height" multiplier="1:1" id="5B7-KU-ebe"/>
                                 </constraints>
@@ -409,8 +404,7 @@
                                     <action selector="btn_9_Click:" destination="LGY-re-7Ww" eventType="touchUpInside" id="XGk-ei-4qU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Moy-kc-jsd" userLabel="btn_9">
-                                <frame key="frameInset" minX="421" minY="391" width="118" height="118"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Moy-kc-jsd" userLabel="btn_9">
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Moy-kc-jsd" secondAttribute="height" multiplier="1:1" id="870-Ca-xzZ"/>
                                 </constraints>
@@ -715,7 +709,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pb2-52-hvN" id="OSD-dk-vsR">
-                                    <frame key="frameInset" width="375" height="43"/>
+                                    <frame key="frameInset" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>

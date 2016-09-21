@@ -8,6 +8,8 @@
 
 #import "ThirdVc.h"
 #import "StayTuneVC.h"
+#import "MBProgressHUD.h"
+#import "WebBrowserTest.h"
 
 @implementation ThirdVc {
     NSInteger i_role;
@@ -29,6 +31,11 @@
     __weak IBOutlet UIButton *btn_8;
     
     __weak IBOutlet UIButton *btn_9;
+    
+    ParentInfo *parent;
+    
+    Baby *baby;
+
     
 }
 
@@ -54,7 +61,20 @@
 
     
     if (i_role==0) {
+        if (parent==nil && baby==nil) {
+            parent=[[ParentInfo alloc]init];
+            baby=[[Baby alloc]init];
+            NSData *data_parent=[[NSUserDefaults standardUserDefaults] objectForKey:@"user_parent"];
+            parent=[NSKeyedUnarchiver unarchiveObjectWithData:data_parent];
+            baby=[parent.arr_baby objectAtIndex:0];
+        }
         
+        NSData *data_baby_now=[[NSUserDefaults standardUserDefaults] objectForKey:@"baby_now"];
+        Baby *baby_now=[NSKeyedUnarchiver unarchiveObjectWithData:data_baby_now];
+        if (baby_now!=nil) {
+            baby=baby_now;
+        }
+
     }
     else if (i_role==2 || i_role==3) {
         
@@ -137,8 +157,9 @@
 }
 
 - (IBAction)btn_9_Click:(id)sender {
-     [self MoveToStayTune:sender];
+    [self MoveToStayTune:sender];
 }
+
 
 
 -(void)MoveToStayTune:(UIButton*)btn {
@@ -146,9 +167,29 @@
     NSRange range1=[str_title rangeOfString:@"相册"];
     NSRange range2=[str_title rangeOfString:@"视频"];
     if (range1.location==NSNotFound && range2.location==NSNotFound) {
+        MBProgressHUD *hud=[MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        hud.mode = MBProgressHUDModeText;
+        hud.labelText=@"敬请期待";
+        hud.removeFromSuperViewOnHide=YES;
+        [hud hide:YES afterDelay:2];
+        /*
         StayTuneVC *vc_staytune=[[self storyboard] instantiateViewControllerWithIdentifier:@"view_staytune"];
         vc_staytune.str_title=@"敬请期待";
         [self.navigationController pushViewController:vc_staytune animated:YES];
+         */
+    }
+    else  {
+        WebBrowserTest *webbrowser = [[self storyboard] instantiateViewControllerWithIdentifier:@"WebBrowser"];
+        webbrowser.str_category=str_title;
+        if (i_role==0) {
+            if (baby!=nil) {
+                webbrowser.str_xuejihao=baby.xuejihao;
+            }
+        }
+        
+        UINavigationController *navi1=[[UINavigationController alloc]initWithRootViewController:self];
+        [UIApplication sharedApplication].keyWindow.rootViewController=navi1;
+         [navi1 pushViewController:webbrowser animated:YES];
     }
 }
 

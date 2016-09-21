@@ -24,7 +24,7 @@
     
     [[UINavigationBar appearance] setTitleTextAttributes:dict];
     
-    [[UITabBarItem appearance] setTitleTextAttributes:@{ NSForegroundColorAttributeName : [UIColor blackColor],NSFontAttributeName:[UIFont fontWithName:@"FZSEJW--GB1-0" size:12.0]}            forState:UIControlStateNormal];
+    [[UITabBarItem appearance] setTitleTextAttributes:@{ NSForegroundColorAttributeName : [UIColor colorWithRed:90/255.0f green:90/255.0f blue:90/255.0f alpha:1.0],NSFontAttributeName:[UIFont fontWithName:@"FZSEJW--GB1-0" size:12.0]}            forState:UIControlStateNormal];
     
     /*
     self.window=[[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
