@@ -330,6 +330,7 @@
                 
                 
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                NSLog(@"%@", error);
                 NSLog(@"接收失败");
                 [view_indicator hide:YES];
                 [view_indicator setLabelText:@"接受失败"];

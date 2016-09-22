@@ -51,14 +51,27 @@
     
     baseFunc=[[BaseFunc alloc]init];
     
-    UIButton *btn_back=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 80, 50)];
+    UIButton *btn_back=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 40, 40)];
     [btn_back setTitle:@"返回" forState:UIControlStateNormal];
+    btn_back.titleLabel.font=[UIFont systemFontOfSize:14];
     [btn_back setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [btn_back setTintColor:[UIColor whiteColor]];
     [btn_back setImage:[UIImage imageNamed:@"returnlogo"] forState:UIControlStateNormal];
-    [btn_back setTitleEdgeInsets:UIEdgeInsetsMake(0, 20, 0, 0)];
+    [btn_back setTitleEdgeInsets:UIEdgeInsetsMake(0, -20, 0, 0)];
+    [btn_back setImageEdgeInsets:UIEdgeInsetsMake(0, -20, 0, 0)];
     [btn_back addTarget:self action:@selector(BackToAppCenter:) forControlEvents:UIControlEventTouchUpInside];
-    self.navigationItem.leftBarButtonItem=[[UIBarButtonItem alloc]initWithCustomView:btn_back];
+    
+    UIButton *btn_close = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 40, 40)];
+    [btn_close setTitle:@"关闭" forState:UIControlStateNormal];
+    btn_close.titleLabel.font=[UIFont systemFontOfSize:14];
+    [btn_close setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [btn_close setTintColor:[UIColor whiteColor]];
+    [btn_close setTitleEdgeInsets:UIEdgeInsetsMake(0, -20, 0, 0)];
+    [btn_close addTarget:self action:@selector(CloseToAppCenter:) forControlEvents:UIControlEventTouchUpInside];
+    //self.navigationItem.leftBarButtonItem=[[UIBarButtonItem alloc]initWithCustomView:btn_back];
+    UIBarButtonItem *bar_button_back=[[UIBarButtonItem alloc]initWithCustomView:btn_back];
+    UIBarButtonItem *bar_button_close=[[UIBarButtonItem alloc]initWithCustomView:btn_close];
+    self.navigationItem.leftBarButtonItems=[NSArray arrayWithObjects:bar_button_back,bar_button_close, nil];
    
     self.view.backgroundColor=[UIColor whiteColor];
     
@@ -170,6 +183,10 @@
   //  }
     
    
+}
+
+-(void)CloseToAppCenter:(UIButton*)sender {
+     [self.navigationController popViewControllerAnimated:NO];
 }
 
 -(void)segmentClick:(UISegmentedControl *)segment{
