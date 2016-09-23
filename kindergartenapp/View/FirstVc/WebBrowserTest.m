@@ -118,11 +118,11 @@
     segment.tintColor = [UIColor whiteColor];
     segment.selectedSegmentIndex = 0;
     [segment addTarget:self action:@selector(segmentClick:) forControlEvents:UIControlEventValueChanged];
-     if ([[[UIDevice currentDevice] systemVersion] floatValue]>=10.0) {
+    // if ([[[UIDevice currentDevice] systemVersion] floatValue]>=10.0) {
          CGFloat i_width=  segment.frame.size.width;
          CGFloat i_height= segment.frame.size.height;
          [segment setFrame:CGRectMake((Width-i_width)/2, 5, i_width, i_height)];
-    }
+   // }
     self.navigationItem.titleView = segment;
 
     
