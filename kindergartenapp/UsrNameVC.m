@@ -70,8 +70,9 @@
         cell.backgroundColor=[UIColor clearColor];
         cell.textLabel.text = self.listData[indexPath.row];
         cell.tag=indexPath.row;
-        UIButton *btn_cross=[[UIButton alloc]initWithFrame:CGRectMake(_width-60, 10, 60, 30)];
-        [btn_cross setTitle:@"删除" forState:UIControlStateNormal];
+        UIButton *btn_cross=[[UIButton alloc]initWithFrame:CGRectMake(_width-60, 10, 30, 30)];
+       // [btn_cross setTitle:@"删除" forState:UIControlStateNormal];
+        [btn_cross setImage:[UIImage imageNamed:@"Delete"] forState:UIControlStateNormal];
         [btn_cross setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [btn_cross addTarget:self action:@selector(cellDelete:) forControlEvents:UIControlEventTouchUpInside];
         

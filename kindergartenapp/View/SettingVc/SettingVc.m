@@ -21,6 +21,7 @@
 #define Cell_Setting   4005
 #define Cell_About     4006
 #define Cell_SchoolInfo 4007
+#define Cell_ClearCache 4008
 
 
 @interface SettingVc()<UITableViewDelegate,UITableViewDataSource>
@@ -72,17 +73,23 @@
         return 2;
     }
     else if (section==2) {
-        if (i_role!=3) {
+        if (i_role==0) {
             return 2;
         }
-        else {
+        else if (i_role==2) {
+            return 3;
+        }
+        else if (i_role==3){
             return 1;
+        }
+        else {
+            return 0;
         }
     }
     else {
         if (i_role==0 || i_role==3) {
             if (section==3) {
-                return 2;
+                return 3;
             }
             else {
                 return 0;
@@ -138,6 +145,10 @@
                     cell.img_Logo.image=[UIImage imageNamed:@"About"];
                     cell.tag=Cell_About;
                 }
+                else if (indexPath.row==2) {
+                    cell.lbl_Title.text=[NSString stringWithFormat:@"%@          (%.2fM)",@"清除缓存",[self filePath]];
+                    cell.tag=Cell_ClearCache;
+                }
             }
             else if (i_role==3) {
                 if (indexPath.row==0) {
@@ -157,6 +168,11 @@
                 cell.lbl_Title.text=@"关于";
                 cell.img_Logo.image=[UIImage imageNamed:@"About"];
                 cell.tag=Cell_About;
+            }
+            else if (indexPath.row==2) {
+                cell.lbl_Title.text=[NSString stringWithFormat:@"%@     (%.2fM)",@"清除缓存",[self filePath]];
+                
+                cell.tag=Cell_ClearCache;
             }
         }
         else {
@@ -232,6 +248,9 @@
         vc_about.str_title=@"关于我们";
         [self.navigationController pushViewController:vc_about animated:YES];
     }
+    else if (cell.tag==Cell_ClearCache) {
+        [self clearFile];
+    }
 }
 
 -(void)viewDidAppear:(BOOL)animated {
@@ -244,5 +263,68 @@
     [UIApplication sharedApplication].keyWindow.rootViewController=navMain;
 }
 */
+
+- ( long long ) fileSizeAtPath:( NSString *) filePath{
+    
+    NSFileManager * manager = [ NSFileManager defaultManager ];
+    
+    if ([manager fileExistsAtPath :filePath]){
+        
+        return [[manager attributesOfItemAtPath :filePath error : nil ] fileSize ];
+        
+    }
+    
+    return 0;
+}
+
+-( float )folderSizeAtPath:(NSString*)folderPath {
+    NSFileManager *manager = [NSFileManager defaultManager];
+    if (![manager fileExistsAtPath:folderPath]) {
+        return 0;
+    }
+    
+    NSEnumerator *childFielsEnumerator = [[manager subpathsAtPath:folderPath] objectEnumerator];
+    NSString *fileName;
+    
+    long long folderSize=0;
+    
+    while ((fileName=[childFielsEnumerator nextObject])!=nil) {
+        NSString *fileAbsolutePath = [folderPath stringByAppendingPathComponent:fileName];
+        folderSize += [self fileSizeAtPath:fileAbsolutePath];
+    }
+    
+    return folderSize/(1024.0 * 1024.0);
+}
+
+//显示缓存大小
+-(float)filePath {
+    NSString *cachePath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject];
+    return [self folderSizeAtPath:cachePath];
+}
+
+//清理缓存
+-(void)clearFile {
+    NSString *cachePath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject];
+    NSArray *files = [[NSFileManager defaultManager] subpathsAtPath:cachePath];
+    
+    NSLog(@"cachePath = %@", cachePath);
+    
+    for (NSString *p in files) {
+        NSError *error = nil;
+        NSString *path = [cachePath stringByAppendingPathComponent:p];
+        if ([[NSFileManager defaultManager] fileExistsAtPath:path]) {
+            [[NSFileManager defaultManager] removeItemAtPath:path error:&error];
+        }
+    }
+    
+    [self performSelectorOnMainThread:@selector(clearCacheSuccess) withObject:nil waitUntilDone:YES];
+}
+
+-(void)clearCacheSuccess {
+    NSLog(@"清理成功");
+    UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"提示" message:@"缓存清理完毕" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
+    [alertView show];
+    [_tb_setting reloadData];
+}
 
 @end

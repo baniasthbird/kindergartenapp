@@ -45,10 +45,12 @@
 		684CB4881D6BE00A0099CEE4 /* GrayPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 684CB4821D6BE00A0099CEE4 /* GrayPageControl.m */; };
 		684CB4891D6BE00A0099CEE4 /* HcdGuideViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 684CB4851D6BE00A0099CEE4 /* HcdGuideViewCell.m */; };
 		684CB48A1D6BE00A0099CEE4 /* HcdGuideViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 684CB4871D6BE00A0099CEE4 /* HcdGuideViewManager.m */; };
+		6850643B1D9920F300DAA4D0 /* LXAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 685064381D9920F300DAA4D0 /* LXAlertView.m */; };
+		6850643C1D9920F300DAA4D0 /* UILabel+LXAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 6850643A1D9920F300DAA4D0 /* UILabel+LXAdd.m */; };
+		6850643D1D9921B200DAA4D0 /* libFMDB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68794A551D8E39BA00DF901D /* libFMDB.a */; };
 		6875729C1D86358A00AEA354 /* StayTuneVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6875729B1D86358A00AEA354 /* StayTuneVC.m */; };
 		6875729F1D86397E00AEA354 /* BaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6875729E1D86397E00AEA354 /* BaseVC.m */; };
 		68794A541D8E38CB00DF901D /* DataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 68794A531D8E38CB00DF901D /* DataBase.m */; };
-		68794A561D8E39BA00DF901D /* libFMDB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68794A551D8E39BA00DF901D /* libFMDB.a */; };
 		6884D3631D74300600BC87F8 /* UIImage+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 6884D3621D74300600BC87F8 /* UIImage+GIF.m */; };
 		6884D3861D75489A00BC87F8 /* comboDownArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 6884D3801D75489A00BC87F8 /* comboDownArrow.png */; };
 		6884D3871D75489A00BC87F8 /* comboDownArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6884D3811D75489A00BC87F8 /* comboDownArrow@2x.png */; };
@@ -163,6 +165,10 @@
 		684CB4851D6BE00A0099CEE4 /* HcdGuideViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HcdGuideViewCell.m; sourceTree = "<group>"; };
 		684CB4861D6BE00A0099CEE4 /* HcdGuideViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HcdGuideViewManager.h; sourceTree = "<group>"; };
 		684CB4871D6BE00A0099CEE4 /* HcdGuideViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HcdGuideViewManager.m; sourceTree = "<group>"; };
+		685064371D9920F300DAA4D0 /* LXAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXAlertView.h; sourceTree = "<group>"; };
+		685064381D9920F300DAA4D0 /* LXAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXAlertView.m; sourceTree = "<group>"; };
+		685064391D9920F300DAA4D0 /* UILabel+LXAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+LXAdd.h"; sourceTree = "<group>"; };
+		6850643A1D9920F300DAA4D0 /* UILabel+LXAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+LXAdd.m"; sourceTree = "<group>"; };
 		6875729A1D86358A00AEA354 /* StayTuneVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StayTuneVC.h; path = View/SecondVc/StayTuneVC.h; sourceTree = "<group>"; };
 		6875729B1D86358A00AEA354 /* StayTuneVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StayTuneVC.m; path = View/SecondVc/StayTuneVC.m; sourceTree = "<group>"; };
 		6875729D1D86397E00AEA354 /* BaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseVC.h; path = Common/BaseVC.h; sourceTree = "<group>"; };
@@ -216,7 +222,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68794A561D8E39BA00DF901D /* libFMDB.a in Frameworks */,
+				6850643D1D9921B200DAA4D0 /* libFMDB.a in Frameworks */,
 				6884D38B1D75494E00BC87F8 /* libDownPicker.a in Frameworks */,
 				6895AE2E1D70214C0003F2A2 /* libSDCycleScrollView.a in Frameworks */,
 				68F89E091D66DFAE00D2C1F0 /* libSDWebImage.a in Frameworks */,
@@ -553,6 +559,17 @@
 			path = HcdGuideView;
 			sourceTree = "<group>";
 		};
+		685064361D9920F300DAA4D0 /* LXAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				685064371D9920F300DAA4D0 /* LXAlertView.h */,
+				685064381D9920F300DAA4D0 /* LXAlertView.m */,
+				685064391D9920F300DAA4D0 /* UILabel+LXAdd.h */,
+				6850643A1D9920F300DAA4D0 /* UILabel+LXAdd.m */,
+			);
+			path = LXAlertView;
+			sourceTree = "<group>";
+		};
 		68794A511D8E37CD00DF901D /* DataBase */ = {
 			isa = PBXGroup;
 			children = (
@@ -627,6 +644,7 @@
 		68F89E0B1D66F1E900D2C1F0 /* OpenSource */ = {
 			isa = PBXGroup;
 			children = (
+				685064361D9920F300DAA4D0 /* LXAlertView */,
 				68B710B21D824D75006F741D /* MLPAutoCompleteTextField */,
 				6884D38C1D75623900BC87F8 /* ZLCGuidePage */,
 				6884D37F1D75489A00BC87F8 /* FSComboListView */,
@@ -864,6 +882,7 @@
 				2C9361B31D69312A002E5D4E /* ThirdVc.m in Sources */,
 				2C9361D81D6C8FD7002E5D4E /* TeacherInfo.m in Sources */,
 				68B710B11D824036006F741D /* AutocompletionTableView.m in Sources */,
+				6850643C1D9920F300DAA4D0 /* UILabel+LXAdd.m in Sources */,
 				6884D3881D75489A00BC87F8 /* FSComboListView.m in Sources */,
 				2C9361BB1D6932AF002E5D4E /* SettingVc.m in Sources */,
 				2CEBEE621D82DF6B000DD832 /* CellSetting.m in Sources */,
@@ -880,6 +899,7 @@
 				68B710CF1D8271F4006F741D /* UsrNameVC.m in Sources */,
 				2CEBEDF31D72F687000DD832 /* Headmaster.m in Sources */,
 				2C9361CC1D6C8B4D002E5D4E /* ParentInfo.m in Sources */,
+				6850643B1D9920F300DAA4D0 /* LXAlertView.m in Sources */,
 				6875729F1D86397E00AEA354 /* BaseVC.m in Sources */,
 				2CEBEE6B1D837B8B000DD832 /* AboutVC.m in Sources */,
 				2C8AE9DF1D5F337B0069B3BD /* main.m in Sources */,

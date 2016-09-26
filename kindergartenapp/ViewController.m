@@ -20,6 +20,7 @@
 #import "UIImage+GIF.h"
 #import "ZLCGuidePageView.h"
 #import "UsrNameVC.h"
+#import "LXAlertView.h"
 
 
 
@@ -27,7 +28,7 @@
 
 
 
-@interface ViewController ()<UITextFieldDelegate,YBMonitorNetWorkStateDelegate,YLSearchDelegate>
+@interface ViewController ()<UITextFieldDelegate,UIAlertViewDelegate,YBMonitorNetWorkStateDelegate,YLSearchDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *login_Parent;
 @property (weak, nonatomic) IBOutlet UIView *bgView;
@@ -111,7 +112,21 @@
     _dataSource=[[NSArray alloc]initWithObjects:@"P01",@"T01",@"Y01", nil];
     
     
-    
+    if (_b_update==YES) {
+         NSString *str_msg1=@"有新版本，是否下载？\n";
+         LXAlertView *alert = [[LXAlertView alloc] initWithTitle:@"提示" message:str_msg1 cancelBtnTitle:@"稍后下载" otherBtnTitle:@"立即下载" clickIndexBlock:^(NSInteger clickIndex) {
+             if (clickIndex ==0) {
+                 
+             }
+             else {
+                 NSString *DownLoadLink =@"https://app.hnsi.cn/kindergartenapp/";
+                 [[UIApplication sharedApplication] openURL:[NSURL URLWithString:DownLoadLink]];
+                 exit(0);
+             }
+         }];
+        [alert showLXAlertView];
+        
+    }
     
     
     /*

@@ -169,7 +169,7 @@
     if (range1.location==NSNotFound && range2.location==NSNotFound) {
         MBProgressHUD *hud=[MBProgressHUD showHUDAddedTo:self.view animated:YES];
         hud.mode = MBProgressHUDModeText;
-        hud.labelText=@"敬请期待";
+        hud.labelText=@"即将上线,敬请期待";
         hud.removeFromSuperViewOnHide=YES;
         [hud hide:YES afterDelay:2];
         /*

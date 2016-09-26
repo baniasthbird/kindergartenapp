@@ -118,11 +118,24 @@
     segment.tintColor = [UIColor whiteColor];
     segment.selectedSegmentIndex = 0;
     [segment addTarget:self action:@selector(segmentClick:) forControlEvents:UIControlEventValueChanged];
-    // if ([[[UIDevice currentDevice] systemVersion] floatValue]>=10.0) {
-         CGFloat i_width=  segment.frame.size.width;
-         CGFloat i_height= segment.frame.size.height;
-         [segment setFrame:CGRectMake((Width-i_width)/2, 5, i_width, i_height)];
-   // }
+
+    CGFloat i_width=  segment.frame.size.width;
+    CGFloat i_height= segment.frame.size.height;
+   // CGRect leftViewbounds = self.navigationItem.leftBarButtonItem.customView.bounds;
+ //   CGFloat i_left=(int)(Width-leftViewbounds.size.width-i_width)/2;
+    CGFloat i_left=110;
+    if (iPhone5_5s) {
+        i_left=110;
+    }
+    else if (iPhone6) {
+        i_left=121;
+    }
+    else if (iPhone6_plus) {
+        i_left=141;
+    }
+
+    [segment setFrame:CGRectMake(i_left, (44-i_height)/2, i_width, i_height)];
+  //  }
     self.navigationItem.titleView = segment;
 
     
