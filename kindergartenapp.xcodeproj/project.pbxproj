@@ -39,6 +39,9 @@
 		2CEBEE621D82DF6B000DD832 /* CellSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CEBEE601D82DF6B000DD832 /* CellSetting.m */; };
 		2CEBEE631D82DF6B000DD832 /* CellSetting.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CEBEE611D82DF6B000DD832 /* CellSetting.xib */; };
 		2CEBEE6B1D837B8B000DD832 /* AboutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CEBEE6A1D837B8B000DD832 /* AboutVC.m */; };
+		2CFA32361DC4ADC0005D20B4 /* SettingSetVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CFA32351DC4ADC0005D20B4 /* SettingSetVC.m */; };
+		2CFA323F1DC60C13005D20B4 /* CellBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CFA323D1DC60C13005D20B4 /* CellBtn.m */; };
+		2CFA32401DC60C13005D20B4 /* CellBtn.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CFA323E1DC60C13005D20B4 /* CellBtn.xib */; };
 		4DDB1AE24EA15B79A798639A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C5BBA671F146BFEDCE513B /* libPods.a */; };
 		680FB7B81D913A9B0093DA38 /* UsrCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 680FB7B61D913A9B0093DA38 /* UsrCell.m */; };
 		680FB7B91D913A9B0093DA38 /* UsrCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 680FB7B71D913A9B0093DA38 /* UsrCell.xib */; };
@@ -155,6 +158,11 @@
 		2CEBEE611D82DF6B000DD832 /* CellSetting.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CellSetting.xib; path = View/SettingVc/Modal/CellSetting.xib; sourceTree = "<group>"; };
 		2CEBEE691D837B8B000DD832 /* AboutVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AboutVC.h; path = View/SettingVc/AboutVC.h; sourceTree = "<group>"; };
 		2CEBEE6A1D837B8B000DD832 /* AboutVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AboutVC.m; path = View/SettingVc/AboutVC.m; sourceTree = "<group>"; };
+		2CFA32341DC4ADC0005D20B4 /* SettingSetVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingSetVC.h; path = View/SettingVc/SettingSetVC.h; sourceTree = "<group>"; };
+		2CFA32351DC4ADC0005D20B4 /* SettingSetVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingSetVC.m; path = View/SettingVc/SettingSetVC.m; sourceTree = "<group>"; };
+		2CFA323C1DC60C13005D20B4 /* CellBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CellBtn.h; path = View/SettingVc/Modal/CellBtn.h; sourceTree = "<group>"; };
+		2CFA323D1DC60C13005D20B4 /* CellBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CellBtn.m; path = View/SettingVc/Modal/CellBtn.m; sourceTree = "<group>"; };
+		2CFA323E1DC60C13005D20B4 /* CellBtn.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CellBtn.xib; path = View/SettingVc/Modal/CellBtn.xib; sourceTree = "<group>"; };
 		680FB7B51D913A9B0093DA38 /* UsrCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UsrCell.h; path = Login/Modal/UsrCell.h; sourceTree = "<group>"; };
 		680FB7B61D913A9B0093DA38 /* UsrCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UsrCell.m; path = Login/Modal/UsrCell.m; sourceTree = "<group>"; };
 		680FB7B71D913A9B0093DA38 /* UsrCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UsrCell.xib; path = Login/Modal/UsrCell.xib; sourceTree = "<group>"; };
@@ -455,6 +463,8 @@
 				2C9361BA1D6932AF002E5D4E /* SettingVc.m */,
 				2CEBEE691D837B8B000DD832 /* AboutVC.h */,
 				2CEBEE6A1D837B8B000DD832 /* AboutVC.m */,
+				2CFA32341DC4ADC0005D20B4 /* SettingSetVC.h */,
+				2CFA32351DC4ADC0005D20B4 /* SettingSetVC.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -516,6 +526,9 @@
 				2CEBEE5F1D82DF6B000DD832 /* CellSetting.h */,
 				2CEBEE601D82DF6B000DD832 /* CellSetting.m */,
 				2CEBEE611D82DF6B000DD832 /* CellSetting.xib */,
+				2CFA323C1DC60C13005D20B4 /* CellBtn.h */,
+				2CFA323D1DC60C13005D20B4 /* CellBtn.m */,
+				2CFA323E1DC60C13005D20B4 /* CellBtn.xib */,
 			);
 			name = Modal;
 			sourceTree = "<group>";
@@ -791,6 +804,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CFA32401DC60C13005D20B4 /* CellBtn.xib in Resources */,
 				2C9361DA1D6F2FE9002E5D4E /* FZSEJT.ttf in Resources */,
 				6884D3871D75489A00BC87F8 /* comboDownArrow@2x.png in Resources */,
 				68B710D01D8271F4006F741D /* UsrNameVC.xib in Resources */,
@@ -892,7 +906,9 @@
 				68F89E121D66F1E900D2C1F0 /* Reachability.m in Sources */,
 				68F89E131D66F1E900D2C1F0 /* YBMonitorNetWorkState.m in Sources */,
 				684CB4891D6BE00A0099CEE4 /* HcdGuideViewCell.m in Sources */,
+				2CFA323F1DC60C13005D20B4 /* CellBtn.m in Sources */,
 				68F89E171D67057A00D2C1F0 /* MainTabController.m in Sources */,
+				2CFA32361DC4ADC0005D20B4 /* SettingSetVC.m in Sources */,
 				2C9361A01D692E88002E5D4E /* NTButton.m in Sources */,
 				6875729C1D86358A00AEA354 /* StayTuneVC.m in Sources */,
 				6884D3631D74300600BC87F8 /* UIImage+GIF.m in Sources */,

@@ -74,7 +74,6 @@
         if (baby_now!=nil) {
             baby=baby_now;
         }
-
     }
     else if (i_role==2 || i_role==3) {
         
@@ -187,9 +186,12 @@
             }
         }
         
+        [self.navigationController pushViewController:webbrowser animated:YES];
+        /*
         UINavigationController *navi1=[[UINavigationController alloc]initWithRootViewController:self];
         [UIApplication sharedApplication].keyWindow.rootViewController=navi1;
          [navi1 pushViewController:webbrowser animated:YES];
+         */
     }
 }
 

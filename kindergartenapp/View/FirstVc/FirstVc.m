@@ -80,7 +80,7 @@
         self.tabBarItem.selectedImage=[[UIImage imageNamed:@"first_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         
         
-        self.navigationController.navigationBar.topItem.title=@"新马良幼儿园";
+    
         
     Baby *baby_now;
     
@@ -92,7 +92,8 @@
         NSData *data=[[NSUserDefaults standardUserDefaults] objectForKey:@"user"];
         _userInfo=[[UserInfo alloc]init];
         _userInfo=[NSKeyedUnarchiver unarchiveObjectWithData:data];
-        
+    
+        self.navigationController.navigationBar.topItem.title=_userInfo.str_org;
         i_role=[_userInfo.str_role integerValue];
         
         NSString *str_banner_img1=@"img_T_Header1";
@@ -428,7 +429,7 @@
         [_bg_Content addSubview:btn_2];
         [_bg_Content addSubview:btn_3];
         [_bg_Content addSubview:btn_4];
-        [_bg_Content addSubview:btn_5];
+       // [_bg_Content addSubview:btn_5];
     }
     //园长
     else if (i_role==3) {
@@ -490,8 +491,15 @@
  //   str_url=[NSString stringWithFormat:@"%@?%@=%@&%@=%@",str_url,@"userid",str_id,@"role",str_role];
     WebBrowserTest *webbrowser = [[self storyboard] instantiateViewControllerWithIdentifier:@"WebBrowser"];
     webbrowser.str_category=str_category;
-    if (baby!=nil) {
-        webbrowser.str_xuejihao=baby.xuejihao;
+    if (i_role==0) {
+        if (baby!=nil) {
+            webbrowser.str_xuejihao=baby.xuejihao;
+        }
+    }
+    else if (i_role==2)  {
+        
+        webbrowser.str_xuejihao=_userInfo.str_token;
+        webbrowser.str_class_id=class_school.i_id;
     }
    // webbrowser.str_url=str_url;
     

@@ -8,36 +8,55 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>1</integer>
 		</dict>
 		<key>DownPicker-DownPicker.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>3</integer>
 		</dict>
 		<key>DownPicker.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>FMDB.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
 		</dict>
 		<key>MBProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>4</integer>
 		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>5</integer>
 		</dict>
 		<key>SDCycleScrollView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>6</integer>
 		</dict>
 		<key>SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>7</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -52,7 +71,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>31BA2BBD7521687E0825859EDAED08C3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>5C05FADE30EF910B83CBF24CED9FD2F6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6E737EF1F524D9E63C5CF92977AD88E6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -67,7 +96,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>9F12FB4A63E20F601CFB2E64A65B57C1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>DF7339B850F143465DE353DF70630F25</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E324E98E4A204FB19349BBA3FF2354F1</key>
 		<dict>
 			<key>primary</key>
 			<true/>

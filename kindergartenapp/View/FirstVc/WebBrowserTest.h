@@ -20,7 +20,9 @@
 
 @property (nonatomic,strong) NSString *str_xuejihao;
 
+@property (nonatomic,strong) NSString *str_class_id;
 
+@property (nonatomic,strong) NSString *str_school_id;
 
 
 @end

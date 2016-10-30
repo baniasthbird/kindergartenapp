@@ -15,8 +15,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "222"
             endingLineNumber = "222"
-            landmarkName = "-Login:"
-            landmarkType = "5">
+            landmarkName = "-viewDidLoad"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -26,13 +26,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "kindergartenapp/View/FirstVc/FirstVc.m"
-            timestampString = "494865142.57557"
+            timestampString = "499397742.257006"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "175"
-            endingLineNumber = "175"
+            startingLineNumber = "176"
+            endingLineNumber = "176"
             landmarkName = "-viewDidLoad"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -48,7 +48,7 @@
             startingLineNumber = "291"
             endingLineNumber = "291"
             landmarkName = "-Login:"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -64,7 +64,7 @@
             startingLineNumber = "292"
             endingLineNumber = "292"
             landmarkName = "-Login:"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -80,7 +80,7 @@
             startingLineNumber = "293"
             endingLineNumber = "293"
             landmarkName = "-Login:"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -96,7 +96,7 @@
             startingLineNumber = "278"
             endingLineNumber = "278"
             landmarkName = "-Login:"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -106,13 +106,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "kindergartenapp/View/FirstVc/FirstVc.m"
-            timestampString = "494865142.57557"
+            timestampString = "499397742.257006"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "183"
-            endingLineNumber = "183"
+            startingLineNumber = "184"
+            endingLineNumber = "184"
             landmarkName = "-viewDidLoad"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -127,8 +127,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "200"
             endingLineNumber = "200"
-            landmarkName = "-viewDidAppear:"
-            landmarkType = "5">
+            landmarkName = "-viewDidLoad"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -144,7 +144,7 @@
             startingLineNumber = "309"
             endingLineNumber = "309"
             landmarkName = "-Login:"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -160,7 +160,7 @@
             startingLineNumber = "48"
             endingLineNumber = "48"
             landmarkName = "-viewDidLoad"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -170,13 +170,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "kindergartenapp/View/FirstVc/FirstVc.m"
-            timestampString = "495165409.579766"
+            timestampString = "499397742.257006"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "343"
-            endingLineNumber = "343"
+            startingLineNumber = "344"
+            endingLineNumber = "344"
             landmarkName = "-AddButton:"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -191,8 +191,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "348"
             endingLineNumber = "348"
-            landmarkName = "-textFieldShouldReturn:"
-            landmarkType = "5">
+            landmarkName = "-Login:"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -207,8 +207,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "420"
             endingLineNumber = "420"
-            landmarkName = "-SaveTeacherAdditionInfo:"
-            landmarkType = "5">
+            landmarkName = "-MoveToNextPage:"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -223,8 +223,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "358"
             endingLineNumber = "358"
-            landmarkName = "-fingerTapped:"
-            landmarkType = "5">
+            landmarkName = "-didReceiveMemoryWarning"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -234,13 +234,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "kindergartenapp/View/FirstVc/FirstVc.m"
-            timestampString = "494865142.57557"
+            timestampString = "499397742.257006"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "159"
-            endingLineNumber = "159"
+            startingLineNumber = "160"
+            endingLineNumber = "160"
             landmarkName = "-viewDidLoad"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -250,13 +250,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "kindergartenapp/View/FirstVc/FirstVc.m"
-            timestampString = "494865142.57557"
+            timestampString = "499397742.257006"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "248"
-            endingLineNumber = "248"
+            startingLineNumber = "249"
+            endingLineNumber = "249"
             landmarkName = "-viewDidAppear:"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -266,13 +266,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "kindergartenapp/View/FirstVc/FirstVc.m"
-            timestampString = "494865142.57557"
+            timestampString = "499397742.257006"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "218"
-            endingLineNumber = "218"
+            startingLineNumber = "219"
+            endingLineNumber = "219"
             landmarkName = "-ClacAge"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -282,13 +282,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "kindergartenapp/View/FirstVc/FirstVc.m"
-            timestampString = "495165409.579766"
+            timestampString = "499397742.257006"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "395"
-            endingLineNumber = "395"
+            startingLineNumber = "396"
+            endingLineNumber = "396"
             landmarkName = "-AddButton:"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -298,13 +298,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "kindergartenapp/View/FirstVc/FirstVc.m"
-            timestampString = "494865142.57557"
+            timestampString = "499397742.257006"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "145"
-            endingLineNumber = "145"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
             landmarkName = "-viewDidLoad"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -320,7 +320,7 @@
             startingLineNumber = "195"
             endingLineNumber = "195"
             landmarkName = "-viewDidLoad"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -330,13 +330,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "kindergartenapp/View/FirstVc/FirstVc.m"
-            timestampString = "494559966.863574"
+            timestampString = "499397742.257006"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "117"
-            endingLineNumber = "117"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
             landmarkName = "-viewDidLoad"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -351,8 +351,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "368"
             endingLineNumber = "368"
-            landmarkName = "-CreateUserInfo:"
-            landmarkType = "5">
+            landmarkName = "-netWorkStateChanged"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -367,8 +367,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "366"
             endingLineNumber = "366"
-            landmarkName = "-CreateUserInfo:"
-            landmarkType = "5">
+            landmarkName = "-netWorkStateChanged"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -384,7 +384,7 @@
             startingLineNumber = "83"
             endingLineNumber = "83"
             landmarkName = "-viewDidLoad"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -400,7 +400,7 @@
             startingLineNumber = "187"
             endingLineNumber = "187"
             landmarkName = "-viewDidLoad"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -416,7 +416,7 @@
             startingLineNumber = "184"
             endingLineNumber = "184"
             landmarkName = "-viewDidLoad"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -432,7 +432,7 @@
             startingLineNumber = "177"
             endingLineNumber = "177"
             landmarkName = "-viewDidLoad"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -442,13 +442,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "kindergartenapp/View/FirstVc/FirstVc.m"
-            timestampString = "494865142.57557"
+            timestampString = "499397742.257006"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "219"
-            endingLineNumber = "219"
+            startingLineNumber = "220"
+            endingLineNumber = "220"
             landmarkName = "-ClacAge"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -458,13 +458,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "kindergartenapp/View/FirstVc/FirstVc.m"
-            timestampString = "494865142.57557"
+            timestampString = "499397742.257006"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "164"
-            endingLineNumber = "164"
+            startingLineNumber = "165"
+            endingLineNumber = "165"
             landmarkName = "-viewDidLoad"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -474,13 +474,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "kindergartenapp/View/FirstVc/FirstVc.m"
-            timestampString = "494865142.57557"
+            timestampString = "499397742.257006"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "185"
-            endingLineNumber = "185"
+            startingLineNumber = "186"
+            endingLineNumber = "186"
             landmarkName = "-viewDidLoad"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -490,13 +490,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "kindergartenapp/View/FirstVc/FirstVc.m"
-            timestampString = "495165409.579766"
+            timestampString = "499397742.257006"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "473"
-            endingLineNumber = "473"
-            landmarkName = "-Albumn:"
-            landmarkType = "5">
+            startingLineNumber = "474"
+            endingLineNumber = "474"
+            landmarkName = "-AddButton:"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -527,8 +527,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "369"
             endingLineNumber = "369"
-            landmarkName = "-CreateUserInfo:"
-            landmarkType = "5">
+            landmarkName = "-netWorkStateChanged"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -538,13 +538,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "kindergartenapp/View/FirstVc/FirstVc.m"
-            timestampString = "495165409.579766"
+            timestampString = "499397742.257006"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "461"
-            endingLineNumber = "461"
-            landmarkName = "-Albumn:"
-            landmarkType = "5">
+            startingLineNumber = "462"
+            endingLineNumber = "462"
+            landmarkName = "-AddButton:"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -560,7 +560,7 @@
             startingLineNumber = "49"
             endingLineNumber = "49"
             landmarkName = "-viewDidLoad"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -576,7 +576,7 @@
             startingLineNumber = "46"
             endingLineNumber = "46"
             landmarkName = "-viewDidLoad"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -591,8 +591,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "384"
             endingLineNumber = "384"
-            landmarkName = "-CreateUserInfo:"
-            landmarkType = "5">
+            landmarkName = "-fingerTapped:"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -608,7 +608,7 @@
             startingLineNumber = "246"
             endingLineNumber = "246"
             landmarkName = "-Login:"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -618,13 +618,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "kindergartenapp/View/FirstVc/FirstVc.m"
-            timestampString = "495165409.579766"
+            timestampString = "499525817.107264"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "521"
-            endingLineNumber = "521"
-            landmarkName = "-PassValue:childvalue:refresh:"
-            landmarkType = "5">
+            startingLineNumber = "529"
+            endingLineNumber = "529"
+            landmarkName = "-Switch:"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -640,7 +640,7 @@
             startingLineNumber = "87"
             endingLineNumber = "87"
             landmarkName = "-viewDidLoad"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -650,13 +650,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "kindergartenapp/View/SettingVc/SettingVc.m"
-            timestampString = "495159268.96115"
+            timestampString = "499524855.755806"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "190"
-            endingLineNumber = "190"
-            landmarkName = "-tableView:viewForHeaderInSection:"
-            landmarkType = "5">
+            startingLineNumber = "336"
+            endingLineNumber = "336"
+            landmarkName = "-tableView:heightForRowAtIndexPath:"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -672,7 +672,7 @@
             startingLineNumber = "259"
             endingLineNumber = "259"
             landmarkName = "-Login:"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -688,7 +688,7 @@
             startingLineNumber = "307"
             endingLineNumber = "307"
             landmarkName = "-Login:"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -703,8 +703,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "390"
             endingLineNumber = "390"
-            landmarkName = "-MoveToNextPage:"
-            landmarkType = "5">
+            landmarkName = "-CreateUserInfo:"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -720,7 +720,7 @@
             startingLineNumber = "77"
             endingLineNumber = "77"
             landmarkName = "-viewDidLoad"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -736,7 +736,7 @@
             startingLineNumber = "71"
             endingLineNumber = "71"
             landmarkName = "-viewDidLoad"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -752,7 +752,7 @@
             startingLineNumber = "63"
             endingLineNumber = "63"
             landmarkName = "-viewDidLoad"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -762,13 +762,93 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "kindergartenapp/View/FirstVc/FirstVc.m"
-            timestampString = "495165498.578684"
+            timestampString = "499397742.257006"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "259"
-            endingLineNumber = "259"
+            startingLineNumber = "260"
+            endingLineNumber = "260"
             landmarkName = "-viewDidAppear:"
-            landmarkType = "5">
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "kindergartenapp/View/FirstVc/FirstVc.m"
+            timestampString = "499397742.257006"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "kindergartenapp/View/FirstVc/FirstVc.m"
+            timestampString = "499397921.809655"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "kindergartenapp/View/ThirdVc/ThirdVc.m"
+            timestampString = "499398574.948933"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "kindergartenapp/View/SettingVc/SettingSetVC.m"
+            timestampString = "499514232.956965"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "-tableView:cellForRowAtIndexPath:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "kindergartenapp/View/FirstVc/WebBrowserTest.m"
+            timestampString = "499525687.016049"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "156"
+            endingLineNumber = "156"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
