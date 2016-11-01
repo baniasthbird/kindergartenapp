@@ -494,6 +494,9 @@
     if (i_role==0) {
         if (baby!=nil) {
             webbrowser.str_xuejihao=baby.xuejihao;
+            webbrowser.str_class_id=baby.classid;
+            webbrowser.str_school_id=baby.schoolcode;
+            
         }
     }
     else if (i_role==2)  {

@@ -149,7 +149,7 @@
         }
     else if ([_str_category isEqualToString:@"视频"]) {
             str_baby_url=[NSString stringWithFormat:@"%@%@%@%@%@%@%@",str_base_url,@"?user_key=",_str_xuejihao,@"&role_type=",_userInfo.str_role,@"&class_id=",_str_class_id];
-            str_class_url=[NSString stringWithFormat:@"%@%@%@%@%@",str_base_url,@"?user_key=",_str_xuejihao,@"&rtype=bj&roleid=",_userInfo.str_role];
+            str_class_url=[NSString stringWithFormat:@"%@%@%@%@%@",str_base_url,@"?role_type=",@"2",@"&class_id=",_str_class_id];
     }
    // http://123.57.8.54:8080/Video/videoList.html?user_key=G43087420121025585&role_type=1&shoole_id=1&class_id=1
     
