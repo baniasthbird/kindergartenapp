@@ -36,8 +36,6 @@
 		2CEBEE581D7F7611000DD832 /* ClassVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CEBEE571D7F7611000DD832 /* ClassVC.m */; };
 		2CEBEE5D1D82DF4C000DD832 /* CellLogo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CEBEE5B1D82DF4C000DD832 /* CellLogo.m */; };
 		2CEBEE5E1D82DF4C000DD832 /* CellLogo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CEBEE5C1D82DF4C000DD832 /* CellLogo.xib */; };
-		2CEBEE621D82DF6B000DD832 /* CellSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CEBEE601D82DF6B000DD832 /* CellSetting.m */; };
-		2CEBEE631D82DF6B000DD832 /* CellSetting.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CEBEE611D82DF6B000DD832 /* CellSetting.xib */; };
 		2CEBEE6B1D837B8B000DD832 /* AboutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CEBEE6A1D837B8B000DD832 /* AboutVC.m */; };
 		2CFA32361DC4ADC0005D20B4 /* SettingSetVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CFA32351DC4ADC0005D20B4 /* SettingSetVC.m */; };
 		2CFA323F1DC60C13005D20B4 /* CellBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CFA323D1DC60C13005D20B4 /* CellBtn.m */; };
@@ -68,6 +66,8 @@
 		68B710C31D826EE7006F741D /* UsrTxField.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B710C21D826EE7006F741D /* UsrTxField.m */; };
 		68B710CF1D8271F4006F741D /* UsrNameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B710CD1D8271F4006F741D /* UsrNameVC.m */; };
 		68B710D01D8271F4006F741D /* UsrNameVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68B710CE1D8271F4006F741D /* UsrNameVC.xib */; };
+		68BBDEC71DC9C8AC0087CD43 /* CellSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = 68BBDEC51DC9C8AC0087CD43 /* CellSetting.m */; };
+		68BBDEC81DC9C8AC0087CD43 /* CellSetting.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68BBDEC61DC9C8AC0087CD43 /* CellSetting.xib */; };
 		68F89E051D66DFA700D2C1F0 /* libAFNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68F89E041D66DFA700D2C1F0 /* libAFNetworking.a */; };
 		68F89E071D66DFAB00D2C1F0 /* libMBProgressHUD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68F89E061D66DFAB00D2C1F0 /* libMBProgressHUD.a */; };
 		68F89E091D66DFAE00D2C1F0 /* libSDWebImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68F89E081D66DFAE00D2C1F0 /* libSDWebImage.a */; };
@@ -153,9 +153,6 @@
 		2CEBEE5A1D82DF4C000DD832 /* CellLogo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CellLogo.h; path = View/SettingVc/Modal/CellLogo.h; sourceTree = "<group>"; };
 		2CEBEE5B1D82DF4C000DD832 /* CellLogo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CellLogo.m; path = View/SettingVc/Modal/CellLogo.m; sourceTree = "<group>"; };
 		2CEBEE5C1D82DF4C000DD832 /* CellLogo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CellLogo.xib; path = View/SettingVc/Modal/CellLogo.xib; sourceTree = "<group>"; };
-		2CEBEE5F1D82DF6B000DD832 /* CellSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CellSetting.h; path = View/SettingVc/Modal/CellSetting.h; sourceTree = "<group>"; };
-		2CEBEE601D82DF6B000DD832 /* CellSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CellSetting.m; path = View/SettingVc/Modal/CellSetting.m; sourceTree = "<group>"; };
-		2CEBEE611D82DF6B000DD832 /* CellSetting.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CellSetting.xib; path = View/SettingVc/Modal/CellSetting.xib; sourceTree = "<group>"; };
 		2CEBEE691D837B8B000DD832 /* AboutVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AboutVC.h; path = View/SettingVc/AboutVC.h; sourceTree = "<group>"; };
 		2CEBEE6A1D837B8B000DD832 /* AboutVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AboutVC.m; path = View/SettingVc/AboutVC.m; sourceTree = "<group>"; };
 		2CFA32341DC4ADC0005D20B4 /* SettingSetVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingSetVC.h; path = View/SettingVc/SettingSetVC.h; sourceTree = "<group>"; };
@@ -211,6 +208,9 @@
 		68B710CC1D8271F4006F741D /* UsrNameVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsrNameVC.h; sourceTree = "<group>"; };
 		68B710CD1D8271F4006F741D /* UsrNameVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsrNameVC.m; sourceTree = "<group>"; };
 		68B710CE1D8271F4006F741D /* UsrNameVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UsrNameVC.xib; sourceTree = "<group>"; };
+		68BBDEC41DC9C8AC0087CD43 /* CellSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CellSetting.h; path = View/SettingVc/Modal/CellSetting.h; sourceTree = "<group>"; };
+		68BBDEC51DC9C8AC0087CD43 /* CellSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CellSetting.m; path = View/SettingVc/Modal/CellSetting.m; sourceTree = "<group>"; };
+		68BBDEC61DC9C8AC0087CD43 /* CellSetting.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CellSetting.xib; path = View/SettingVc/Modal/CellSetting.xib; sourceTree = "<group>"; };
 		68F89E041D66DFA700D2C1F0 /* libAFNetworking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAFNetworking.a; path = "Pods/../build/Debug-iphoneos/libAFNetworking.a"; sourceTree = "<group>"; };
 		68F89E061D66DFAB00D2C1F0 /* libMBProgressHUD.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMBProgressHUD.a; path = "Pods/../build/Debug-iphoneos/libMBProgressHUD.a"; sourceTree = "<group>"; };
 		68F89E081D66DFAE00D2C1F0 /* libSDWebImage.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSDWebImage.a; path = "Pods/../build/Debug-iphoneos/libSDWebImage.a"; sourceTree = "<group>"; };
@@ -523,12 +523,12 @@
 				2CEBEE5A1D82DF4C000DD832 /* CellLogo.h */,
 				2CEBEE5B1D82DF4C000DD832 /* CellLogo.m */,
 				2CEBEE5C1D82DF4C000DD832 /* CellLogo.xib */,
-				2CEBEE5F1D82DF6B000DD832 /* CellSetting.h */,
-				2CEBEE601D82DF6B000DD832 /* CellSetting.m */,
-				2CEBEE611D82DF6B000DD832 /* CellSetting.xib */,
 				2CFA323C1DC60C13005D20B4 /* CellBtn.h */,
 				2CFA323D1DC60C13005D20B4 /* CellBtn.m */,
 				2CFA323E1DC60C13005D20B4 /* CellBtn.xib */,
+				68BBDEC41DC9C8AC0087CD43 /* CellSetting.h */,
+				68BBDEC51DC9C8AC0087CD43 /* CellSetting.m */,
+				68BBDEC61DC9C8AC0087CD43 /* CellSetting.xib */,
 			);
 			name = Modal;
 			sourceTree = "<group>";
@@ -810,11 +810,11 @@
 				68B710D01D8271F4006F741D /* UsrNameVC.xib in Resources */,
 				2C8AE9ED1D5F337B0069B3BD /* LaunchScreen.storyboard in Resources */,
 				6884D3861D75489A00BC87F8 /* comboDownArrow.png in Resources */,
+				68BBDEC81DC9C8AC0087CD43 /* CellSetting.xib in Resources */,
 				2CEBEE041D7C23C4000DD832 /* loading.gif in Resources */,
 				2CEBEDF51D72FCF2000DD832 /* Assets.xcassets in Resources */,
 				2CEBEE5E1D82DF4C000DD832 /* CellLogo.xib in Resources */,
 				680FB7B91D913A9B0093DA38 /* UsrCell.xib in Resources */,
-				2CEBEE631D82DF6B000DD832 /* CellSetting.xib in Resources */,
 				2C8AE9E81D5F337B0069B3BD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -899,10 +899,10 @@
 				6850643C1D9920F300DAA4D0 /* UILabel+LXAdd.m in Sources */,
 				6884D3881D75489A00BC87F8 /* FSComboListView.m in Sources */,
 				2C9361BB1D6932AF002E5D4E /* SettingVc.m in Sources */,
-				2CEBEE621D82DF6B000DD832 /* CellSetting.m in Sources */,
 				2CEBEE5D1D82DF4C000DD832 /* CellLogo.m in Sources */,
 				2C9361D51D6C8EA9002E5D4E /* Class_School.m in Sources */,
 				68794A541D8E38CB00DF901D /* DataBase.m in Sources */,
+				68BBDEC71DC9C8AC0087CD43 /* CellSetting.m in Sources */,
 				68F89E121D66F1E900D2C1F0 /* Reachability.m in Sources */,
 				68F89E131D66F1E900D2C1F0 /* YBMonitorNetWorkState.m in Sources */,
 				684CB4891D6BE00A0099CEE4 /* HcdGuideViewCell.m in Sources */,

@@ -145,7 +145,7 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSDictionary *dic = [defaults dictionaryRepresentation];
     for (id  key in dic) {
-        if ([key isEqualToString:@"systemversion"] || [key isEqualToString:@"firstLaunch"]) {
+        if ([key isEqualToString:@"systemversion"] || [key isEqualToString:@"firstLaunch"] || [key isEqualToString:@"name"] || [key isEqualToString:@"password"]) {
             continue;
         }
         [defaults removeObjectForKey:key];
@@ -239,6 +239,14 @@
    // NSString *str_usrname=_txtUsrName.text;
     NSString *str_usrname=_ursNameVC.txt_usr.text;
     NSString *str_pwd=_txtPwd.text;
+    //获取userDefault单例
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    str_usrname= [str_usrname stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    str_pwd=[str_pwd stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    [userDefaults setObject:str_usrname forKey:@"name"];
+    [userDefaults setObject:str_pwd forKey:@"password"];
+    [userDefaults synchronize];
+
     if (![str_usrname isEqualToString:@""] && ![str_pwd isEqualToString:@""]) {
         NSString *str_url=@"http://123.56.238.120:8080/Base/MobileAccessService";
         str_usrname= [str_usrname stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
@@ -553,7 +561,20 @@
     
 }
 
+-(void)viewWillAppear:(BOOL)animated {
+    NSUserDefaults *account = [NSUserDefaults standardUserDefaults];
+    NSString *str_usrname= [account objectForKey:@"name"];
+    NSString *str_password= [account objectForKey:@"password"];
+    if (str_usrname==nil && str_password==nil) {
+        _ursNameVC.txt_usr.text=@"";
+        _txtPwd.text=@"";
+    }
+    else if (![str_usrname isEqualToString:@""] && ![str_password isEqualToString:@""]) {
+         _ursNameVC.txt_usr.text=str_usrname;
+        _txtPwd.text=str_password;
+    }
 
+}
 
 
 

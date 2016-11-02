@@ -429,7 +429,7 @@
             NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
             NSDictionary *dic = [defaults dictionaryRepresentation];
             for (id  key in dic) {
-                [defaults removeObjectForKey:key];
+               // [defaults removeObjectForKey:key];
             }
             [defaults synchronize];
             ViewController *login=[[self storyboard] instantiateViewControllerWithIdentifier:@"LoginView"];

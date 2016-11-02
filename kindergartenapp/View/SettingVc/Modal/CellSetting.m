@@ -2,7 +2,7 @@
 //  CellSetting.m
 //  kindergartenapp
 //
-//  Created by zr-mac on 16/9/9.
+//  Created by hnsi-03 on 2016/11/2.
 //  Copyright © 2016年 zr-mac. All rights reserved.
 //
 
