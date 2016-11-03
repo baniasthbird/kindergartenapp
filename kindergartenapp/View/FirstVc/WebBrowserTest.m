@@ -153,9 +153,15 @@
     }
    // http://123.57.8.54:8080/Video/videoList.html?user_key=G43087420121025585&role_type=1&shoole_id=1&class_id=1
     
-        baby_vc.str_url=str_baby_url;
+    baby_vc.str_url=str_baby_url;
     class_vc.str_url=str_class_url;
-    [self.view addSubview:baby_vc.view];
+    if (i_role==0) {
+        [self.view addSubview:baby_vc.view];
+    }
+    else if (i_role==2) {
+        [self.view addSubview:class_vc.view];
+    }
+    
     
 
 }

@@ -501,7 +501,7 @@
     }
     else if (i_role==2)  {
         
-        webbrowser.str_xuejihao=_userInfo.str_token;
+        webbrowser.str_xuejihao=_userInfo.str_id;
         webbrowser.str_class_id=class_school.i_id;
     }
    // webbrowser.str_url=str_url;
