@@ -20,7 +20,9 @@
 @property (nonatomic,assign) float hight;//高
 @end
 
-@implementation UsrNameVC
+@implementation UsrNameVC {
+    NSIndexPath *g_indexPath;
+}
 - (IBAction)btn_show:(id)sender {
     if (_tb_usr.hidden==YES) {
         self.tb_usr.frame = CGRectMake(CGRectGetMinX(self.txt_usr.frame), CGRectGetMaxY(self.txt_usr.frame) + 2, CGRectGetWidth(self.txt_usr.frame), self.listData.count * 40);
@@ -74,10 +76,14 @@
        // [btn_cross setTitle:@"删除" forState:UIControlStateNormal];
         [btn_cross setImage:[UIImage imageNamed:@"Delete"] forState:UIControlStateNormal];
         [btn_cross setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        g_indexPath=indexPath;
         [btn_cross addTarget:self action:@selector(cellDelete:) forControlEvents:UIControlEventTouchUpInside];
         
         [cell.contentView addSubview:btn_cross];
         
+    }
+    else {
+        cell.tag=indexPath.row;
     }
     
     
@@ -121,6 +127,7 @@
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:row inSection:0];
     NSArray *arr_indexPath = [NSArray arrayWithObjects:indexPath, nil];
     [_tb_usr deleteRowsAtIndexPaths:arr_indexPath withRowAnimation:UITableViewRowAnimationNone];
+    [_tb_usr reloadData];
 }
 /*
 #pragma mark - Navigation
